@@ -1,0 +1,143 @@
+/*В работе использованы статьи:*/
+/*Статья про float: https://habrahabr.ru/post/136588/*/
+/*Руководство по выравниванию: http://frontender.info/centering-css-complete-guide/#tsentrirovanievcsspolnoerukovodstvo*/
+
+/*Вопросы:
+1. Почему у логотипа высота 40, а у его родительского div - 43.5 ?
+*/
+
+ body {
+     background-color: #f9f9f9;
+ }
+
+.document {
+    box-sizing: border-box;
+    margin: 0px auto;
+    padding: 50px 46px 60px 48px;
+    width: 1060px;
+
+    background-color: white;
+    -webkit-box-shadow: 0px 1px 2px 1px rgba(204,204,204,1);
+    -moz-box-shadow: 0px 1px 2px 1px rgba(204,204,204,1);
+    box-shadow: 0px 1px 2px 1px rgba(204,204,204,1);
+}
+
+.menu-top {
+    margin: 40px 0px 40px;
+    height: 40px;
+
+    color: white;
+    background-image: url("../img/menu-top-bg.png") ;
+
+    font-size: 14.67px;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.menu-top li {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 30px 0px 24px;
+    margin-right: 40px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+
+.menu-top li:hover {
+    border-left: 1px solid #838383;
+    border-right: 1px solid #838383;
+
+    background-image: url("../img/menu-top-bg-hover.png") ;
+}
+
+.menu-left {
+    float: left;
+    width: 240px;
+
+    background-color: white;
+
+    font-size: 13.33px;
+}
+
+.menu-left li {
+    box-sizing: border-box;
+    display: block;
+    height: 40px;
+    padding-left: 22px;
+    line-height: 40px;
+    border: 1px solid #c8c8c8;
+    margin-bottom: -1px; /*Насколько это корректный способ избавиться от задвоения границ?*/
+
+    color: #656363;
+}
+
+.menu-left li:hover {
+    padding-left: 35px;
+
+    background-color: #f9f9f9;
+    color: #2c2c2c;
+}
+
+.article {
+    margin-left: 288px; /*Оставить место для левого меню*/
+}
+
+.goods-container {
+    /*Для выравнивания картинки по центру*/
+    position: relative;
+    box-sizing: border-box; /*Чтобы размеры включали padding и border*/
+    height: 400px;
+    width: 678px;
+    border: 1px solid #c8c8c8;
+}
+
+.goods{
+    /*Для выравнивания картинки по центру*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.description {
+    padding: 32px 24px;
+
+    font-size: 13.33px;
+    line-height: 16pt;
+    letter-spacing: -0.25px;
+}
+
+footer {
+    height: 40px;
+    margin-top: 50px;
+
+    background-color: #e1e1e1;
+
+    line-height: 40px;
+    font-size: 13.33px;
+}
+
+.menu-bottom {
+    display: inline-block;
+}
+
+.menu-bottom li {
+    display: inline-block;
+    padding: 0px 70px 0px 25px;
+}
+
+.menu-bottom li a {
+    color: #2c2c2c;
+
+    text-decoration: none;
+}
+
+.menu-bottom li a:hover {
+    /*color: #2c2c2c; Цвет уже перебит в предыдущем селекторе*/
+    text-decoration: underline;
+}
+
+.copyright {
+    float: right;
+    padding-right: 40px;
+}
