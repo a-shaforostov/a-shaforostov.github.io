@@ -1,0 +1,83 @@
+body {
+    position: relative;
+    box-sizing: border-box;
+    padding: 57px 70px 30px 65px;
+    width: 960px;
+    height: 883px;
+    margin: 0 auto;
+
+    background-color: black;
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+header {
+    height: 147px;
+}
+
+.logo {
+    float: left;
+    margin-left: 5px;
+    /*Компенсация увеличения высоты родительским блоком*/
+    margin-bottom: -3.5px;
+}
+
+.contacts {
+    position: relative;
+    height: 100%;
+    text-align: right;
+}
+
+.contacts img {
+    position: absolute;
+    bottom: 15px;
+    right: 17px;
+}
+
+.content ul li {
+    display: inline-block;
+    padding-left: 3px;
+    text-align: center;
+}
+
+.content ul li:nth-child(3n+1) {
+    padding-left: 0px;
+}
+
+.first-row {
+    margin-top: -1px;
+}
+
+.second-row {
+    margin-top: 45px;
+}
+
+.content ul li figure {
+    position: relative;
+}
+
+.content ul li figure img.image{
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    z-index: -1;
+}
+
+figcaption {
+    margin-top: -7px;
+    color: #e6e6e6;
+    font-family: Tahoma;
+    font-size: 15.24px;
+}
+
+footer {
+    position: absolute;
+    width: 820px;
+    bottom: 30px;
+    color: #e6e6e6;
+    background-color: transparent;
+    text-align: center;
+    font-family: Tahoma;
+    font-size: 10.16px;
+}
