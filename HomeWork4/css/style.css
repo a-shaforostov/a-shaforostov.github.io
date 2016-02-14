@@ -60,32 +60,47 @@ body {
 
 header .first-section {
     position: relative;
-    /*margin-bottom: -3.5px;*/
 }
 
 .countries {
-    /*float: right;
-    clear: right;*/
     position: absolute;
-    /*margin-right: 33px;*/
     right: 27px;
     bottom: 8px;
+    list-style: none;
 }
 
 .countries li {
     float: left;
-    list-style: none;
 }
 
-figure {
+.countries li a {
+    display: block;
     width: 57px;
+    padding-top: 43px;
+    color: #128aa7;
+    background-position: center top;
+    background-repeat: no-repeat;
     text-align: center;
     font-size: 10px;
-    color: #128aa7;
 }
 
-figcaption {
-    margin-top: -3px;
+li.india a {
+    background-image: url(../img/i_flag.png);
+}
+li.nepal a {
+    background-image: url(../img/n_flag.png);
+}
+li.tibet a {
+    background-image: url(../img/t_flag.png);
+}
+li.bhutan a {
+    background-image: url(../img/b_flag.png);
+}
+li.sri-lanka a {
+    background-image: url(../img/s_flag.png);
+}
+li.maldives a {
+    background-image: url(../img/m_flag.png);
 }
 
 .second-section {
