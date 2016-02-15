@@ -1,5 +1,10 @@
+/*Как плавающий контент завести под блок, который в потоке?*/
+/*В работе использована статья: http://html5.by/blog/flexbox/*/
+
+
 body {
     background-image: url(../img/background.jpg);
+    background-repeat: repeat-x;
     font-family: Tahoma;
     font-size: 12px;
 }
@@ -13,7 +18,6 @@ body {
 .page {
     position: relative;
     width: 1000px;
-    height: 500px;
     margin: 0 auto;
     background-color: white;
 }
@@ -25,7 +29,6 @@ body {
     bottom: -3px;
     right: -6px;
     z-index: -1;
-    /*background-color: green;*/
     background: rgba(255,255,255,0);
     background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 2%, rgba(0,0,0,1) 98%, rgba(255,255,255,0) 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(2%, rgba(0,0,0,1)), color-stop(98%, rgba(0,0,0,1)), color-stop(100%, rgba(255,255,255,0)));
@@ -33,7 +36,6 @@ body {
     background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 2%, rgba(0,0,0,1) 98%, rgba(255,255,255,0) 100%);
     background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 2%, rgba(0,0,0,1) 98%, rgba(255,255,255,0) 100%);
     background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 2%, rgba(0,0,0,1) 98%, rgba(255,255,255,0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
 }
 
 .logo {
@@ -45,12 +47,11 @@ body {
 
 .contacts {
     float: right;
-    width: 125px;
+    width: 130px;
     margin-right: 33px;
     margin-top: 7px;
     color: #128aa7;
     line-height: 140%;
-    /*letter-spacing: -0.1px;*/
 }
 
 .contacts p:first-child {
@@ -116,10 +117,11 @@ li.maldives a {
     color: white;
     list-style: none;
     font-size: 14px;
-    font-weight: bolder;
+    font-weight: normal;
 }
 
 .menu li {
+    position: relative;
     padding: 4px;
 }
 
@@ -130,4 +132,86 @@ li.maldives a {
     float: right;
     background: url(../img/triangle.png) 6px 8px;
     background-repeat: no-repeat;
+}
+
+/*Выпадающие пункты*/
+.submenu ul {
+    position: absolute;
+    top: 30px;
+    left: -9999px;
+    padding-left: 10px;
+    padding-right: 40px;
+    padding-bottom: 8px;
+    color: white;
+    background-color: #303030;
+    list-style: none;
+    font-size: 14px;
+    white-space: nowrap;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,1);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,1);
+}
+
+.submenu ul li {
+    height: 16px;
+    font-weight: normal;
+}
+
+.menu li:hover ul {
+    left: 0px;
+}
+
+/*Колонки контента*/
+.content {
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between;
+    max-height: 542px;
+    color: #424c43;
+    text-align: center;
+}
+
+.left-column, .right-column {
+    flex-basis: 210px;
+    max-height: inherit;
+    overflow-y: auto;
+    background-color: #edeef0;
+    border-left: 1px solid #c7cacf;
+    border-right: 1px solid #c7cacf;
+    font-size: 14px;
+}
+
+.center-column {
+    flex-basis: 580px;
+    max-height: inherit;
+    overflow-y: auto;
+    background-color: white;
+}
+
+.content h2 {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    color: #424c43;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.content p {
+    padding-left: 15px;
+    text-align: left;
+    line-height: 171%;
+    letter-spacing: 0.17px;
+    padding-bottom: 10px;
+}
+
+body>p {
+    color: white;
+    height: 26px;
+    padding-top: 8px;
+    font-size: 12px;
+    text-align: center;
 }
