@@ -54,6 +54,11 @@ body {
     line-height: 140%;
 }
 
+.contacts a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
 .contacts p:first-child {
     margin-bottom: 5px;
     font-weight: bolder;
@@ -118,6 +123,11 @@ li.maldives a {
     list-style: none;
     font-size: 14px;
     font-weight: normal;
+}
+
+.menu a {
+    text-decoration: inherit;
+    color: inherit;
 }
 
 .menu li {

@@ -43,6 +43,11 @@
     border-right: 1px solid transparent;
 }
 
+.menu-top a, .menu-left a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
 .menu-top li:hover {
     border-left: 1px solid #838383;
     border-right: 1px solid #838383;

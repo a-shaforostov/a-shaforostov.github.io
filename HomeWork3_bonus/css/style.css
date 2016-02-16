@@ -17,22 +17,22 @@ header {
 }
 
 .logo {
-    float: left;
+    /*float: left;*/
+    position: relative;
     margin-left: 5px;
     /*Компенсация увеличения высоты родительским блоком*/
     margin-bottom: -3.5px;
 }
 
 .contacts {
-    position: relative;
+    position: absolute;
+    top: 155px;
+    right: 88px;
     height: 100%;
     text-align: right;
 }
 
 .contacts img {
-    position: absolute;
-    bottom: 15px;
-    right: 17px;
 }
 
 .content ul li {
