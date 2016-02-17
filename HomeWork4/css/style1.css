@@ -1,5 +1,8 @@
+/*Как плавающий контент завести под блок, который в потоке?*/
+/*В работе использована статья: http://html5.by/blog/flexbox/*/
+
+
 body {
-    background-color: #0c739f;
     background-image: url(../img/background.jpg);
     background-repeat: repeat-x;
     font-family: Tahoma;
@@ -39,16 +42,17 @@ body {
     float: left;
     margin-top: 11px;
     margin-left: 27px;
+    /*margin-bottom: -3px;*/
 }
 
 .contacts {
     float: right;
-    margin-right: 34px;
+    width: 130px;
+    margin-right: 33px;
     margin-top: 7px;
     color: #128aa7;
     font-size: 12px;
-    line-height: 145%;
-    letter-spacing: -0.2px;
+    line-height: 140%;
 }
 
 .contacts a {
@@ -57,8 +61,8 @@ body {
 }
 
 .contacts p:first-child {
-    font-weight: bolder;
     margin-bottom: 5px;
+    font-weight: bolder;
 }
 
 header .first-section {
@@ -106,10 +110,15 @@ li.maldives a {
     background-image: url(../img/m_flag.png);
 }
 
+.second-section {
+    margin-bottom: -3px;
+}
+
 .menu {
-    /*display: flex;
-    justify-content: space-around;*/
+    display: flex;
+    justify-content: space-around;
     height: 34px;
+    padding: 0px 35px;
     background-image: url(../img/menu-bg.png);
     color: white;
     list-style: none;
@@ -123,18 +132,17 @@ li.maldives a {
 }
 
 .menu li {
-    float: left;
     position: relative;
-    line-height: 30px;
-    margin-left: 50px;
+    padding: 4px;
+    line-height: 22px;
 }
 
 .submenu:after {
     content: ' ';
     width: 15px;
-    height: 30px;
+    height: 16px;
     float: right;
-    background: url(../img/triangle.png) 6px 13px;
+    background: url(../img/triangle.png) 6px 8px;
     background-repeat: no-repeat;
 }
 
@@ -158,8 +166,6 @@ li.maldives a {
 
 .submenu ul li {
     height: 16px;
-    margin-left: 0px;
-    padding-bottom: 6px;
     font-weight: normal;
 }
 
@@ -169,28 +175,33 @@ li.maldives a {
 
 /*Колонки контента*/
 .content {
-    overflow: hidden;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between;
+    max-height: 542px;
     color: #424c43;
     text-align: center;
-    font-size: 12px;
 }
 
 .left-column, .right-column {
-    float: left;
-    width: 208px;
-    padding-bottom: 20000px;
-    margin-bottom: -20000px;
-    border-right: 1px solid #c7cacf;
-    border-left: 1px solid #c7cacf;
+    flex-basis: 210px;
+    max-height: inherit;
+    overflow-y: auto;
     background-color: #edeef0;
+    border-left: 1px solid #c7cacf;
+    border-right: 1px solid #c7cacf;
     font-size: 14px;
 }
 
 .center-column {
-    float: left;
-    width: 580px;
-    padding-bottom: 20000px;
-    margin-bottom: -20000px;
+    flex-basis: 580px;
+    max-height: inherit;
+    overflow-y: auto;
+    background-color: white;
 }
 
 .content h2 {
@@ -198,14 +209,14 @@ li.maldives a {
     margin-bottom: 3px;
     color: #424c43;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .content p {
     padding-left: 15px;
     text-align: left;
-    line-height: 172%;
-    letter-spacing: 0.1px;
+    line-height: 171%;
+    letter-spacing: 0.17px;
     padding-bottom: 10px;
 }
 
