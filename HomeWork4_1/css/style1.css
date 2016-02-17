@@ -110,10 +110,6 @@ li.maldives a {
     background-image: url(../img/m_flag.png);
 }
 
-.second-section {
-    margin-bottom: -3px;
-}
-
 .menu {
     display: flex;
     justify-content: space-around;
