@@ -1,0 +1,104 @@
+body {
+    height: 600px;
+    background-color: white;
+}
+
+.wrapper {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+td {
+    border: 5px solid black;
+}
+
+table {
+    width: 500px;
+    height: 541px;
+    border-collapse: separate;
+}
+
+table:after {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    border: 5px solid white;
+    border-top: 15px solid white;
+}
+
+.white {
+    background-color: white;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.red {
+    background-color: red;
+}
+
+.black {
+    background-color: black;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.c1 {
+    width: 53px;
+}
+
+.c2 {
+    width: 78px;
+}
+
+.c3 {
+    width: 74px;
+}
+
+.c4 {
+    width: 138px;
+}
+
+.c5 {
+    width: 88px;
+}
+
+.c6 {
+    width: 78px;
+}
+
+.r2 {
+    height: 58px;
+}
+
+.r3 {
+    height: 140px;
+}
+
+.r4 {
+    height: 136px;
+}
+
+.r5 {
+    height: 70px;
+}
+
+.r6 {
+    height: 68px;
+}
+
+.r7 {
+    height: 42px;
+}
+
+.r8 {
+    height: 38px;
+}
