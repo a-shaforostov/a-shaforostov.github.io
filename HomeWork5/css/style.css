@@ -1,0 +1,231 @@
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../fonts/helveticaneuecyr-roman-webfont.eot');
+    src: url('../fonts/helveticaneuecyr-roman-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/helveticaneuecyr-roman-webfont.woff2') format('woff2'),
+         url('../fonts/helveticaneuecyr-roman-webfont.woff') format('woff'),
+         url('../fonts/helveticaneuecyr-roman-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/*a {
+    color: inherit;
+    text-decoration: inherit;
+}*/
+
+a, a:hover, a:focus, a:visited {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.wrapper {
+    position: relative;
+    width: 1215px;
+    height: 1064px;
+    margin: 0 auto;
+    background-image: url(../img/background.jpg);
+    background-position: center bottom;
+}
+
+.menu {
+    color: #60b5ed;
+    background-image: url(../img/menu.png);
+    font-size: 14px;
+    line-height: 36px;
+}
+
+.menu>ul {
+    float: right;
+}
+
+.menu>ul>li {
+    float: left;
+}
+
+.menu>ul>li>a {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0 13px;
+}
+
+.menu>ul>li:hover {
+    background-color: #4eabda;
+    color: white;
+}
+
+.flag {
+    float: right;
+    box-sizing: border-box;
+    height: 31px;
+    margin-top: 2px;
+    margin-bottom: 3px;
+    margin-left: 9px;
+    /*width: 160px;*/
+    border-left: 1px solid #56a2dc;
+    color: white;
+}
+
+.flag img {
+    float: left;
+    padding-top: 4px;
+    padding-left: 16px;
+    /*vertical-align: top;*/
+    /*height: 36px;*/
+}
+
+.flag a {
+    float: left;
+    padding: 0px 16px 0px 8px;
+    margin-top: -2px;
+}
+
+.ola {
+    float: right;
+    box-sizing: border-box;
+    width: 191px;
+    padding: 0 12px;
+    margin-right: 20px;
+    background-image: url(../img/btn-gradient.png);
+    background-repeat: repeat-x;
+    color: white;
+}
+
+.ola a {
+    text-decoration: underline;
+}
+
+.middle-block {
+    position: absolute;
+    box-sizing: border-box;
+    width: 560px;
+    height: 613px;
+    top: 50%;
+    margin-top: -306px;
+    left: 50%;
+    margin-left: -280px;
+    /*background-color: #F00;*/
+}
+
+.middle-block header {
+    box-sizing: border-box;
+    height: 62px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    line-height: 62px;
+    text-align: center;
+}
+
+.middle-block .content {
+    box-sizing: border-box;
+    margin-top: 2px;
+    padding-top: 36px;
+    height: 549px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.fb {
+    display: block;
+    /*position: absolute;*/
+    width: 276px;
+    height: 35px;
+    /*left: 50%;*/
+    /*margin-left: -138px;*/
+    margin: 0 auto;
+    /*margin-top: 36px;*/
+    background-image: url(../img/fb.png);
+    /*background-color: red;*/
+}
+
+.divider {
+    width: 276px;
+    margin: 30px auto 24px;
+    /*left: 50%;*/
+    background-image: url(../img/divider.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+}
+
+.content form {
+    box-sizing: border-box;
+    margin: 0px auto;
+    width: 276px;
+}
+
+.content dd {
+    box-sizing: border-box;
+    margin: 16px 0px;
+}
+
+.content .edit {
+    box-sizing: border-box;
+    width: 276px;
+    height: 36px;
+    border: 0px;
+    padding: 0px 19px;
+    margin: 8px 0px;
+    background-image: url(../img/input-text-bg.png);
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.content .edit:focus {
+    background-image: url(../img/input-text-focus.png);
+    background-position: -8px -8px;
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(68,127,170,1);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(68,127,170,1);
+    box-shadow: 0px 0px 5px 3px rgba(68,127,170,1);
+}
+
+.content input {
+    color: #ccc;
+    vertical-align: middle;
+}
+
+.cb-send-updates {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.content label {
+    margin-left: 2px;
+    color: #ccc;
+    vertical-align: middle;
+}
+
+.content input[type="submit"] {
+    display: block;
+    width: 151px;
+    height: 36px;
+    border: 0px;
+    margin: 0 auto;
+    margin-top: 14px;
+    background-color: transparent;
+    background-image: url(../img/submit.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+footer {
+    color: #ccc;
+    text-align: center;
+    font-size: 11px;
+    margin: 17px 0px;
+    line-height: 15px;
+}
