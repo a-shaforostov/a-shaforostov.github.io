@@ -495,12 +495,17 @@ a.lost-pass {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7dc9cfd1', endColorstr='#7d234b5d',GradientType=0 ); /* IE6-9 */
 }
 
+.content ul {
+    float: left;
+    width: 168px;
+}
+
 .content-item {
     list-style: none;
     float: left;
     box-sizing: border-box;
     width: 139px;
-    height: 202px;
+    height: 203px;
     margin-right: 29px;
     font-family: "Lucida Sans Unicode";
     text-align: center;
@@ -524,17 +529,13 @@ a.lost-pass {
     font-weight: bolder;
     font-style: italic;
     color: #114165;
-    margin-top: 4px;
+    margin-top: 3px;
     letter-spacing: 0.6px;
     margin-left: 9px;
 }
 
 .content-item figure > p span {
     font-size: 12px;
-    /*font-family: Arial;*/
-    /*font-weight: bolder;*/
-    /*font-style: italic;*/
-    /*text-align: left;*/
 }
 
 .img-wrapper {
