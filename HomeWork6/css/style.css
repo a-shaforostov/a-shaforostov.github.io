@@ -89,6 +89,8 @@ a.lost-pass {
 }
 
 .shadowed {
+    float: right;
+    margin-right: 6px;
     position: relative;
     z-index: 0;
 }
