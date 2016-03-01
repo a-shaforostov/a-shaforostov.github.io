@@ -21,9 +21,9 @@ body {
 
 .page-header {
     width: 100%;
+    margin: 0 auto;
     /*height: 869px;*/
     height: 846px;
-    margin: 0 auto;
     background-image: url(../img/background.jpg);
     background-repeat: no-repeat;
     background-position: top center;
@@ -199,7 +199,7 @@ body {
 }
 
 .slider__left-arrow a {
-    display: block;
+    display: none;
     position: absolute;
     width: 30px;
     height: 42px;
@@ -210,7 +210,6 @@ body {
     background-image: url(../img/left-arrow.png);
 }
 .slider__right-arrow a {
-    /*display: block;*/
     display: none;
     position: absolute;
     width: 30px;
@@ -223,6 +222,9 @@ body {
 /* Если этого не сделать, браузер включает горизонтальную прокрутку до стрелки*/
 @media only screen and (min-width: 1600px) {
     .slider__right-arrow a {
+        display: block;
+    }
+    .slider__left-arrow a {
         display: block;
     }
 }
@@ -262,8 +264,10 @@ body {
 }
 
 .top-row-bg {
-    width: 100%;
     position: absolute;
+    box-sizing: border-box;
+    border-top: 1px solid #33253a;
+    width: 100%;
     height: 342px;
     background-image: linear-gradient(to top, #322539 0%, #745083 100%);
     z-index: -1;
@@ -297,12 +301,12 @@ body {
 .top-row__icon--i2 {
     background-image: url(../img/sprite.png);
     background-position: -31px;
-    left: 9px;
+    left: 11px;
 }
 .top-row__icon--i3 {
     background-image: url(../img/sprite.png);
     background-position: -61px;
-    left: 9px;
+    left: 8px;
 }
 .top-row__col-h2 {
     height: 22px;
@@ -359,7 +363,7 @@ a.top-row__read-more {
     margin-left: 70%;
 }
 a.top-row__read-more--c2 {
-    margin-left: 72%;
+    margin-left: 70%;
 }
 a.top-row__read-more--c3 {
     margin-left: 74%;
@@ -371,16 +375,18 @@ a.top-row__read-more:hover {
 }
 
 .top-row__col--col2 {
-    margin-left: 5.104%;
-    width: 30.208%;
+    width: 30.896%;
+    margin-left: 4.9%;
 }
 .top-row__col--col3 {
-    width: 29.896%;
-    margin-left: 4.688%;
+    width: 29.7%;
+    margin-left: 4.3%;
 }
 
 .top-row__text-block {
-    margin-left: 60px;
+    margin-left: 61px;
+    margin-left: 20.8%;
+    width: 79.208%;
 }
 
 .top-row:after {
@@ -474,7 +480,7 @@ a.top-row__read-more:hover {
 
 .mr-right-col {
     float: left;
-    width: 52.8%;
+    width: 50.8%;
     padding-left: 58px;
     box-sizing: border-box;
     padding-top: 32px;
@@ -514,6 +520,8 @@ a.top-row__read-more:hover {
     font-weight: 300;
     margin-left: 66px;
     letter-spacing: -0.1px;
+    height: 26px;
+    overflow: hidden;
 }
 
 .recent-updates__art-header a {
@@ -546,10 +554,10 @@ a.top-row__read-more:hover {
     background-image: url(../img/ru-i3.png);
 }
 
-a.recent-updates__read-more {
+a.recent-updates__read-more-960 {
     display: block;
-    margin-top: 28px;
-    margin-right: 20px;
+    margin-top: 3px;
+    margin-right: 1px;
     color: #454545;
     font-family: "League Gothic";
     font-size: 19px;
@@ -558,6 +566,10 @@ a.recent-updates__read-more {
     text-decoration: none;
     text-shadow: 0.5px 0.9px 0 white;
     letter-spacing: -0.28px;
+    float: right;
+}
+a.recent-updates__read-more-768 {
+    display: none;
 }
 
 .logos {
@@ -597,7 +609,15 @@ a.recent-updates__read-more {
     margin-left: 5.833%;
 }
 
-.bottom-row__col3 {
+.bottom-row__col3-1 {
+    display: none;
+}
+
+.bottom-row__col3-2 {
+    display: none;
+}
+
+.bottom-row__col3-3 {
     float: left;
     overflow: hidden;
     width: 29.167%;

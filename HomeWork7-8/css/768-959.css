@@ -13,7 +13,7 @@
     }
 
     .slider__article {
-        margin-left: 34px;
+        margin-left: 43px;
         padding-top: 104px;
         height: 290px;
         margin-right: 440px;
@@ -37,29 +37,35 @@
         font-size: 16px;
         line-height: 26px;
         letter-spacing: -0.09px;
+        width: 272px;
     }
 
     .slider__image {
         top: -23px;
-        right: 39px;
+        right: 47px;
     }
 
     .slider__left-arrow a {
         top: 179px;
-        left: -14px;
+        left: -5px;
     }
     .slider__right-arrow a {
         top: 179px;
-        right: -12px;
+        right: -4px;
     }
 
     .slider__selector {
         bottom: -53px;
-        right: 131px;
+        right: 139px;
     }
 
     .wrapper {
         width: 100%;
+    }
+
+    .page-header {
+        height: 869px;
+        /*height: 846px;*/
     }
 
     .logo__suffix {
@@ -68,12 +74,262 @@
     }
 
     .logo--position_header {
-        left: 9px;
+        left: 18px;
         top: 60px;
     }
 
     .menu {
         top: 138px;
-        left: -33px;
+        left: -24px;
+    }
+
+    .menu--bottom {
+        top: 39px;
+        font-size: 20px;
+        left: 19px;
+    }
+
+    .page-header {
+        height: 798px;
+    }
+
+    .top-row-bg {
+        height: 343px;
+        margin-top: 0px;
+    }
+
+    .top-row {
+        margin-top: 78px;
+        height: 266px;
+    }
+
+    .top-row__col--col1 {
+        width: 29%;
+        margin-left: 1.1%;
+    }
+    .top-row__col--col2 {
+        width: 29.896%;
+        margin-left: 4.688%;
+    }
+    .top-row__col--col3 {
+        width: 29.896%;
+        margin-left: 4.688%;
+    }
+
+
+    .top-row__icon--i1 {
+        top: 1px;
+        left: 22px;
+    }
+
+    .top-row__icon--i2 {
+        top: 1px;
+        left: 24px;
+        background-position: 0px;
+    }
+
+    .top-row__icon--i3 {
+        top: 1px;
+        left: 23px;
+        background-position: 0px;
+    }
+
+    .top-row__text-block {
+        margin-left: 61px;
+        margin-left: 32.104%;
+        width: 74.208%;
+    }
+
+    .top-row__col-h2 {
+        font-size: 24px;
+    }
+
+    .top-row__col-h2--c3 {
+        /*font-size: 24px;*/
+        /*position: absolute;*/
+        margin-left: 4px;
+    }
+
+    .top-row__col-text--c1 {
+        margin-left: 2px;
+        margin-top: 5px;
+        height: 143px;
+    }
+
+    a.top-row__read-more {
+        margin-top: 6px;
+        margin-left: 55.3%;
+    }
+
+    a.top-row__read-more--c2 {
+        margin-top: 5px;
+        margin-left: 56%;
+    }
+
+    a.top-row__read-more--c3 {
+        margin-top: 4.5px;
+        margin-left: 56.5%;
+    }
+
+    .top-row__col--col2 {
+        margin-left: 3.5%;
+        width: 29.208%;
+    }
+    .top-row__col--col3 {
+        width: 28.896%;
+        margin-left: 4.9%;
+    }
+
+    .top-row__col-text--c2 {
+        margin-left: 4px;
+        margin-top: 5px;
+        line-height: 24px;
+        height: 144px;
+    }
+
+    .top-row__col-text--c3 {
+        margin-left: 4px;
+        margin-top: 5px;
+        line-height: 24px;
+        height: 144px;
+    }
+
+    .middle-row {
+        padding-top: 99px;
+    }
+
+    .mr-left-col {
+        width: 40.85%;
+        padding-left: 42px;
+    }
+
+    .mr-left-col__cloud {
+        background-color: white;
+        box-sizing: border-box;
+        /*background-image: url();*/
+        height: 272px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        background-image: none;
+    }
+
+    .mr-left-col__text-block {
+        /*position: absolute;*/
+        padding-top: 29px;
+    }
+
+    .mr-left-col__h2 {
+        font-size: 24px;
+        width: 100px;
+    }
+
+    .mr-left-col__p {
+        margin-top: 34px;
+        margin-right: 25px;
+        height: 145px;
+    }
+
+    .mr-left-col__selector {
+        left: 115px;
+        top: 295px;
+    }
+
+    .recent-updates__art-icon1 {
+        background-image: url(../img/ru-i1-768.png);
+    }
+    .recent-updates__art-icon2 {
+        top: 111px;
+        background-image: url(../img/ru-i2-768.png);
+    }
+    .recent-updates__art-icon3 {
+        top: 177px;
+        background-image: url(../img/ru-i3-768.png);
+    }
+
+    .recent-updates__art-block {
+        margin-bottom: 27px;
+    }
+
+    a.recent-updates__read-more-960 {
+        display: none;
+    }
+    a.recent-updates__read-more-768 {
+        display: block;
+        float: right;
+        margin-top: -3px;
+        margin-right: 0px;
+        width: 93px;
+        color: #454545;
+        font-family: "League Gothic";
+        font-size: 19px;
+        font-weight: 400;
+        text-shadow: 0.5px 0.9px 0 white;
+        letter-spacing: -0.28px;
+        text-decoration: none;
+    }
+
+    .logos {
+        background-position: center 25px;
+        background-image: url(../img/logos-768.png);
+        height: 119px;
+    }
+
+    .bottom-row {
+        height: 396px;
+        position: relative;
+    }
+
+    .bottom-row__col1 {
+        display: none;
+    }
+
+    .bottom-row__col2 {
+        display: none;
+    }
+
+    .bottom-row__col3-1 {
+        display: block;
+        float: left;
+        overflow: hidden;
+        width: 27.479%;
+        margin-left: 19px;
+        height: 100%;
+        letter-spacing: -0.1px;
+    }
+
+    .bottom-row__col3-2 {
+        display: block;
+        float: left;
+        overflow: hidden;
+        width: 27%;
+        height: 100%;
+        margin-left: 7.2%;
+    }
+
+    .bottom-row__col3-3 {
+        display: block;
+        float: left;
+        overflow: hidden;
+        width: 27.6%;
+        height: 100%;
+        margin-left: 7.2%;
+    }
+
+    .news-categories__header {
+        font-size: 24px;
+        margin-top: 5px;
+    }
+
+    .news-categories__text {
+        margin-top: 9px;
+    }
+
+    .footer {
+        height: 201px;
+        background-image: url(../img/footer-768.jpg);
+    }
+
+    .designed {
+        top: 92px;
+        right: 22px;
     }
 }
