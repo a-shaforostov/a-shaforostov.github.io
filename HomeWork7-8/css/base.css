@@ -13,7 +13,6 @@
          url('../font/league-gothic.leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 body {
@@ -21,9 +20,8 @@ body {
 
 .page-header {
     width: 100%;
-    margin: 0 auto;
-    /*height: 869px;*/
     height: 846px;
+    margin: 0 auto;
     background-image: url(../img/background.jpg);
     background-repeat: no-repeat;
     background-position: top center;
@@ -58,8 +56,8 @@ body {
 
 .logo--position_header {
     position: absolute;
-    top: 60px;
     left: -2px;
+    top: 60px;
 }
 
 .logo--position_footer {
@@ -79,10 +77,11 @@ body {
 }
 
 .menu {
-    /*float: right;*/
     position: absolute;
+    overflow-x: hidden;
     top: 69px;
     right: 0px;
+    width: 677px;
     color: white;
     font-family: 'League Gothic Regular', sans-serif;
     text-transform: uppercase;
@@ -91,15 +90,13 @@ body {
     line-height: 34px;
     text-shadow: 1px 1.7px 2px rgba(0, 0, 0, 0.4);
     /*float: right;*/
-    width: 677px;
     white-space: nowrap;
-    overflow-x: hidden;
 }
 
 .menu--bottom {
+    left: -1px;
     top: 38px;
     font-size: 20px;
-    left: -1px;
 }
 
 .menu__item {
@@ -126,39 +123,36 @@ body {
 
 .slider-wrapper {
     position: absolute;
-    height: 400px;
-    width: 100%;
     top: 278px;
+    width: 100%;
+    height: 400px;
 }
 
 /* .slider должен помещаться в контейнер, который задает позицию и размер на сайте */
 /* Он занимает весь размер контейнера и задает позиционирование относительно себя */
 .slider {
     position: relative;
-    height: 100%;
     width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
 
 }
 
 .slider__content {
     position: relative;
+    width: 960px;
     height: 100%;
     margin: 0 auto;
-    width: 960px;
 }
 
 .slider__article {
     box-sizing: border-box;
     overflow-y: hidden;
     height: 100%;
-    /*position: absolute;*/
-    /*top: 50%;*/
-    /*transform: translateY(-50%);*/
     margin-left: -1px;
     margin-right: 440px;
     padding-top: 90px;
-    font-family: "League Gothic";
+    font-family: "League Gothic", sans-serif;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
@@ -182,7 +176,7 @@ body {
 .slider__p {
     margin-top: 3px;
     color: white;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 18px;
     font-weight: 300;
     line-height: 24px;
@@ -201,24 +195,22 @@ body {
 .slider__left-arrow a {
     display: none;
     position: absolute;
-    width: 30px;
-    height: 42px;
-    /*top:178px;
-    left: 547px;*/
     top: 179px;
     left: -321px;
+    width: 30px;
+    height: 42px;
     background-image: url(../img/left-arrow.png);
 }
 .slider__right-arrow a {
     display: none;
     position: absolute;
-    width: 30px;
-    height: 42px;
     top: 179px;
     right: -322px;
+    width: 30px;
+    height: 42px;
     background-image: url(../img/right-arrow.png);
 }
-/* Правую стрелку нужно прятать пока ширина меньше 1600 */
+/* Стрелки нужно прятать пока ширина меньше 1600 */
 /* Если этого не сделать, браузер включает горизонтальную прокрутку до стрелки*/
 @media only screen and (min-width: 1600px) {
     .slider__right-arrow a {
@@ -231,10 +223,10 @@ body {
 
 .slider__selector {
     position: absolute;
-    width: 87px;
-    height: 16px;
     bottom: -109px;
     right: 163px;
+    width: 87px;
+    height: 16px;
     /*background-color: red;*/
     background-image: url(../img/slider-selector.png);
     background-repeat: no-repeat;
@@ -255,10 +247,10 @@ body {
 
 .slider__selector {
     position: absolute;
-    width: 87px;
-    height: 16px;
     bottom: -109px;
     right: 163px;
+    width: 87px;
+    height: 16px;
     background-image: url(../img/slider-selector.png);
     background-repeat: no-repeat;
 }
@@ -266,9 +258,9 @@ body {
 .top-row-bg {
     position: absolute;
     box-sizing: border-box;
-    border-top: 1px solid #33253a;
     width: 100%;
     height: 342px;
+    border-top: 1px solid #33253a;
     background-image: linear-gradient(to top, #322539 0%, #745083 100%);
     z-index: -1;
 }
@@ -278,12 +270,11 @@ body {
     width: 100%;
     height: 262px;
     margin-top: 80px;
-    /*background-color: green;*/
 }
 
 .top-row__col {
-    float: left;
     position: relative;
+    float: left;
 }
 .top-row__col--col1 {
     width: 30.104%;
@@ -299,25 +290,25 @@ body {
     background-image: url(../img/sprite.png);
 }
 .top-row__icon--i2 {
+    left: 11px;
     background-image: url(../img/sprite.png);
     background-position: -31px;
-    left: 11px;
 }
 .top-row__icon--i3 {
+    left: 8px;
     background-image: url(../img/sprite.png);
     background-position: -61px;
-    left: 8px;
 }
 .top-row__col-h2 {
     height: 22px;
-    text-shadow: 0.5px 0.9px 0 #0f1518;
+    margin-left: 3px;
     color: white;
-    font-family: "League Gothic";
+    font-family: "League Gothic", sans-serif;
     font-size: 30px;
     font-weight: 400;
     line-height: 24px;
-    margin-left: 3px;
     letter-spacing: -0.1px;
+    text-shadow: 0.5px 0.9px 0 #0f1518;
 }
 .top-row__col-h2--c2 {
      margin-left: 4px;
@@ -327,16 +318,16 @@ body {
   }
 .top-row__col-text {
     overflow: hidden;
-    margin-top: 13px;
-    margin-left: 1px;
     width: 99%;
     height: 120px;
+    margin-top: 13px;
+    margin-left: 1px;
     color: white;
-    text-shadow: 0.5px 0.9px 0 #0f1518;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-weight: 300;
     line-height: 24px;
+    text-shadow: 0.5px 0.9px 0 #0f1518;
     letter-spacing: -0.1px;
     word-wrap: break-word;
 }
@@ -348,19 +339,19 @@ body {
 }
 a.top-row__read-more {
     display: block;
-    text-align: right;
     margin-top: 17px;
     /* Text style for "READ MORE" */
     width: 57px;
     height: 24px;
-    text-shadow: 0.5px 0.9px 0 #0f1518;
-    text-decoration: none;
+    margin-left: 70%;
     color: white;
-    font-family: "League Gothic";
+    font-family: "League Gothic", sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
-    margin-left: 70%;
+    text-align: right;
+    text-decoration: none;
+    text-shadow: 0.5px 0.9px 0 #0f1518;
 }
 a.top-row__read-more--c2 {
     margin-left: 70%;
@@ -384,9 +375,9 @@ a.top-row__read-more:hover {
 }
 
 .top-row__text-block {
+    width: 79.208%;
     margin-left: 61px;
     margin-left: 20.8%;
-    width: 79.208%;
 }
 
 .top-row:after {
@@ -401,10 +392,10 @@ a.top-row__read-more:hover {
 }
 
 .middle-row {
+    box-sizing: border-box;
     height: 487px;
     padding-top: 100px;
     background-color: #f9f9f9;
-    box-sizing: border-box;
     border-bottom: 1px solid #e6e6e6;
 }
 
@@ -415,11 +406,11 @@ a.top-row__read-more:hover {
 }
 
 .mr-left-col__cloud {
+    box-sizing: border-box;
     position: relative;
     height: 294px;
     background-image: url(../img/cloud.png);
     background-size: 100% 100%;
-    box-sizing: border-box;;
 }
 
 .mr-left-col__icon {
@@ -429,7 +420,6 @@ a.top-row__read-more:hover {
     width: 49px;
     height: 51px;
     background-image: url('../img/man.png');
-    /*box-shadow: 1px 1.7px 0 white, inset 1px 1.7px 5px rgba(0, 0, 0, 0.3);*/
 }
 
 .mr-left-col__text-block {
@@ -440,13 +430,13 @@ a.top-row__read-more:hover {
 .mr-left-col__h2 {
     width: 212px;
     height: 22px;
-    text-shadow: 0.5px 0.9px 0 white;
-    font-family: "League Gothic";
+    color: #454545;
+    font-family: "League Gothic", sans-serif;
     font-size: 30px;
     font-weight: 400;
     line-height: 24px;
+    text-shadow: 0.5px 0.9px 0 white;
     text-transform: uppercase;
-    color: #454545;
     letter-spacing: -0.06px;
 }
 
@@ -456,17 +446,17 @@ a.top-row__read-more:hover {
 }
 
 .mr-left-col__p {
-    font-weight: 400;
-    margin-top: 14px;
-    margin-left: -1px;
-    line-height: 24px;
-    letter-spacing: -0.05px;
-    font-family: "Open Sans";
-    font-size: 16px;
-    margin-right: 39px;
-    word-wrap: break-word;
     overflow: hidden;
     height: 170px;;
+    margin-top: 14px;
+    margin-left: -1px;
+    margin-right: 39px;
+    letter-spacing: -0.05px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    word-wrap: break-word;
+    line-height: 24px;
 }
 
 .mr-left-col__selector {
@@ -479,10 +469,10 @@ a.top-row__read-more:hover {
 }
 
 .mr-right-col {
+    box-sizing: border-box;
     float: left;
     width: 50.8%;
     padding-left: 58px;
-    box-sizing: border-box;
     padding-top: 32px;
 }
 
@@ -492,36 +482,36 @@ a.top-row__read-more:hover {
 
 .recent-updates__block-header {
     height: 22px;
-    text-shadow: 0.5px 0.9px 0 white;
+    margin-bottom: 20px;
     color: #454545;
-    font-family: "League Gothic";
+    font-family: "League Gothic", sans-serif;
     font-size: 30px;
     font-weight: 400;
     line-height: 24px;
-    margin-bottom: 20px;
+    text-shadow: 0.5px 0.9px 0 white;
 }
 
 .recent-updates__art-block {
     height: 41px;
-    text-shadow: 0.5px 0.9px 0 white;
+    margin-bottom: 25px;
     color: #454545;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 25px;
+    text-shadow: 0.5px 0.9px 0 white;
 }
 
 .recent-updates__art-header {
-    font-weight: 700;
     margin-left: 66px;
+    font-weight: 700;
 }
 
 .recent-updates__art-text {
-    font-weight: 300;
+    overflow: hidden;
+    height: 26px;
     margin-left: 66px;
     letter-spacing: -0.1px;
-    height: 26px;
-    overflow: hidden;
+    font-weight: 300;
 }
 
 .recent-updates__art-header a {
@@ -556,17 +546,17 @@ a.top-row__read-more:hover {
 
 a.recent-updates__read-more-960 {
     display: block;
+    float: right;
     margin-top: 3px;
     margin-right: 1px;
     color: #454545;
-    font-family: "League Gothic";
+    font-family: "League Gothic", sans-serif;
     font-size: 19px;
     font-weight: 400;
     text-align: right;
     text-decoration: none;
     text-shadow: 0.5px 0.9px 0 white;
     letter-spacing: -0.28px;
-    float: right;
 }
 a.recent-updates__read-more-768 {
     display: none;
@@ -586,9 +576,9 @@ a.recent-updates__read-more-768 {
     box-sizing: border-box;
     position: relative;
     height: 397px;
-    background-color: #ececec;
     padding-top: 96px;
     padding-bottom: 96px;
+    background-color: #ececec;
     z-index: 2;
 }
 
@@ -596,8 +586,8 @@ a.recent-updates__read-more-768 {
     float: left;
     overflow: hidden;
     width: 29.479%;
-    margin-left: -2px;
     height: 100%;
+    margin-left: -2px;
     letter-spacing: -0.1px;
 }
 
@@ -630,11 +620,11 @@ a.recent-updates__read-more-768 {
 }
 
 .pigbuller__copy {
-    font-style: italic;
     padding-top: 58px;
     color: #c5c5c5;
     font-size: 16px;
     font-family: Georgia, sans-serif;
+    font-style: italic;
     text-shadow: 0.5px 0.9px 0 white;
 }
 
@@ -644,7 +634,6 @@ a.recent-updates__read-more-768 {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-weight: 300;
-    /*text-shadow: 0.5px 0.9px 0 white;*/
     line-height: 24px;
 }
 
@@ -653,7 +642,7 @@ a.recent-updates__read-more-768 {
     margin-left: 0px;
     margin-top: 3px;
     color: #454545;
-    font-family: "League Gothic";
+    font-family: "League Gothic", sans-serif;
     font-size: 30px;
     font-weight: 400;
     line-height: 24px;
@@ -664,7 +653,7 @@ a.recent-updates__read-more-768 {
     margin-left: 0px;
     margin-top: 11px;
     color: #787878;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-weight: 300;
     line-height: 24px;
@@ -675,7 +664,7 @@ a.recent-updates__read-more-768 {
     margin-top: 3px;
     margin-left: 0px;
     color: #454545;
-    font-family: "League Gothic";
+    font-family: "League Gothic", sans-serif;
     font-size: 30px;
     font-weight: 400;
     line-height: 24px;
@@ -688,7 +677,7 @@ a.recent-updates__read-more-768 {
     margin-left: 0px;
     text-shadow: 0.5px 0.9px 0 white;
     color: #787878;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-weight: 300;
     line-height: 24px;
@@ -699,9 +688,9 @@ a.recent-updates__read-more-768 {
     content: "";
     display: block;
     position: absolute;
+    bottom: -16px;
     width: 100%;
     height: 16px;
-    bottom: -16px;
     margin: 0 auto;
     background-image: url(../img/shadow-1.png);
 }
@@ -720,10 +709,10 @@ a.recent-updates__read-more-768 {
     top: 42px;
     right: 0px;
     color: white;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 12px;
-    line-height: 34px;
     font-weight: 300;
+    line-height: 34px;
     text-shadow: 1px 1.7px 2px rgba(0, 0, 0, 0.4);
 }
 
