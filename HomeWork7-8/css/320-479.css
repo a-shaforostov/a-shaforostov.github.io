@@ -129,7 +129,7 @@
         border: 1px solid #051116;
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2), inset 0px 1px 1px 0px #503d58;
         z-index: 2;
-        transition: 0.2s;
+        /*transition: 0.2s;*/
     }
 
     .menu:hover .menu__item {

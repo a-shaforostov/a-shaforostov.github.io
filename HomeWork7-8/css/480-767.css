@@ -146,7 +146,7 @@
         border: 1px solid #051116;
         z-index: 2;
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2), inset 0px 1px 1px 0px #503d58;
-        transition: 0.2s;
+        /*transition: 0.2s;*/
     }
 
     .menu ul {
@@ -443,6 +443,8 @@
         height: auto;
         margin: 0 0px;
         padding-left: 0px;
+        background-color: inherit;
+        opacity: 1;
         color: white;
         font-family: 'League Gothic Regular', sans-serif;
         font-size: 20px;
@@ -451,7 +453,6 @@
         line-height: 34px;
         text-shadow: 1px 1.7px 2px rgba(0, 0, 0, 0.4);
         white-space: nowrap;
-        background-color: inherit;
         border: 0px;
         box-shadow: none;
     }
