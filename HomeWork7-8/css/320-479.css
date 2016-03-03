@@ -59,7 +59,7 @@
     .slider__right-arrow a {
         display: block;
         top: 102px;
-        right: -3px;
+        right: 0px;
     }
 
     .slider__selector {
@@ -353,6 +353,19 @@
         height: 422px;
         background-position: center 52px;
         background-image: url(../img/logos-320.png);
+    }
+
+    .logos:after {
+        content: "";
+        position: absolute;
+        bottom: 185px;
+        width: 100%;
+        height: 16px;
+        margin: 0 auto;
+        background-image: url(../img/shadow-1.png);
+        display: block;
+        z-index: 2;
+        background-position-x: center;
     }
 
     .bottom-row {

@@ -16,6 +16,7 @@
 }
 
 body {
+    width: 100%;
 }
 
 .page-header {
@@ -113,6 +114,9 @@ body {
     padding: 0 5px;
 }
 
+.menu__item-link:last-child {
+}
+
 .menu__item-link--bottom {
     padding: 0 0px;
 }
@@ -140,9 +144,10 @@ body {
 
 .slider__content {
     position: relative;
-    width: 960px;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
+    max-width: 960px;
 }
 
 .slider__article {
@@ -176,11 +181,11 @@ body {
 .slider__p {
     margin-top: 3px;
     color: white;
-    font-family: "Open Sans", sans-serif;
     font-size: 18px;
     font-weight: 300;
     line-height: 24px;
     letter-spacing: -0.09px;
+    font-family: "Open Sans", sans-serif;
 }
 
 .slider__image {
@@ -206,7 +211,7 @@ body {
     position: absolute;
     top: 179px;
     right: -322px;
-    width: 30px;
+    width: 27px;
     height: 42px;
     background-image: url(../img/right-arrow.png);
 }
@@ -317,9 +322,7 @@ body {
       margin-left: 6px;
   }
 .top-row__col-text {
-    overflow: hidden;
-    width: 99%;
-    height: 120px;
+    width: 98.7%;
     margin-top: 13px;
     margin-left: 1px;
     color: white;
@@ -330,6 +333,8 @@ body {
     text-shadow: 0.5px 0.9px 0 #0f1518;
     letter-spacing: -0.1px;
     word-wrap: break-word;
+    height: 119px;
+    overflow: hidden;
 }
 .top-row__col-text--c2 {
     margin-left: 2px;
@@ -343,7 +348,6 @@ a.top-row__read-more {
     /* Text style for "READ MORE" */
     width: 57px;
     height: 24px;
-    margin-left: 70%;
     color: white;
     font-family: "League Gothic", sans-serif;
     font-size: 18px;
@@ -352,9 +356,10 @@ a.top-row__read-more {
     text-align: right;
     text-decoration: none;
     text-shadow: 0.5px 0.9px 0 #0f1518;
+    margin-left: 70%;
 }
 a.top-row__read-more--c2 {
-    margin-left: 70%;
+    margin-left: 70.6%;
 }
 a.top-row__read-more--c3 {
     margin-left: 74%;
@@ -686,13 +691,13 @@ a.recent-updates__read-more-768 {
 
 .bottom-row:after {
     content: "";
-    display: block;
     position: absolute;
     bottom: -16px;
     width: 100%;
     height: 16px;
     margin: 0 auto;
     background-image: url(../img/shadow-1.png);
+    display: block;
 }
 
 .footer {
@@ -714,6 +719,7 @@ a.recent-updates__read-more-768 {
     font-weight: 300;
     line-height: 34px;
     text-shadow: 1px 1.7px 2px rgba(0, 0, 0, 0.4);
+    width: 139px;
 }
 
 a.designed__link {
