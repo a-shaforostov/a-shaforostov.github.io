@@ -27,7 +27,7 @@ var pageFactory = {
 
     createControls: function (parentElement) {
         // Переменная для хранения созданного элемента
-        var currentElement;
+        var currentElement, label, checkBox, textNode;
         // Цикл для каждого вопроса
         for (var i = 1; i <= 3; i++) {
             // Создать заголовок вопроса
@@ -38,13 +38,12 @@ var pageFactory = {
             // В цикле создать варианты ответов
             for (var j = 1; j <= 3; j++) {
                 // Создать вариант ответа и добавить его в группу контролов
-                currentElement = document.createElement('input');
-                currentElement.setAttribute('type', 'checkbox');
-                parentElement.appendChild(currentElement);
-                // Создать и добавить текст варианта ответа
-                parentElement.appendChild(document.createTextNode('Вариант ответа №'+j));
-                // Создать и добавить переход на новую строку
-                parentElement.appendChild(document.createElement('br'));
+                currentElement = parentElement.appendChild(document.createElement('div'));
+                currentElement.classList.add('radio');
+                label = currentElement.appendChild(document.createElement('label'));
+                checkBox = label.appendChild(document.createElement('input'))
+                checkBox.setAttribute('type', 'checkbox');
+                textNode = label.appendChild(document.createTextNode('Вариант ответа №'+j));
             }
         }
     },
