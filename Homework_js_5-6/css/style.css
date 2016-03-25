@@ -1,0 +1,45 @@
+.container {
+    width: 400px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.timer {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid blue;
+    border-radius: 6px;
+    background-color: #DDD;
+    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.glyphicon-time {
+    position: absolute;
+    font-size: 30px;
+    left: 8px;
+    top: 8px;
+}
+
+.timer__display {
+    width: 360px;
+    margin: 0 auto;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.timer__display > span {
+    font-size: 0.7em;
+}
+
+.timer__button-panel {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.btn {
+    margin-left: 5px;
+    margin-right: 5px;
+}
