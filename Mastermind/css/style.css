@@ -1,0 +1,351 @@
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+body {
+    position: relative;
+    box-sizing: border-box;
+    height: 100vh;
+    min-height: 650px;
+    padding: 5px 0px 10px 0px;
+    background-image: url(../img/background.jpg);
+    background-position: center;
+}
+
+ul {
+    text-align: center;
+    list-style: none;
+}
+
+.field {
+    width: 960px;
+    margin: 0px auto;
+    padding-top: 2px;
+}
+
+/*Если высота экрана больше, чем высота игрового поля, то центрировать по вертикали */
+@media (min-height: 636px) {
+    .field {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 960px;
+        height: 635px;
+        margin: 0;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.scores {
+    float: left;
+    width: 200px;
+    height: 625px;
+    margin-right: 30px;
+    padding-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    color: #472e0a;
+}
+
+.scores__value {
+    margin: 5px;
+    border: 2px solid #472e0a;
+    border-radius: 5px;
+    color: black;
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+.scores__caption {
+    margin-bottom: 20px;
+    font-family: impact, sans-serif;
+    font-size: 18px;
+}
+
+.scores__btn {
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    color: red;
+    transition: all 0.5s;
+}
+
+.scores__btn:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: yellow;
+    transition: all 0.5s;
+}
+
+.scores__game-control {
+    height: 100px;
+    padding: 5px 0;
+    background-image: url(../img/ICheckFlag.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px;
+}
+
+.board {
+    float: left;
+    width: 402px;
+    padding-top: 5px;
+    border-radius: 3px;
+    background-image: url(../img/wood-bg.jpg);
+    background-position: center;
+    box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.8);
+}
+
+.hidden-area {
+    width: 254px;
+    margin: 0 auto;
+}
+
+.road>li {
+    margin-top: 5px;
+}
+
+.hidden-pins, .pins {
+    float: left;
+    width: 240px;
+    margin: 0px 5px;
+    border: 2px solid #472e0a;
+    border-radius: 5px;
+    background-image: url(../img/pins-grid.png);
+    background-repeat: repeat-x;
+}
+
+.select-pins {
+    float: left;
+    width: 369px;
+    margin: 5px 10px 10px 10px;
+    padding-left: 9px;
+    border: 2px solid #472e0a;
+    border-radius: 5px;
+    background-image: url(../img/pins-grid.png);
+    background-position: 9px center;
+    background-repeat: repeat-x;
+    cursor: pointer;
+}
+
+.numbers {
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin: 0px 0px 0px 10px;
+    border: 2px solid #472e0a;
+    border-radius: 5px;
+    color: #e1bb00;
+    font-size: 50px;
+    text-shadow: 4px 4px 1px rgba(2, 2, 2, 0.8);
+}
+
+.pins {
+    cursor: pointer;
+}
+
+.pin, .select-pin {
+    float: left;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.select-pin:hover {
+    box-sizing: border-box;
+    border-bottom: 3px solid black;
+}
+
+.pin:hover {
+    box-sizing: border-box;
+    border-bottom: 3px solid black;
+}
+
+.red-pin {
+    background-image: url(../img/ball_red1.png);
+}
+
+.blue-pin {
+    background-image: url(../img/ball_blue1.png);
+}
+
+.yellow-pin {
+    background-image: url(../img/ball_yellow1.png);
+}
+
+.brown-pin {
+    background-image: url(../img/ball_brown1.png);
+}
+
+.green-pin {
+    background-image: url(../img/ball_green1.png);
+}
+
+.pink-pin {
+    background-image: url(../img/ball_pink.png);
+}
+
+.answers-pane {
+    position: relative;
+    float: left;
+    width: 64px;
+    height: 64px;
+    margin: 0px 10px 0px 0px;
+}
+
+.answers {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+    border: 2px solid #472e0a;
+    border-radius: 5px;
+}
+
+.answer {
+    float: left;
+    width: 26px;
+    height: 26px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.answer-black {
+    background-image: url(../img/answer_black.png);
+}
+
+.answer-white {
+    background-image: url(../img/answer_white.png);
+}
+
+.answer-empty {
+    /*background-image: url(../img/answer_empty.png);*/
+    background-image: none;
+}
+
+.check-button {
+    position: absolute;
+    box-sizing: border-box;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    background-image: url(../img/question_button.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.check-button:hover {
+    opacity: 1;
+    transition: all 1s;
+}
+
+.rules {
+    float: left;
+    box-sizing: border-box;
+    width: 298px;
+    margin-left: 30px;
+    padding: 13px;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: all 0.5s;
+}
+
+.rules:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: all 0.5s;
+}
+
+.rules__h1 {
+    margin: 0px;
+    color: #472e0a;
+    font-size: 24px;
+    text-align: center;
+}
+
+.rules__h2 {
+    margin: 15px 0px 5px 0px;
+    color: #472e0a;
+    font-size: 18px;
+}
+
+.rules > p {
+    margin: 7px 0px;
+    line-height: 18px;
+}
+
+.copyright {
+    float: left;
+    box-sizing: border-box;
+    width: 298px;
+    margin-left: 30px;
+    margin-top: 15px;
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    transition: all 0.5s;
+}
+.copyright:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: all 0.5s;
+}
+.copyright > a {
+    color: blue;
+}
+
+.final-screen {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.final-screen__dialog {
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    width: 300px;
+    height: 330px;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.final-screen__dialog > i {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    background-image: url(../img/Lose.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 190px;
+}
+
+.final-screen__result-area {
+    width: 254px;
+    margin: 0 auto;
+}
+
+.result-pins {
+    float: left;
+    width: 240px;
+    margin: 10px 5px;
+    border: 2px solid #472e0a;
+    border-radius: 5px;
+    background-image: url(../img/pins-grid.png);
+    background-repeat: repeat-x;
+}
+
+.result-pins > .pin:hover {
+    border: none;
+    cursor: default;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru-UA" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <title>Быки и коровы</title>
+
+    <!-- You can use open graph tags to customize link previews.
+    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+    <meta property="og:url"           content="http://a-shaforostov.github.io/Mastermind/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Быки и коровы" />
+    <meta property="og:description"   content="Игра, написанная после 2-х месяцев изучения HTML, CSS, JS на курсе http://fe.goit.ua/" />
+    <meta property="og:image"         content="http://a-shaforostov.github.io/Mastermind/img/cow.jpg" />
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.5&appId=1701068273498187";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '1701068273498187',
+                xfbml      : true,
+                version    : 'v2.5'
+            });
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <div class="field clearfix">
+        <div class="scores">
+            <p class="scores__attempts scores__value">0</p><p class="scores__caption">Игры</p>
+            <p class="scores__wins scores__value">0</p><p class="scores__caption">Победы</p>
+            <p class="scores__record scores__value">0</p><p class="scores__caption">Рекорд</p>
+            <p class="scores__average scores__value">0</p><p class="scores__caption">Средний показатель</p>
+            <div class="scores__btn">
+                <p class="scores__game-control"></p><p class="scores__caption">Начать раунд</p>
+            </div>
+            <div
+                class="fb-like"
+                data-href="http://a-shaforostov.github.io/Mastermind/"
+                data-layout="box_count"
+                data-action="like"
+                data-show-faces="true"
+                data-share="true">
+            </div>
+        </div>
+        <div class="board clearfix">
+            <div class="hidden-area clearfix" hidden>
+                <ul class="hidden-pins">
+                    <li class="pin red-pin"></li>
+                    <li class="pin empty-pin"></li>
+                    <li class="pin yellow-pin"></li>
+                    <li class="pin brown-pin"></li>
+                </ul>
+            </div>
+            <ul class="road clearfix">
+            </ul>
+            <ul class="select-pins">
+                <li class="select-pin red-pin" data-color="red"></li>
+                <li class="select-pin blue-pin" data-color="blue"></li>
+                <li class="select-pin green-pin" data-color="green"></li>
+                <li class="select-pin yellow-pin" data-color="yellow"></li>
+                <li class="select-pin brown-pin" data-color="brown"></li>
+                <li class="select-pin pink-pin" data-color="pink"></li>
+            </ul>
+        </div>
+        <div class="rules">
+            <h1 class="rules__h1">Быки и коровы</h1>
+            <h2 class="rules__h2">Правила игры</h2>
+            <p>Компьютер загадывает 4 цвета из 6-ти возможных. Цвета могут повторяться.</p>
+            <p>Игрок должен отгадать все загаданные цвета. Количество попыток соответству&shy;ет количеству рядов на поле.</p>
+            <p>Игрок заполняет активный ряд фишка&shy;ми из доступных в нижнем ряду.</p>
+            <p>Ошибочно установленную фишку мож&shy;но удалить нажав на неё.</p>
+            <p>После установки всех фишек Игрок на&shy;жи&shy;мает на кнопку проверки.</p>
+            <p>Компьютер проверяет правильность заполнения и выводит результат.</p>
+            <p>Черная отметка означает что одна из фишек находится на своем месте.</p>
+            <p>Белая отметка означает, что фишка угадана, но стоит не на своем месте.</p>
+            <p>Игрок побеждает, если за отведенное количество попыток угадывает комби&shy;нацию цветов.</p>
+            <p>Игрок побеждает, если за отведенное количество попыток угадывает комби&shy;нацию цветов.</p>
+        </div>
+        <div class="copyright">
+            <a href="https://www.facebook.com/profile.php?id=100007185432193" target="_blank">Шафоростов Андрей</a>
+            &copy; 2016
+        </div>
+    </div>
+    <div class="final-screen" hidden>
+        <div class="final-screen__dialog">
+            <i></i>
+            <div class="final-screen__result-area clearfix">
+                <ul class="result-pins">
+                    <li class="pin empty-pin"></li>
+                    <li class="pin empty-pin"></li>
+                    <li class="pin empty-pin"></li>
+                    <li class="pin empty-pin"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js" charset="utf-8"></script>
+
+</body>
+</html>
