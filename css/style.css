@@ -1,0 +1,51 @@
+.mastermind {
+    position: absolute;
+    left: 600px;
+    top: 20px;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 0 6px gray;
+    box-shadow: 0 0 6px gray;
+}
+
+.mastermind p {
+    margin: 0;
+    padding: 0;
+}
+
+.mastermind a {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.mastermind:hover p {
+    background-color: #26ddff;
+    border-radius: 0px 0px 6px 6px;
+    transition: .6s;
+}
+
+.mastermind i {
+    display: inline-block;
+    background-image: url(../Mastermind/img/cow.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 135px;
+    height: 100px;
+    transition-duration: 0.5s;
+}
+
+.mastermind:hover i {
+    display: inline-block;
+    background-image: url(../Mastermind/img/cow.jpg);
+    width: 135px;
+    height: 172px;
+    transition-duration: 0.5s;
+}

@@ -1,0 +1,114 @@
+.wrapper {
+    float: left;
+    height: 410px;
+    margin: 30px 30px;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+.wrapper-left {
+    width: 400px;
+}
+
+.tab-control {
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+.tab-header {
+    list-style: none;
+    margin-bottom: 5px;
+    padding: 5px 5px 0px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    background-color: lightgray;
+    background-image: -webkit-linear-gradient(#b5b5b5, #d9d9d9);
+    background-image: -o-linear-gradient(#b5b5b5, #d9d9d9);
+    background-image: linear-gradient(#b5b5b5, #d9d9d9);
+}
+
+.tab {
+    display: inline-block;
+    margin: 5px 1px -1px;
+    border: 1px solid gray;
+    border-radius: 3px 3px 0 0;
+    background-image: -webkit-linear-gradient(#ffffff, #b5b5b5);
+    background-image: -o-linear-gradient(#ffffff, #b5b5b5);
+    background-image: linear-gradient(#ffffff, #b5b5b5);
+}
+
+.active-tab {
+    margin-bottom: -1px;
+    padding-bottom: 1px;
+    border-bottom-width: 0;
+    background-color: white;
+    background-image: none;
+}
+
+.active-tab a {
+    cursor: default;
+}
+
+.tab:hover {
+    background-image: -webkit-linear-gradient(#ffffff, #b5b500);
+    background-image: -o-linear-gradient(#ffffff, #b5b500);
+    background-image: linear-gradient(#ffffff, #66b5b5);
+}
+
+.active-tab:hover {
+    background-image: none;
+}
+
+.tab a {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: inherit;
+    line-height: 16px;
+}
+
+.tab-body {
+    padding: 10px;
+    background-color: white;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+.tab-body p {
+    margin-top: 5px;
+}
+
+
+.wrapper-right {
+    width: 600px;
+    font-size: 12px;
+}
+
+.fieldset {
+    border: 1px solid gray;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.control-row {
+    position: relative;
+    margin: 15px 0;
+}
+
+.control-row label {
+    display: inline-block;
+    width: 80px;
+}
+
+.hint {
+    position: absolute;
+    display: none;
+    left: 250px;
+    top: -4px;
+    padding: 4px 6px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+}
