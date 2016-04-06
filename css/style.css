@@ -1,14 +1,51 @@
+body {
+    background-color: #f9f9f9;
+    padding: 0px 20px 0px;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 20px 0 10px;
+}
+
+.homeworks {
+    float: left;
+    width: 600px;
+    height: 100%;
+    min-height: 100vh;
+    line-height: 24px;
+}
+
+nav a {
+    color: blue;
+    text-decoration: underline;
+}
+
+nav a:visited {
+    color: darkblue;
+    text-decoration: underline;
+}
+
+nav a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+.additional {
+    float: left;
+    height: 310px;
+}
+
 .mastermind {
-    position: absolute;
-    left: 600px;
-    top: 20px;
     width: 200px;
     padding: 10px;
-    text-align: center;
     border: 1px solid black;
     border-radius: 6px;
+    background-color: white;
+    text-align: center;
     -webkit-box-shadow: 0 0 6px gray;
     box-shadow: 0 0 6px gray;
+    position: relative;
 }
 
 .mastermind p {
@@ -48,4 +85,19 @@
     width: 135px;
     height: 172px;
     transition-duration: 0.5s;
+}
+
+
+.tests-upwork
+    float: left;{
+}
+
+.tests-upwork {
+    float: left;
+    vertical-align: top;
+    margin-left: -5px;
+}
+
+.tests-upwork img {
+    vertical-align: top;
 }
