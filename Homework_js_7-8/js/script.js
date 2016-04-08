@@ -30,19 +30,20 @@ $(function() {
     var $formFS = $form.find('.fieldset');
 
     $formFS.on('focusin mouseenter', 'input', function(e) {
-        var $hint = $(e.target.parentNode).find('.hint');
+        $('.hint').stop(true, true);
+        var $hint = $(this.parentNode).find('.hint');
         $hint.fadeIn();
     });
 
     $formFS.on('focusout mouseleave', 'input', function(e) {
         // Если элемент в фокусе - не убирать подсказку
-        if (e.target === document.activeElement) return;
+        if (this === document.activeElement) return;
 
-        var $hint = $(e.target.parentNode).find('.hint');
-        $hint.stop().fadeOut();
+        var $hint = $(this.parentNode).find('.hint');
+        $hint.stop(true, true).fadeOut();
     });
 
     $form.on('click', '#show-help',function(e) {
-        $('.hint').stop().fadeIn();
+        $('.hint').stop(true, true).fadeIn();
     });
 });
