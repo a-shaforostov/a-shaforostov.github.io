@@ -36,8 +36,10 @@ nav a:hover {
     height: 310px;
 }
 
-.mastermind {
-    width: 200px;
+.add-work {
+    float: left;
+    width: 160px;
+    margin-right: 10px;
     padding: 10px;
     border: 1px solid black;
     border-radius: 6px;
@@ -48,12 +50,12 @@ nav a:hover {
     position: relative;
 }
 
-.mastermind p {
+.add-work p {
     margin: 0;
     padding: 0;
 }
 
-.mastermind a {
+.add-work a {
     display: block;
     position: absolute;
     left: 0px;
@@ -62,15 +64,14 @@ nav a:hover {
     height: 100%;
 }
 
-.mastermind:hover p {
+.add-work:hover p {
     background-color: #26ddff;
     border-radius: 0px 0px 6px 6px;
     transition: .6s;
 }
 
-.mastermind i {
+.add-work i {
     display: inline-block;
-    background-image: url(../Mastermind/img/cow.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -79,17 +80,22 @@ nav a:hover {
     transition-duration: 0.5s;
 }
 
-.mastermind:hover i {
+.add-work:hover i {
     display: inline-block;
-    background-image: url(../Mastermind/img/cow.jpg);
     width: 135px;
     height: 172px;
     transition-duration: 0.5s;
 }
 
+.mastermind i {
+    background-image: url(../Mastermind/img/cow.jpg);
+}
+.balls i {
+    background-image: url(../Balls/img/field.jpg);
+}
 
-.tests-upwork
-    float: left;{
+.tests-upwork {
+    float: left;
 }
 
 .tests-upwork {

@@ -10,14 +10,14 @@ body {
     background-color: white;
     border: 1px solid black;
     margin: auto;
+    background-image: url(../img/grass1.jpg);
 }
 
 .ball {
     position: absolute;
     left: 0px;
     top: 0px;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    background-color: green;
+    width: 48px;
+    height: 48px;
+    background-image: url(../img/ball.png);
 }
