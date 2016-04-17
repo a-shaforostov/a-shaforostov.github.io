@@ -1,0 +1,23 @@
+body {
+    height: 100vh;
+    background-color: lightgray;
+}
+
+.box {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid black;
+    margin: auto;
+}
+
+.ball {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: green;
+}
