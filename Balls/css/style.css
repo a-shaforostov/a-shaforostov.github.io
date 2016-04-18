@@ -21,3 +21,8 @@ body {
     height: 48px;
     background-image: url(../img/ball.png);
 }
+
+.result {
+    width: 400px;
+    margin: 0 auto;
+}

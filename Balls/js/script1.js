@@ -1,7 +1,11 @@
 var G = 9.81; // Ускорение свободного падения
-var SCALE = 20; // px в метре
-var KSOPR = 0.35; // Ускорение сопротивления
+var SCALE = 20; // Масштаб (количество пикселов в метре)
+var KSOPR = 0.35; // Ускорение, которое создает сила сопротивления
 
+// Конструктор класса мяча
+// @el {element} элемент DOM которому суждено стать мячом
+// @options {object} объект с параметрами (подробнее в примере)
+// result {object} возвращает объект мяча
 function Ball(el, options) {
     var defaults = {
         //       X  Y
@@ -11,29 +15,30 @@ function Ball(el, options) {
         kupr: 0.55 // Коэффициент упругости мяча
     };
     // Сформировать параметры как микс умолчаний и опций
-    var coords = options ? (options.coords ? options.coords : defaults.coords) : defaults.coords;
-    var speed = options ? (options.speed ? options.speed : defaults.speed) : defaults.speed;
-    var accel = options ? (options.accel ? options.accel : defaults.accel) : defaults.accel;
-    var kupr = options ? (options.kupr ? options.kupr : defaults.kupr) : defaults.kupr;
+    var coords = options && options.coords ? options.coords : defaults.coords;
+    var speed = options && options.speed ? options.speed : defaults.speed;
+    var accel = options && options.accel ? options.accel : defaults.accel;
+    var kupr = options && options.kupr ? options.kupr : defaults.kupr;
 
-    // Внутренние переменные
+    // Приватные свойства
     var timeStamp;
     var intervalId;
     var endAnimationEvent;
     var rot = 0; // Начальный угол поворота
     var rotSpeed = 1; // Начальная скорость вращения
 
-    // Запуск таймера public
+    // Запуск анимации (public)
+    // @interval {number} интервал таймера. Чем меньше, тем лучше
+    // @onEndAnimation {function(ball){}} Callback функция, в которую передается название мяча, который остановился.
     this.start = function(interval, onEndAnimation) {
         endAnimationEvent = onEndAnimation;
         timeStamp = performance.now();
         intervalId = setInterval(updateState, interval);
     };
 
-    // Остановка анимации public
+    // Остановка анимации (public)
     this.stop = function() {
-        if (intervalId) clearInterval(intervalId);
-        intervalId = undefined;
+       clearInterval(intervalId);
     }
 
     // Пересчитывает изменение состояния за интервал времени с момента предыдущего запуска и обновляет свойства объекта
@@ -43,8 +48,15 @@ function Ball(el, options) {
         var delta = (now - timeStamp)/1000; // Время, прошедшее с прошлого вызова, в секундах
         timeStamp = now;
 
+        // Получение размера поля, доступного для движения мяча
+        var parentEl = el.parentElement;
+        var fieldSize = {
+            w: (parentEl.clientWidth - el.offsetWidth)/SCALE,
+            h: (parentEl.clientHeight - el.offsetHeight)/SCALE
+        };
+
         // Пересчет координаты
-        coords[0] = coords[0] + speed[0]*delta - accel[0]*Math.pow(delta,2)/2;
+        coords[0] = coords[0] + speed[0]*delta + accel[0]*Math.pow(delta,2)/2;
         coords[1] = coords[1] + speed[1]*delta + accel[1]*Math.pow(delta,2)/2;
         // Пересчет скорости
         speed[0] = speed[0] + accel[0]*delta;
@@ -53,17 +65,11 @@ function Ball(el, options) {
         // Если мяч остановился, остановить анимацию и вызвать callback
         // Мяч остановился если длина вектора скорости меньше определенного порога
         if ( Math.sqrt( Math.pow(speed[0],2) + Math.pow(speed[1],2) ) < .5 ) {
+            el.style.top = fieldSize.h*SCALE+'px'; // Прижать мяч к грунту
             clearInterval(intervalId);
-            endAnimationEvent();
+            endAnimationEvent(el.id);
             return;
         }
-
-        // Получение размера поля, доступного для движения мяча
-        var parentEl = el.parentElement;
-        var fieldSize = {
-            w: (parentEl.clientWidth - el.offsetWidth)/SCALE,
-            h: (parentEl.clientHeight - el.offsetHeight)/SCALE
-        };
 
         // Проверка координаты X на выход за пределы родителя
         if (coords[0] <= 0 || coords[0] >= fieldSize.w) {
@@ -88,7 +94,25 @@ function Ball(el, options) {
     }
 
     return this;
+};
+
+// Callback для вызова после завершения анимации мяча
+function finalCallback(ball) {
+    var res = document.querySelector('.result');
+    var div = document.createElement('div');
+    div.innerHTML = 'Завершилась анимация мяча '+ball;
+    res.appendChild(div);
 }
 
-var b1 = Ball(document.getElementById('b1'), {kupr: 0.55});
-b1.start(10, function() {alert('Анимация мяча завершена')});
+// Первый мяч с дефолтными настройками
+var b1 = new Ball(document.getElementById('b1'));
+b1.start(10, finalCallback);
+
+// Второй мяч с кастомными настройками
+var b2 = new Ball(document.getElementById('b2'), {
+    coords: [370/SCALE, 200/SCALE], // Начальные координаты (в пикселах родительского элемента). Доступна ширина/высота родителя минус ширина/высота мяча
+    speed: [360/SCALE, -360/SCALE], // Скорость пикс/сек. X вправо Y вверх
+    accel: [-KSOPR, G], // Ускорение по X противоположно скорости, ускорение по Y - вниз
+    kupr: 0.7 // Коэффициент упругости при отскакивания от стены. 0.8 - фитбол, 0.55 - футбол, 0.1 - кирпич
+});
+b2.start(10, finalCallback);
