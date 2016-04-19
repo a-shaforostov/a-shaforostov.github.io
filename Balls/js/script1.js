@@ -39,7 +39,7 @@ function Ball(el, options) {
     // Остановка анимации (public)
     this.stop = function() {
        clearInterval(intervalId);
-    }
+    };
 
     // Пересчитывает изменение состояния за интервал времени с момента предыдущего запуска и обновляет свойства объекта
     var updateState = function() {
@@ -69,7 +69,7 @@ function Ball(el, options) {
             clearInterval(intervalId);
             endAnimationEvent(el.id);
             return;
-        }
+        };
 
         // Проверка координаты X на выход за пределы родителя
         if (coords[0] <= 0 || coords[0] >= fieldSize.w) {
@@ -83,7 +83,7 @@ function Ball(el, options) {
             coords[1] <= 0 ? coords[1] = 0 : coords[1] = fieldSize.h; // Вернуть мяч в границы поля
             speed[1] *= -kupr; // Развернуть вектор скорости в обратную сторону и применить коэфф. упругости мяча
             rotSpeed = 3.14*2*speed[0]/SCALE; // При касании земли скорректировать скорость вращения в пикселах
-        }
+        };
 
         // Отрисовать изменения координат мяча
         el.style.left = coords[0]*SCALE+'px';
@@ -91,7 +91,7 @@ function Ball(el, options) {
         // Повернуть мяч на скорость вращения
         rot += rotSpeed;
         el.style.transform = 'rotate('+rot+'deg)';
-    }
+    };
 
     return this;
 };
@@ -102,17 +102,20 @@ function finalCallback(ball) {
     var div = document.createElement('div');
     div.innerHTML = 'Завершилась анимация мяча '+ball;
     res.appendChild(div);
-}
+};
+
+window.onload = function() {
 
 // Первый мяч с дефолтными настройками
-var b1 = new Ball(document.getElementById('b1'));
-b1.start(10, finalCallback);
+    var b1 = new Ball(document.getElementById('b1'));
+    b1.start(10, finalCallback);
 
 // Второй мяч с кастомными настройками
-var b2 = new Ball(document.getElementById('b2'), {
-    coords: [370/SCALE, 200/SCALE], // Начальные координаты (в пикселах родительского элемента). Доступна ширина/высота родителя минус ширина/высота мяча
-    speed: [360/SCALE, -360/SCALE], // Скорость пикс/сек. X вправо Y вверх
-    accel: [-KSOPR, G], // Ускорение по X противоположно скорости, ускорение по Y - вниз
-    kupr: 0.7 // Коэффициент упругости при отскакивания от стены. 0.8 - фитбол, 0.55 - футбол, 0.1 - кирпич
-});
-b2.start(10, finalCallback);
+    var b2 = new Ball(document.getElementById('b2'), {
+        coords: [370 / SCALE, 200 / SCALE], // Начальные координаты (в пикселах родительского элемента). Доступна ширина/высота родителя минус ширина/высота мяча
+        speed: [360 / SCALE, -360 / SCALE], // Скорость пикс/сек. X вправо Y вверх
+        accel: [-KSOPR, G], // Ускорение по X противоположно скорости, ускорение по Y - вниз
+        kupr: 0.7 // Коэффициент упругости при отскакивания от стены. 0.8 - фитбол, 0.55 - футбол, 0.1 - кирпич
+    });
+    b2.start(10, finalCallback);
+};
