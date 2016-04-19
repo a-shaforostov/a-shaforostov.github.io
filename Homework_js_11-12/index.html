@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru-UA">
+<head>
+    <meta charset="UTF-8">
+    <title>ДЗ № 11-12 JS</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/myCarousel.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/tmpl.js" charset="utf-8"></script>
+    <script src="js/myCarousel.js" charset="utf-8"></script>
+    <script src="js/script.js" charset="utf-8"></script>
+</head>
+<body>
+    <script type="text/template" id="my-carousel-template">
+        <ul>
+            <% for (var i = 0; i < items.length; i++) { %>
+            <li><img src="img/<%= items[i].filename %>" alt=""><p><%= items[i].caption %></p></li>
+            <% }; %>
+        </ul>
+    </script>
+    <div class="my-carousel">
+        <div class="carousel-left">Влево</div>
+        <div class="carousel-right">Вправо</div>
+    </div>
+
+    <div class="content">
+        <h2>Использование карусели my-carousel</h2>
+        <p class="p-topic">1. Подготовьте такую структуру:</p>
+            <xmp>
+                <div class="my-carousel">
+                    <div class="carousel-left">Влево</div>
+                        <ul>
+                            <li><img src="img/01.jpg" alt=""><p>Элемент 1</p></li>
+                            ...
+                            <li><img src="img/10.jpg" alt=""><p>Элемент 10</p></li>
+                        </ul>
+                    <div class="carousel-right">Вправо</div>
+                </div>
+            </xmp>
+        <p>
+            Оптимальный размер картинок 200х200 px. <br>
+            <b>.carousel-left</b> и <b>.carousel-right</b> - кнопки прокрутки. <br>
+        </p>
+        <p class="p-topic">2. Преобразуйте структуру в карусель вызовом <b>$('.my-carousel').myCarousel(options);</b></p>
+        <p>Вызов <b>myCarousel([options])</b>: <br>
+            <b>options</b> - объект с параметрами карусели.
+        </p>
+        <p>
+            Может содержать свойства: <br>
+                <b>focusedElement {number}</b> - Индекс элемента, который изначально должен находиться в фокусе. <br>
+                Индекс первого элемента = 0. <br>
+                Попадание в диапазон контролируется.
+        </p>
+        <p class="p-topic">3. В результате преобразования получится следующая структура:</p>
+        <xmp>
+            <div class="my-carousel clearfix">
+                <div class="carousel-left">Влево</div>
+                    <div class="carousel-hider">
+                        <ul class="carousel-list clearfix">
+                            <li class="carousel-element">
+                                <img src="img/01.jpg" alt=""><p>Элемент 1</p>
+                            </li>
+                            ...
+                            <li class="carousel-element">
+                                <img src="img/10.jpg" alt=""><p>Элемент 10</p>
+                            </li>
+                        </ul>
+                    </div>
+                <div class="carousel-right">Вправо</div>
+            </div>
+        </xmp>
+    </div>
+</body>
+</html>

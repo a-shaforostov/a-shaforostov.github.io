@@ -1,0 +1,91 @@
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.my-carousel {
+    position: relative;
+    height: 220px;
+    width: 803px;
+}
+
+.carousel-left, .carousel-right {
+    float: left;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 10px;
+    padding: 3px 7px;
+    background-color: lightgray;
+    border: 1px solid black;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.disabled-button {
+    cursor: default;
+    color: gray;
+    background-color: lightgray;
+}
+
+.carousel-hider {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 640px;
+}
+
+.carousel-list {
+    position: relative;
+    list-style: none;
+    left: 0;
+    width: 10000px;
+    padding: 0;
+}
+
+.carousel-element {
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.carousel-element img {
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+    transition: all linear 600ms;
+}
+
+.focused-element img {
+    width: 200px;
+    height: 200px;
+    margin-top: 0;
+    transition: all linear 600ms;
+}
+
+/* Прозрачность на краях карусели */
+.carousel-hider:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 50px;
+    height: 219px;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    z-index: 1;
+}
+.carousel-hider:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 50px;
+    height: 219px;
+    background: -webkit-linear-gradient(right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    z-index: 1;
+}

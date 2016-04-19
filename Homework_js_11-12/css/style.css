@@ -1,0 +1,38 @@
+body {
+    padding: 20px;
+}
+
+/* Позиционирование карусели */
+.my-carousel {
+    margin: 20px auto;
+}
+
+/* Кастомизация внешнего вида карусели */
+.carousel-left:hover, .carousel-right:hover {
+    background-color: darkgray;
+}
+
+.disabled-button:hover {
+    background-color: lightgray;
+}
+
+/* Инструкция по использованию */
+.content h2 {
+    font-size: 18px;
+    margin: 20px;
+}
+
+.content p {
+    margin: 10px 40px;
+    line-height: 30px;
+}
+
+.content .p-topic {
+    margin: 10px 20px;
+}
+
+.content xmp {
+    background-color: lightgray;
+    border: 1px solid black;
+    margin: 0 40px;
+}
