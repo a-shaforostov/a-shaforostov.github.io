@@ -1,0 +1,15 @@
+.wrapper {
+    width: 900px;
+    margin: 0 auto;
+    background-color: lightyellow;
+}
+
+.search-edit {
+    margin: 10px 20px;
+    width: 700px;
+}
+
+.search-submit {
+    margin: 10px 20px;
+    width: 112px;
+}

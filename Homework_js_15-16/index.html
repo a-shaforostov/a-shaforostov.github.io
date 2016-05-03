@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru-UA">
+<head>
+    <meta charset="UTF-8">
+    <title>ДЗ JS 15-16</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/tmpl.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <script type="text/template" id="search-response">
+        <ul>
+            <li>
+                <a href="" class="link"></a>
+                <div class="url"></div>
+                <div class="brief"></div>
+            </li>
+        </ul>
+    </script>
+    <div class="wrapper">
+        <div class="search-form">
+            <form action="www.infotrack.com.ua" target="_blank" method="get">
+                <input class="search-edit" type="text" name="request">
+                <input class="search-submit" type="submit">
+            </form>
+        </div>
+        <div class="results"></div>
+    </div>
+</body>
+</html>
