@@ -1,6 +1,15 @@
+li {
+    list-style: none;
+}
+
 .wrapper {
     width: 900px;
     margin: 0 auto;
+    font-size: 13px;
+    color: #545454;
+}
+
+.search-form {
     background-color: lightyellow;
 }
 
@@ -12,4 +21,38 @@
 .search-submit {
     margin: 10px 20px;
     width: 112px;
+}
+
+#results {
+    margin: 20px 0;
+    width: 600px;
+}
+
+.result-item {
+    margin: 20px 0;
+}
+
+.link {
+    font-size: 18px;
+    text-decoration: none;
+    color: #1a0dab;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: #1a0dab;
+}
+
+.link:visited {
+    color: #609;
+}
+
+.url {
+    font-size: 14px;
+    color: #006621;
+}
+
+.brief {
+    line-height: 18.2px;
+    word-wrap: break-word;
 }

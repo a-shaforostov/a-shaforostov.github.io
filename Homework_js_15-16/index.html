@@ -11,13 +11,21 @@
 </head>
 <body>
     <script type="text/template" id="search-response">
+        <div>Результатов: примерно <%=cursor.resultCount%> (<%=cursor.searchResultTime%> сек.)</div>
         <ul>
-            <li>
-                <a href="" class="link"></a>
-                <div class="url"></div>
-                <div class="brief"></div>
+            <% for(var i = 0; i < results.length; i++) { %>
+            <li class="result-item">
+                <a href="<%= results[i].url %>" class="link"><%= results[i].titleNoFormatting %></a>
+                <div class="url"><%= results[i].url %></div>
+                <div class="brief"><%= results[i].content %></div>
             </li>
+            <% }; %>
         </ul>
+        <div class="result-pages">
+            <% for(var i = 0; i < cursor.pages.length; i++) { %>
+            <a href="<%= cursor.pages[i].start %>" class="page-link"><%= cursor.pages[i].label %></a>
+            <% }; %>
+        </div>
     </script>
     <div class="wrapper">
         <div class="search-form">
@@ -26,7 +34,7 @@
                 <input class="search-submit" type="submit">
             </form>
         </div>
-        <div class="results"></div>
+        <div id="results"></div>
     </div>
 </body>
 </html>
