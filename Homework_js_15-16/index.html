@@ -11,27 +11,29 @@
 </head>
 <body>
     <script type="text/template" id="search-response">
-        <div>Результатов: примерно <%=cursor.resultCount%> (<%=cursor.searchResultTime%> сек.)</div>
+        <div>Результатов: примерно <%=searchInformation.formattedTotalResults%> (<%=searchInformation.formattedSearchTime%> сек.)</div>
         <ul>
-            <% for(var i = 0; i < results.length; i++) { %>
-            <li class="result-item">
-                <a href="<%= results[i].url %>" class="link"><%= results[i].titleNoFormatting %></a>
-                <div class="url"><%= results[i].url %></div>
-                <div class="brief"><%= results[i].content %></div>
+            <% for(var i = 0; i < items.length; i++) { %>
+            <li class="result-item clearfix">
+                <% if(items[i].pagemap.cse_thumbnail) { %>
+                <img height="70px" src="<%= items[i].pagemap.cse_thumbnail[0].src %>">
+                <% }; %>
+                <div class="text-block">
+                    <a href="<%= items[i].link %>" class="link" target="_blank"><%= items[i].title %></a>
+                    <div class="url"><%= items[i].displayLink %></div>
+                    <div class="brief"><%= items[i].htmlSnippet %></div>
+                </div>
             </li>
             <% }; %>
         </ul>
-        <div class="result-pages">
-            <% for(var i = 0; i < cursor.pages.length; i++) { %>
-            <a href="<%= cursor.pages[i].start %>" class="page-link"><%= cursor.pages[i].label %></a>
-            <% }; %>
-        </div>
     </script>
+
+    <h2>Google Custom Search API</h2>
     <div class="wrapper">
         <div class="search-form">
             <form action="www.infotrack.com.ua" target="_blank" method="get">
                 <input class="search-edit" type="text" name="request">
-                <input class="search-submit" type="submit">
+                <input class="search-submit" type="submit" value="Поиск">
             </form>
         </div>
         <div id="results"></div>

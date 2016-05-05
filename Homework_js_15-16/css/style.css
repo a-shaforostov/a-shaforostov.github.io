@@ -1,3 +1,8 @@
+h2 {
+    width: 300px;
+    margin: 20px auto;
+}
+
 li {
     list-style: none;
 }
@@ -10,7 +15,7 @@ li {
 }
 
 .search-form {
-    background-color: lightyellow;
+    margin: 20px 0;
 }
 
 .search-edit {
@@ -25,7 +30,6 @@ li {
 
 #results {
     margin: 20px 0;
-    width: 600px;
 }
 
 .result-item {
@@ -55,4 +59,9 @@ li {
 .brief {
     line-height: 18.2px;
     word-wrap: break-word;
+}
+
+.result-item img {
+    float: left;
+    margin-right: 20px;
 }
