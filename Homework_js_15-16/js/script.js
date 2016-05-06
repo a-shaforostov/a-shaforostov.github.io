@@ -37,7 +37,7 @@
             this.gender = properties.gender;
             this.tall = properties.tall;
             this.weight = properties.weight;
-        };
+        }
 
         // Работник
         function Worker(properties) {
@@ -48,7 +48,7 @@
 
             this.job = properties.job || 'unemployed';
             this.profit = properties.profit || 0;
-        };
+        }
 
         Worker.prototype = Object.create(Human.prototype);
         Worker.prototype.constructor = Worker;
@@ -65,7 +65,7 @@
 
             this.school = properties.school;
             this.grants = properties.grants || 0;
-        };
+        }
 
         Student.prototype = Object.create(Human.prototype);
         Student.prototype.constructor = Student;
@@ -83,7 +83,7 @@
             weight: 85,
             job: 'Google, Inc.',
             profit: 5000
-        })
+        });
         worker.work();
 
         var student = new Student({
@@ -99,7 +99,7 @@
             name: 'Jim Hawkins',
             age: 19,
             school: 'Harvard University'
-        })
+        });
 
         console.dir(human);
         console.dir(worker);

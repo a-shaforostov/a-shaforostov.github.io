@@ -1,0 +1,22 @@
+{
+  "name": "Homework_js_17-18",
+  "version": "1.0.0",
+  "description": "Домашняя работа Javascript 17-18",
+  "main": "script.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-shaforostov/a-shaforostov.github.io.git"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
