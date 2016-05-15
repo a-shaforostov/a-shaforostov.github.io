@@ -1,0 +1,323 @@
+@charset "UTF-8";
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b,
+u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot,
+thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer,
+header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  /* обнуляем отступы и убираем бордюры */
+  vertical-align: baseline;
+  /* приводим все к одной базовой линии */
+  background: transparent;
+  /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+  font-size: 100%;
+  /* размер шрифта всем одинаковый */ }
+
+a {
+  /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+table {
+  /* устраняем отступы между ячейками таблицы */
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, td img {
+  vertical-align: top;
+  /* возвращаем привычное вертикальное выравнивание */ }
+
+input, select, button, textarea {
+  margin: 0;
+  /* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+  font-size: 100%;
+  /* делаем размер шрифтов везде одинаковым */ }
+
+input[type="text"], input[type="password"], textarea {
+  padding: 0;
+  /* убираем внутренние отступы для текстовых полей */ }
+
+input[type="checkbox"] {
+  /* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+  vertical-align: bottom; }
+
+input[type="radio"] {
+  vertical-align: text-bottom; }
+
+sub {
+  vertical-align: sub;
+  font-size: smaller; }
+
+sup {
+  vertical-align: super;
+  font-size: smaller; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+/* --------------- /reset.css --------------- */
+/* --------------- базовые настройки ---------*/
+html {
+  overflow-y: scroll;
+  /* всегда показываем вертикальную полосу прокрутки  */ }
+
+body {
+  line-height: 1;
+  background: #fff;
+  color: #000;
+  text-align: left;
+  font: 14px Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+  /* используем безопасные шрифтовые CSS стеки */ }
+
+input, select, button, textarea {
+  /* чтобы шрифт был такой же как и везде */
+  font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif; }
+
+label, input[type="button"], input[type="submit"], button {
+  cursor: pointer;
+  /* курсор в виде руки для всех кликабельных элементов форм */ }
+
+a, a:visited {
+  /* порядок правил для ссылок имеет значение */
+  color: #287fc3;
+  text-decoration: underline; }
+
+a:hover {
+  color: #287fc3;
+  text-decoration: none; }
+
+a:focus, a:active {
+  color: #287fc3;
+  text-decoration: underline; }
+
+/* --------------- /базовые настройки ---------*/
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block; }
+
+/*
+	Coin Slider jQuery plugin CSS styles
+	http://workshop.rs/projects/coin-slider
+*/
+.coin-slider {
+  overflow: hidden;
+  zoom: 1;
+  position: relative; }
+
+.coin-slider a {
+  text-decoration: none;
+  outline: none;
+  border: none; }
+
+.cs-buttons {
+  font-size: 0px;
+  padding: 10px;
+  float: left;
+  margin-top: -68px; }
+
+.cs-buttons a {
+  margin-left: 15px;
+  height: 10px;
+  width: 10px;
+  float: left;
+  border: 3px solid #FFF;
+  background-color: #FFF;
+  text-indent: -1000px; }
+
+.cs-buttons .cs-active {
+  background-color: #B8C4CF;
+  background-color: #001d1d; }
+
+.cs-title {
+  width: 545px;
+  padding: 10px;
+  background-color: #000000;
+  color: #FFFFFF; }
+
+.cs-prev,
+.cs-next {
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 0px 10px;
+  display: none; }
+
+.wrapper {
+  width: 100%;
+  background-color: white; }
+
+.header {
+  width: 1158px;
+  min-width: 1158px;
+  margin: 26px auto;
+  padding: 10px 41px; }
+
+.logo {
+  float: left;
+  position: relative;
+  width: 205px;
+  height: 37px;
+  background-image: url(../img/logo.png); }
+  .logo a {
+    display: inline-block;
+    width: 100%;
+    height: 100%; }
+
+.socials {
+  float: right;
+  margin-top: 12px;
+  cursor: default; }
+  .socials span {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 6.3px;
+    background-image: url(../img/sprite.png);
+    cursor: pointer; }
+  .socials .socials__fb {
+    background-position: 0 0; }
+  .socials .socials__twitter {
+    background-position: -16px 0; }
+  .socials .socials__rss {
+    background-position: -32px 0; }
+  .socials .socials__li {
+    background-position: -48px 0; }
+  .socials .socials__skype {
+    background-position: -64px 0; }
+  .socials .socials__fb:hover {
+    background-position: 0 -16px; }
+  .socials .socials__twitter:hover {
+    background-position: -16px -16px; }
+  .socials .socials__rss:hover {
+    background-position: -32px -17px; }
+  .socials .socials__li:hover {
+    background-position: -48px -17px; }
+  .socials .socials__skype:hover {
+    background-position: -64px -16px; }
+
+.menu {
+  width: 1158px;
+  min-width: 1158px;
+  margin: 26px auto;
+  background-color: #2a2d32;
+  line-height: 56px; }
+  .menu .menu__item {
+    float: left;
+    box-sizing: border-box;
+    border-right: 1px solid #151515;
+    color: white; }
+  .menu a {
+    display: inline-block;
+    color: inherit;
+    padding: 0 39px;
+    text-decoration: none;
+    font-family: "Ubuntu Condensed", sans-serif;
+    font-size: 14px; }
+  .menu .menu__item--selected {
+    background-color: #248cec; }
+  .menu .menu__item:hover {
+    color: #f4b60d; }
+
+.search {
+  float: right;
+  margin-right: 10px;
+  position: relative; }
+  .search input {
+    background-color: #35383c;
+    line-height: 38px;
+    width: 240px;
+    padding-left: 10px;
+    padding-right: 30px;
+    border: 1px solid #181a1d;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: white;
+    outline: none; }
+  .search input[type="search"]::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.15); }
+  .search input[type="search"]::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.15); }
+
+.search__button {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  background-image: url(../img/sprite.png);
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  background-position: -80px -16px; }
+
+#coin-slider {
+  width: 1158px;
+  min-width: 1158px;
+  margin: 26px auto;
+  margin-top: 15px; }
+
+.info {
+  width: 1158px;
+  min-width: 1158px;
+  margin: 26px auto;
+  height: 260px; }
+  .info .info__column {
+    float: left;
+    width: 386px;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 500; }
+    .info .info__column .info__number {
+      float: left;
+      width: 120px;
+      font-size: 90px;
+      color: rgba(24, 26, 29, 0.1); }
+    .info .info__column .info__content {
+      float: left;
+      margin-top: 20px;
+      width: 266px;
+      color: #2a2b2e;
+      font-size: 13px; }
+      .info .info__column .info__content .info__image {
+        width: 32px;
+        height: 32px;
+        background-image: url(../img/sprite.png); }
+      .info .info__column .info__content .info__image--im1 {
+        background-position: -192px 0; }
+      .info .info__column .info__content .info__image--im2 {
+        background-position: -160px 0; }
+      .info .info__column .info__content .info__image--im3 {
+        background-position: -128px 0; }
+      .info .info__column .info__content .info__header {
+        font-size: 20px;
+        margin-top: 13px; }
+      .info .info__column .info__content .info__text {
+        font-family: Arial, sans-serif;
+        color: #8a8a8a;
+        width: 256px;
+        height: 77px;
+        line-height: 20px;
+        margin-top: 19px;
+        overflow-y: hidden; }
+      .info .info__column .info__content .info__read-more {
+        position: relative; }
+        .info .info__column .info__content .info__read-more a {
+          text-decoration: none;
+          color: inherit; }
+      .info .info__column .info__content .info__read-more:hover a {
+        color: #248cec;
+        cursor: pointer; }
+      .info .info__column .info__content .info__read-more:after {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        margin-left: 5px;
+        background-image: url(../img/sprite.png);
+        background-position: -96px -16px; }

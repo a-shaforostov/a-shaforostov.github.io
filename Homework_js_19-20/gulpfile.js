@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     rigger = require('gulp-rigger'),
     rename = require("gulp-rename"),
     cssmin = require('gulp-clean-css'),
-    sass = require('gulp-ruby-sass'),
+    sass = require('gulp-sass'),
     watch = require('gulp-watch');
 
 var path = {
@@ -23,6 +23,7 @@ var path = {
         js: 'src/js/main.js',//В стилях и скриптах нам понадобятся только main файлы
         style: 'src/css/main.css',
         scss: 'src/css/main.scss',
+        scssTarget: 'src/css',
         img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'src/fonts/**/*.*'
     },
@@ -53,8 +54,10 @@ gulp.task('js:build', function () {
 });
 
 gulp.task('style:build', function () {
-    gulp.src(path.src.style) //Выберем наш main.scss
-        .pipe(rigger()) //Прогоним через rigger
+    gulp.src(path.src.scss) //Выберем наш main.scss
+        // .pipe(rigger()) //Прогоним через rigger
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest(path.src.scssTarget))
         .pipe(cssmin()) //Сожмем
         .pipe(rename(function (path) {
             path.basename += ".min";
@@ -62,11 +65,17 @@ gulp.task('style:build', function () {
         .pipe(gulp.dest(path.build.css)); //И в build
 });
 
-gulp.task('sass:build', function () {
-  return sass(path.src.scss)
-    .on('error', sass.logError)
-    .pipe(gulp.dest(path.src.style));
+gulp.task('image:build', function () {
+    gulp.src(path.src.img) //Выберем картинки
+        .pipe(gulp.dest(path.build.img)); //И в build
 });
+
+// gulp.task('sass:build', function () {
+    // return gulp.src(path.src.scss)
+        // .pipe(rigger()) //Прогоним через rigger
+        // .pipe(sass().on('error', sass.logError))
+        // .pipe(gulp.dest(path.src.scssTarget));
+  // });
 
 gulp.task('watch', function(){
     watch([path.watch.html], function(event, cb) {
@@ -78,9 +87,9 @@ gulp.task('watch', function(){
     watch([path.watch.js], function(event, cb) {
         gulp.start('js:build');
     });
-    // watch([path.watch.img], function(event, cb) {
-    //     gulp.start('image:build');
-    // });
+     watch([path.watch.img], function(event, cb) {
+         gulp.start('image:build');
+     });
     // watch([path.watch.fonts], function(event, cb) {
     //     gulp.start('fonts:build');
     // });
@@ -89,8 +98,9 @@ gulp.task('watch', function(){
 gulp.task('build', [
     'html:build',
     'js:build',
-    'sass:build',
-    'style:build'
+    // 'sass:build',
+    'style:build',
+    'image:build'
 ]);
 
 gulp.task('default', ['build', 'watch']);

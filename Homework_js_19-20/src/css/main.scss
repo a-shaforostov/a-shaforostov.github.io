@@ -1,3 +1,214 @@
-/*Включение файлов для модуля rigger*/
-/*= parts/reset.css */
-/*= parts/style.scss */
+@import 'reset';
+@import 'coin-slider-styles';
+
+// .c1 {
+//     font-family: Ubuntu, sans-serif;
+//     font-weight: 300;
+// }
+// .c2 {
+//     font-family: Ubuntu, sans-serif;
+//     font-weight: 500;
+// }
+// .c3 {
+//     font-family: "Ubuntu Condensed", sans-serif;
+//     color: green;
+// }
+
+$contentMargin: (1240-1158)/2;
+@mixin content-area {
+    width: 1158px;
+    min-width: 1158px;
+    margin: 26px auto;
+}
+
+.wrapper {
+    width: 100%;
+    background-color: white;
+}
+
+// Header begin
+.header {
+    @include content-area;
+    padding: 10px $contentMargin+px;
+}
+
+.logo {
+    float: left;
+    position: relative;
+    width: 205px;
+    height: 37px;
+    background-image: url(../img/logo.png);
+    a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.socials {
+    float: right;
+    margin-top: 12px;
+    cursor: default;
+    span {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin: 0 6.3px;
+        background-image: url(../img/sprite.png);
+        cursor: pointer;
+    }
+    .socials__fb { background-position: 0 0; }
+    .socials__twitter { background-position: -16px 0; }
+    .socials__rss { background-position: -32px 0; }
+    .socials__li { background-position: -48px 0; }
+    .socials__skype { background-position: -64px 0; }
+    .socials__fb:hover { background-position: 0 -16px; }
+    .socials__twitter:hover { background-position: -16px -16px; }
+    .socials__rss:hover { background-position: -32px -17px; }
+    .socials__li:hover { background-position: -48px -17px; }
+    .socials__skype:hover { background-position: -64px -16px; }
+}
+// Header end
+
+// Menu begin
+.menu {
+    @include content-area;
+    background-color: #2a2d32;
+    line-height: 56px;
+
+    .menu__item {
+        float: left;
+        box-sizing: border-box;
+        border-right: 1px solid #151515;
+        color: white;
+    }
+
+    a {
+        display: inline-block;
+        color: inherit;
+        padding: 0 39px;
+        text-decoration: none;
+        font-family: "Ubuntu Condensed", sans-serif;
+        font-size: 14px;
+    }
+
+    .menu__item--selected {
+        background-color: #248cec;
+    }
+
+    .menu__item:hover {
+        color: #f4b60d;
+    }
+}
+
+.search {
+    float: right;
+    margin-right: 10px;
+    position: relative;
+    input {
+        background-color: #35383c;
+        line-height: 38px;
+        width: 240px;
+        padding-left: 10px;
+        padding-right: 30px;
+        border: 1px solid #181a1d;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        color: white;
+        outline: none;
+    }
+    input[type="search"]::-webkit-input-placeholder {
+     color: rgba(255, 255, 255, 0.15);
+    }
+    input[type="search"]::-moz-placeholder {
+     color: rgba(255, 255, 255, 0.15);
+    }
+}
+.search__button {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    background-image: url(../img/sprite.png);
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    background-position: -80px -16px;
+}
+// Menu end
+
+// Slider begin
+#coin-slider {
+    @include content-area;
+    margin-top: 15px;
+}
+// Slider end
+
+// Info row begin
+.info {
+    @include content-area;
+    height: 260px;
+    // background-color: green;
+    .info__column {
+        float: left;
+        width: 386px;
+        font-family: Ubuntu, sans-serif;
+        font-weight: 500;
+        // background-color: blue;
+        .info__number {
+            float: left;
+            width: 120px;
+            // background-color: gray;
+            font-size: 90px;
+            color: rgba(24, 26, 29, 0.1);
+        }
+        .info__content {
+            float: left;
+            margin-top: 20px;
+            width: 266px;
+            color: #2a2b2e;
+            font-size: 13px;
+            .info__image {
+                width: 32px;
+                height: 32px;
+                background-image: url(../img/sprite.png);
+            }
+            .info__image--im1 { background-position: -192px 0; }
+            .info__image--im2 { background-position: -160px 0; }
+            .info__image--im3 { background-position: -128px 0; }
+            .info__header {
+                font-size: 20px;
+                margin-top: 13px;
+            }
+            .info__text {
+                font-family: Arial, sans-serif;
+                color: #8a8a8a;
+                width: 256px;
+                height: 77px;
+                line-height: 20px;
+                margin-top: 19px;
+                overflow-y: hidden;
+            }
+            .info__read-more {
+                position: relative;
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
+            .info__read-more:hover a {
+                color: #248cec;
+                cursor: pointer;
+            }
+            .info__read-more:after {
+                content: "";
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                margin-left: 5px;
+                background-image: url(../img/sprite.png);
+                background-position: -96px -16px;
+            }
+        }
+    }
+}
+// Info row end
