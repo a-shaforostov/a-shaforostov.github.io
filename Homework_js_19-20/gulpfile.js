@@ -8,6 +8,8 @@ var gulp = require('gulp'),
     rename = require("gulp-rename"),
     cssmin = require('gulp-clean-css'),
     sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
+    htmlmin = require('gulp-htmlmin'),
     watch = require('gulp-watch');
 
 var path = {
@@ -24,14 +26,14 @@ var path = {
         style: 'src/css/main.css',
         scss: 'src/css/main.scss',
         scssTarget: 'src/css',
-        img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+        img: ['src/img/**/*.png', 'src/img/**/*.jpg', 'src/img/**/*.svg'],
         fonts: 'src/fonts/**/*.*'
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
         style: 'src/css/**/*.scss',
-        img: 'src/img/**/*.*',
+        img: '[src/img/**/*.png, src/img/**/*.jpg, src/img/**/*.svg]',
         fonts: 'src/fonts/**/*.*'
     },
     clean: './build'
@@ -39,17 +41,20 @@ var path = {
 
 gulp.task('html:build', function () {
     gulp.src(path.src.html) //Выберем файлы по нужному пути
-        .pipe(rigger()) //Прогоним через rigger (сборка файла из фрагментов - сейчас не используется)
+        .pipe(rigger()) //Прогоним через rigger
+        .pipe(htmlmin({collapseWhitespace: true})) // Минификация
         .pipe(gulp.dest(path.build.html)); //Выплюнем их в папку build
 });
 
 gulp.task('js:build', function () {
     gulp.src(path.src.js) //Найдем наш main файл
+        .pipe(sourcemaps.init()) //Инициализация первой командой
         .pipe(rigger()) //Прогоним через rigger
         .pipe(uglify()) //Сожмем наш js
         .pipe(rename(function (path) {
             path.basename += ".min";
           }))
+        .pipe(sourcemaps.write('../maps')) // Карта последней командой
         .pipe(gulp.dest(path.build.js)); //Выплюнем готовый файл в build
 });
 
@@ -57,7 +62,6 @@ gulp.task('style:build', function () {
     gulp.src(path.src.scss) //Выберем наш main.scss
         // .pipe(rigger()) //Прогоним через rigger
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest(path.src.scssTarget))
         .pipe(cssmin()) //Сожмем
         .pipe(rename(function (path) {
             path.basename += ".min";
@@ -69,13 +73,6 @@ gulp.task('image:build', function () {
     gulp.src(path.src.img) //Выберем картинки
         .pipe(gulp.dest(path.build.img)); //И в build
 });
-
-// gulp.task('sass:build', function () {
-    // return gulp.src(path.src.scss)
-        // .pipe(rigger()) //Прогоним через rigger
-        // .pipe(sass().on('error', sass.logError))
-        // .pipe(gulp.dest(path.src.scssTarget));
-  // });
 
 gulp.task('watch', function(){
     watch([path.watch.html], function(event, cb) {
@@ -98,7 +95,6 @@ gulp.task('watch', function(){
 gulp.task('build', [
     'html:build',
     'js:build',
-    // 'sass:build',
     'style:build',
     'image:build'
 ]);
