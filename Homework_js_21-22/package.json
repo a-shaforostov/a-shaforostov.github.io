@@ -1,0 +1,15 @@
+{
+  "name": "js_21-22",
+  "version": "1.0.0",
+  "dependencies": {
+    "jasmine": "^2.4.1",
+    "phantomjs-prebuilt": "^2.1.7"
+  },
+  "bin": {
+    "pow": "./bin/script.js"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jasmine"
+  }
+}
