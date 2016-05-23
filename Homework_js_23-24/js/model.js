@@ -3,10 +3,10 @@
 define(function () {
     'use strict';
 
-    return function Model(defData) {
+    return function Model(defaultData) {
         var self = this;
 
-        self.data = defData || [];
+        self.data = defaultData || [];
 
         self.addItem = function (name) {
             self.data.push(name);

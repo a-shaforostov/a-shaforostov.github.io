@@ -1,3 +1,4 @@
+/*jslint browser: true, devel: true, vars: true*/
 /*global define:true*/
 
 define(["jquery", "model", "view"], function ($, model, view) {
@@ -20,7 +21,7 @@ define(["jquery", "model", "view"], function ($, model, view) {
             
             if ($(this).attr('alt') === "Edit") {
                 var newName = prompt('Введите новое имя:', name);
-                if ((newName !== name) && (newName)) {
+                if (newName && (newName !== name)) {
                     model.editItem(name, newName);
                     view.updateFriends(model.data);
                 }
