@@ -1,0 +1,36 @@
+html, body {
+    height: 100%;
+}
+
+.fr-box {
+    box-sizing: border-box;
+    max-width: 760px;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: lightgoldenrodyellow;
+    font-family: Georgia, sans-serif;
+    font-size: 18px;
+    color: #1b2b2b;
+}
+
+.fr-box h2 {
+    margin-bottom: 20px;
+}
+
+.fr-box__friend {
+    line-height: 30px;
+}
+
+.fr-box__friend  img {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.fr-box__controls {
+    margin: 20px 0;
+}
+
+.fr-box__controls img {
+    margin: 0 5px;
+}
