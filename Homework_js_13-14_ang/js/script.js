@@ -1,27 +1,48 @@
+//			$scope.$apply(); используется для обновления вида, если данные обновились не в ангуляре.
+
+
 (function () {
 	"use strict";
 
 	// Init angular application
 	var app = angular.module("quiz", []);
 
-	// Create controller with factory
+	// Create controller
 	app.controller("appCtrl", function ($scope) {
 
 		$scope.model = new Model(quizData);
-		$scope.userAnswers = [];
 		
+		
+		$scope.initQuiz = function () {
+		
+			$scope.userAnswers = [];
+			$scope.testResult = {};
+			
+			var questions = $scope.model.data.questions; 
+			_.each(questions, function(value) {
+				$scope.userAnswers.push(
+					_.fill(new Array(value.correctAnswers.length), false)
+				);
+			});
+			
+			window.scrollTo(0, 0);
+
+		}
+
 		$scope.initClickHandler = function() {
-			$scope.model.initQuiz();
+			$scope.initQuiz();
 		};
 		
 		$scope.checkClickHandler = function() {
-			$scope.testResult = $scope.model.checkResult();
+			$scope.testResult = $scope.model.checkResult($scope.userAnswers);
 			$('.modal').modal();
-			$scope.model.initQuiz();
 		};
 		
-		$scope.model.initQuiz();
-
+		$scope.closeModalHandler = function() {
+			$scope.initQuiz();
+		};
+		
+		$scope.initQuiz();
 	});
 
 /* 
@@ -32,31 +53,19 @@
 		this.data = appData || {};
 	}
 
-	Model.prototype.initQuiz = function () {
+	Model.prototype.checkResult = function (userAnswers) {
 		
-		 // Очистить 
-		var l = this.data.questions.length; 
-		_.each(this.data.questions, function(value) {
-			value.userAnswers = _.fill(new Array(l), false);
-		});
-
-	}
-
-	Model.prototype.checkResult = function () {
-		
-		var l = this.data.questions.length;
+		var qs = this.data.questions;
 		var result = {
 			correct: 0,
-			total: l
+			total: qs.length
 		};
 		
-		_.each(this.data.questions, function(value) {
-			// Сверить массивы попарно. Результат - массив несовпадающих эл-тов
-			// Если массив пуст, значит ответ правильный
-			if (_(value.userAnswers).xor(value.correctAnswers).isEmpty()) {
+		for (var i = 0; i < qs.length; i++) {
+			if ( _.isEqual(userAnswers[i], qs[i].correctAnswers) ) {
 				result.correct++;
 			}
-		});
+		}
 		
 		return result;
 	}
