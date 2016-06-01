@@ -1,3 +1,27 @@
+function Slider(selector, images) {
+	this.frame = 0;
+	this.selector = selector;
+	this.slides = images;
+	
+	this.set(this.slides[this.frame]);
+};	
+Slider.prototype.set = function(image) { // установка нужного фона слайдеру
+	var elements = document.querySelectorAll(this.selector)
+	for (var i = 0; i < elements.length; i++) {
+		elements[i].style.backgroundImage = "url("+image+")";
+	}
+};
+Slider.prototype.left = function() { // крутим на один кадр влево
+	this.frame--;
+	if(this.frame < 0) this.frame = this.slides.length-1;
+	this.set(this.slides[this.frame]);
+};
+Slider.prototype.right = function() { // крутим на один кадр вправо
+	this.frame++;
+	if(this.frame === this.slides.length) this.frame = 0;
+	this.set(this.slides[this.frame]);		
+};
+
 (function ($) {
 	'use strict';
 	$(function () {
@@ -9,6 +33,14 @@
 				columnWidth: 300
 			});
 		}
+		
+		var slider = new Slider(
+			'.slider', 
+			['img/tablet/step-merged-1.png','img/tablet/step-merged-2.png','img/tablet/step-merged-3.png']
+		);	
+		setInterval(function() { // ставим пятисекундный интервал для перелистывания картинок
+			slider.right();
+		}, 5000);		
 		
 		var isPicturesReceived = false;
 		
@@ -76,6 +108,6 @@
 //			e.stopImmediatePropagation();
 //			e.preventDefault();
 		});
-
+		
 	});
 })(jQuery);

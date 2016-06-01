@@ -1,6 +1,7 @@
 @import 'reset';
 @import 'grid-imagefill';
 @import 'main-imagefill';
+@import 'mq';
 
 @mixin center($width) {
 	position: absolute;
@@ -19,8 +20,8 @@
 	height: 100%;
 }
 
-$mobile-width: 320px;
-$mobile-flow: 300px;
+$column-width: 320px;
+$column-flow: 300px;
 
 a,
 a:hover,
@@ -38,40 +39,78 @@ body {
 
 .wrapper {
 	padding: 0;
+	width: 100%;
 }
 
 .header {
-	width: $mobile-width;
-	height: 520px;
+	position: relative;
 	margin: 0 auto;
-	padding: 10px 0;
-	background: url(../img/header.png);
 	text-align: center;
 	color: #ffffff;
 	font: 700 20px Montserrat;
+	
+	@include mq($until: tablet) {
+		width: 320px;
+		height: 520px;
+		padding: 10px 0;
+		background: url(../img/header.png);
+	}
+	@include mq(tablet, desktop) {
+		box-sizing: border-box;
+		width: 768px;
+		height: 700px;
+		padding: 30px 0;
+		background: url(../img/tablet/header.png);
+	}
+	
 	&__name {
 		margin-top: 115px;
 		letter-spacing: 1px;
+		margin-left: -1px;
+		@include mq(tablet, desktop) {
+			text-align: left;
+			margin-left: 48px;
+			margin-top: 16px;
+		}
 	}
 	&__slogan {
 		margin-top: 27px;
 		font-size: 30.01px;
 		text-transform: uppercase;
+		@include mq(tablet, desktop) {
+			margin-top: 144px;
+			margin-left: -5px;
+			font: 700 52px Montserrat;
+		}
 		
 	}
 	&__slogan2 {
-		margin: 8px 50px;
-		font: 300 18.01px Roboto;
-		width: 220px;
+		@include mq($until: tablet) {
+			margin: 8px 50px;
+			width: 220px;
+			font: 300 18.01px Roboto;
+		}
+		@include mq(tablet, desktop) {
+			margin: 24px 2px 33px 0px;
+			font: 300 24px Roboto;
+		}
 	}
 	&__find-btn {
 		font-size: 14px;
 		background-color: #ff4e50;
 		border-radius: 20px;
 		height: 40px;
-		width: 280px;
 		line-height: 40px;
 		margin: 14px auto;
+		@include mq($until: tablet) {
+			width: 280px;
+		}
+		@include mq(tablet, desktop) {
+			position: relative;
+			width: 225px;
+			left: -2px;
+		}
+		
 		a {
 			display: inline-block;
 			width: 100%;
@@ -82,7 +121,6 @@ body {
 }
 
 .login-panel {
-	margin: 10px auto;
 	padding: 0px 20px 0 0px;
 	width: 180px;
 	height: 36px;
@@ -90,6 +128,15 @@ body {
 	color: #ffffff;
 	font: 700 14px Montserrat;
 	line-height: 36px;
+	@include mq($until: tablet) {
+		margin: 10px auto;
+	}
+	@include mq(tablet, desktop) {
+		position: absolute;
+		right: 25px;
+		margin-top: 8px;
+	}
+
 	&__btn {
 		float: left;
 		box-sizing: border-box;
@@ -101,34 +148,73 @@ body {
 	}
 	&__btn--login {
 		width: 80px;
-		margin-left: 5px;
+		margin-left: 4px;
 	}
 	&__btn--signup {
 		width: 90px;
+		margin-left: 1px;
+		@include mq(tablet, desktop) {
+			margin-left: 1px;
+		}
 	}
 }
 
 .hiw {
 	text-align: center;
-	width: $mobile-width;
+	width: 320px;
 	margin: 34px auto;
+	@include mq(tablet, desktop) {
+		position: relative;
+		margin: 94px auto;
+		left: 3px;
+		width: 100%;
+	}
 	&__header {
 		color: #333;
 		font: 700 22px Montserrat;
 		margin-bottom: 14px;
+		@include mq(tablet, desktop) {
+			margin-bottom: 23px;
+		}
+
 	}
 	&__block {
 		position: relative;
 		margin-top: 10px;
+		@include mq(tablet, desktop) {
+			float: left;
+			margin: 10px 13px 0 7px;
+			width: 236px;
+			height: 401px;
+		}
 	}
 	&__image {
-		width: $mobile-flow;
+		width: 320px;
 		height: 240px;
 		margin: 0 auto;
+		@include mq(tablet, desktop) {
+			width: 236px;
+			height: 401px;
+		}
 	}
-	&__image--i1 { background: url(../img/step-merged-1.png); }
-	&__image--i2 { background: url(../img/step-merged-2.png); }
-	&__image--i3 { background: url(../img/step-merged-3.png); }
+//	&__image--i1 { 
+//		background: url(../img/step-merged-1.png);
+//		@include mq(tablet, desktop) {
+//			background: url(../img/tablet/step-merged-1.png);
+//		}
+//	}
+//	&__image--i2 { 
+//		background: url(../img/step-merged-2.png);
+//		@include mq(tablet, desktop) {
+//			background: url(../img/tablet/step-merged-2.png);
+//		}
+//	}
+//	&__image--i3 { 
+//		background: url(../img/step-merged-3.png);
+//		@include mq(tablet, desktop) {
+//			background: url(../img/tablet/step-merged-3.png);
+//		}
+//	}
 	&__text-block {
 		position: absolute;
 		bottom: 0px;
@@ -136,6 +222,9 @@ body {
 		text-align: left;
 		//zoom: 1;
 		//writing-mode: tb-rl;		
+		@include mq(tablet, desktop) {
+			padding: 15px 17px;
+		}
 	}
 	&__step {
 		color: #fff;
@@ -149,6 +238,10 @@ body {
 		text-align: center;
 		border-radius: 10px;
 		padding-left: 3px;
+		@include mq(tablet, desktop) {
+			padding-left: 0px;
+			margin-left: 5px;
+		}
 	}
 	&__caption {
 		color: #fff;
@@ -162,9 +255,37 @@ body {
 	}
 }
 
+.slider {
+	position:relative;
+	margin: 1px auto;
+	width: 236px;
+	height: 400px;
+	border-radius: 5px;
+	&__scr {
+		margin: 0px auto;
+		width: 236px;
+		height: 400px;
+		background-size:cover;
+	}
+	&__button {
+		position: absolute;
+		top: 150px;
+		width: 25px;
+		height: 70px;
+		font: 36px Arial, Tahoma, sans-serif;
+		text-align: center;
+		&--left {
+			left: 5px;
+		}
+		&--right {
+			right: 5px;
+		}
+	}
+}
+
 .partners {
 	text-align: center;
-	width: $mobile-width;
+	width: $column-width;
 	margin: 34px auto;
 	&__header {
 		color: #333;
@@ -248,7 +369,7 @@ body {
 }
 
 .discover-ideas {
-	width: $mobile-width;
+	width: $column-width;
 	margin: 0 auto;
 	&__header {
 		color: #333;
@@ -270,7 +391,7 @@ body {
 		position: relative;
 		overflow: hidden;
 		margin: 10px auto;
-		width: $mobile-flow;
+		width: $column-flow;
 		height: 120px;
 		border-radius: 5px;
 		a {
@@ -291,7 +412,7 @@ body {
 }
 
 .request-area {
-	width: $mobile-width;
+	width: $column-width;
 	margin: 0 auto 40px;	
 	&__header {
 		color: #333;
@@ -321,7 +442,7 @@ body {
 }
 
 .footer {
-	width: $mobile-width;
+	width: $column-width;
 	margin: 0 auto 18px;	
 	
 	border-top: 4px solid #ff4e50;

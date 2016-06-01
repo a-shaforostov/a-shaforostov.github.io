@@ -830,43 +830,76 @@ body {
   text-align: center; }
 
 .wrapper {
-  padding: 0; }
+  padding: 0;
+  width: 100%; }
 
 .header {
-  width: 320px;
-  height: 520px;
+  position: relative;
   margin: 0 auto;
-  padding: 10px 0;
-  background: url(../img/header.png);
   text-align: center;
   color: #ffffff;
   font: 700 20px Montserrat; }
+  @media (max-width: 47.99em) {
+    .header {
+      width: 320px;
+      height: 520px;
+      padding: 10px 0;
+      background: url(../img/header.png); } }
+  @media (min-width: 48em) and (max-width: 89.99em) {
+    .header {
+      box-sizing: border-box;
+      width: 768px;
+      height: 700px;
+      padding: 30px 0;
+      background: url(../img/tablet/header.png); } }
   .header__name {
     margin-top: 115px;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    margin-left: -1px; }
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      .header__name {
+        text-align: left;
+        margin-left: 48px;
+        margin-top: 16px; } }
   .header__slogan {
     margin-top: 27px;
     font-size: 30.01px;
     text-transform: uppercase; }
-  .header__slogan2 {
-    margin: 8px 50px;
-    font: 300 18.01px Roboto;
-    width: 220px; }
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      .header__slogan {
+        margin-top: 144px;
+        margin-left: -5px;
+        font: 700 52px Montserrat; } }
+  @media (max-width: 47.99em) {
+    .header__slogan2 {
+      margin: 8px 50px;
+      width: 220px;
+      font: 300 18.01px Roboto; } }
+  @media (min-width: 48em) and (max-width: 89.99em) {
+    .header__slogan2 {
+      margin: 24px 2px 33px 0px;
+      font: 300 24px Roboto; } }
   .header__find-btn {
     font-size: 14px;
     background-color: #ff4e50;
     border-radius: 20px;
     height: 40px;
-    width: 280px;
     line-height: 40px;
     margin: 14px auto; }
+    @media (max-width: 47.99em) {
+      .header__find-btn {
+        width: 280px; } }
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      .header__find-btn {
+        position: relative;
+        width: 225px;
+        left: -2px; } }
     .header__find-btn a {
       display: inline-block;
       width: 100%;
       height: 100%; }
 
 .login-panel {
-  margin: 10px auto;
   padding: 0px 20px 0 0px;
   width: 180px;
   height: 36px;
@@ -874,6 +907,14 @@ body {
   color: #ffffff;
   font: 700 14px Montserrat;
   line-height: 36px; }
+  @media (max-width: 47.99em) {
+    .login-panel {
+      margin: 10px auto; } }
+  @media (min-width: 48em) and (max-width: 89.99em) {
+    .login-panel {
+      position: absolute;
+      right: 25px;
+      margin-top: 8px; } }
   .login-panel__btn {
     float: left;
     box-sizing: border-box; }
@@ -883,36 +924,56 @@ body {
     line-height: 32px; }
   .login-panel__btn--login {
     width: 80px;
-    margin-left: 5px; }
+    margin-left: 4px; }
   .login-panel__btn--signup {
-    width: 90px; }
+    width: 90px;
+    margin-left: 1px; }
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      .login-panel__btn--signup {
+        margin-left: 1px; } }
 
 .hiw {
   text-align: center;
   width: 320px;
   margin: 34px auto; }
+  @media (min-width: 48em) and (max-width: 89.99em) {
+    .hiw {
+      position: relative;
+      margin: 94px auto;
+      left: 3px;
+      width: 100%; } }
   .hiw__header {
     color: #333;
     font: 700 22px Montserrat;
     margin-bottom: 14px; }
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      .hiw__header {
+        margin-bottom: 23px; } }
   .hiw__block {
     position: relative;
     margin-top: 10px; }
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      .hiw__block {
+        float: left;
+        margin: 10px 13px 0 7px;
+        width: 236px;
+        height: 401px; } }
   .hiw__image {
-    width: 300px;
+    width: 320px;
     height: 240px;
     margin: 0 auto; }
-  .hiw__image--i1 {
-    background: url(../img/step-merged-1.png); }
-  .hiw__image--i2 {
-    background: url(../img/step-merged-2.png); }
-  .hiw__image--i3 {
-    background: url(../img/step-merged-3.png); }
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      .hiw__image {
+        width: 236px;
+        height: 401px; } }
   .hiw__text-block {
     position: absolute;
     bottom: 0px;
     padding: 15px 30px;
     text-align: left; }
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      .hiw__text-block {
+        padding: 15px 17px; } }
   .hiw__step {
     color: #fff;
     font: 400 10px Montserrat;
@@ -925,6 +986,10 @@ body {
     text-align: center;
     border-radius: 10px;
     padding-left: 3px; }
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      .hiw__step {
+        padding-left: 0px;
+        margin-left: 5px; } }
   .hiw__caption {
     color: #fff;
     font: 700 24px Montserrat;
@@ -933,6 +998,29 @@ body {
     color: #ccc;
     font: 300 14px Roboto;
     bottom: 0px; }
+
+.slider {
+  position: relative;
+  margin: 1px auto;
+  width: 236px;
+  height: 400px;
+  border-radius: 5px; }
+  .slider__scr {
+    margin: 0px auto;
+    width: 236px;
+    height: 400px;
+    background-size: cover; }
+  .slider__button {
+    position: absolute;
+    top: 150px;
+    width: 25px;
+    height: 70px;
+    font: 36px Arial, Tahoma, sans-serif;
+    text-align: center; }
+    .slider__button--left {
+      left: 5px; }
+    .slider__button--right {
+      right: 5px; }
 
 .partners {
   text-align: center;
