@@ -1059,15 +1059,41 @@ a:active {
   cursor: pointer; }
 
 /* line 36, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+html {
+  overflow-x: hidden; }
+
+/* line 40, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
 body {
   text-align: center; }
 
-/* line 40, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+/* line 44, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+.round-button {
+  color: #ff4e50;
+  font: 700 14px Montserrat;
+  width: 276px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 20px;
+  border: 2px solid #ff4e50;
+  margin: -1px 0 0 18px; }
+  /* line 54, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  .round-button a {
+    display: inline-block;
+    width: 100%; }
+
+/* line 60, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+.round-button:hover {
+  background-color: #ff4e50;
+  color: #fff;
+  cursor: pointer; }
+
+/* line 66, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
 .wrapper {
   padding: 0;
   width: 100%; }
 
-/* line 45, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+/* line 71, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
 .header {
   position: relative;
   margin: 0 auto;
@@ -1075,54 +1101,54 @@ body {
   color: #ffffff;
   font: 700 20px Montserrat; }
   @media (max-width: 47.99em) {
-    /* line 45, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    /* line 71, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
     .header {
       width: 320px;
       height: 520px;
       padding: 10px 0;
       background: url(../img/header.png); } }
   @media (min-width: 48em) and (max-width: 89.99em) {
-    /* line 45, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    /* line 71, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
     .header {
       box-sizing: border-box;
       width: 768px;
       height: 700px;
       padding: 30px 0;
       background: url(../img/tablet/header.png); } }
-  /* line 66, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 92, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .header__name {
     margin-top: 115px;
     letter-spacing: 1px;
     margin-left: -1px; }
     @media (min-width: 48em) and (max-width: 89.99em) {
-      /* line 66, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      /* line 92, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
       .header__name {
         text-align: left;
         margin-left: 48px;
         margin-top: 16px; } }
-  /* line 76, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 102, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .header__slogan {
     margin-top: 27px;
     font-size: 30.01px;
     text-transform: uppercase; }
     @media (min-width: 48em) and (max-width: 89.99em) {
-      /* line 76, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      /* line 102, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
       .header__slogan {
         margin-top: 144px;
         margin-left: -5px;
         font: 700 52px Montserrat; } }
   @media (max-width: 47.99em) {
-    /* line 87, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    /* line 113, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
     .header__slogan2 {
       margin: 8px 50px;
       width: 220px;
       font: 300 18.01px Roboto; } }
   @media (min-width: 48em) and (max-width: 89.99em) {
-    /* line 87, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    /* line 113, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
     .header__slogan2 {
       margin: 24px 2px 33px 0px;
       font: 300 24px Roboto; } }
-  /* line 98, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 124, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .header__find-btn {
     font-size: 14px;
     background-color: #ff4e50;
@@ -1131,22 +1157,22 @@ body {
     line-height: 40px;
     margin: 14px auto; }
     @media (max-width: 47.99em) {
-      /* line 98, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      /* line 124, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
       .header__find-btn {
         width: 280px; } }
     @media (min-width: 48em) and (max-width: 89.99em) {
-      /* line 98, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      /* line 124, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
       .header__find-btn {
         position: relative;
         width: 225px;
         left: -2px; } }
-    /* line 114, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    /* line 140, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
     .header__find-btn a {
       display: inline-block;
       width: 100%;
       height: 100%; }
 
-/* line 123, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+/* line 149, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
 .login-panel {
   padding: 0px 20px 0 0px;
   width: 180px;
@@ -1156,91 +1182,160 @@ body {
   font: 700 14px Montserrat;
   line-height: 36px; }
   @media (max-width: 47.99em) {
-    /* line 123, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    /* line 149, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
     .login-panel {
       margin: 10px auto; } }
   @media (min-width: 48em) and (max-width: 89.99em) {
-    /* line 123, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    /* line 149, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
     .login-panel {
       position: absolute;
       right: 25px;
       margin-top: 8px; } }
-  /* line 140, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 166, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .login-panel__btn {
     float: left;
     box-sizing: border-box; }
-  /* line 144, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 170, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .login-panel__btn:hover {
     border: 2px solid #fff;
     border-radius: 20px;
     line-height: 32px; }
-  /* line 149, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 175, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .login-panel__btn--login {
     width: 80px;
     margin-left: 4px; }
-  /* line 153, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 179, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .login-panel__btn--signup {
     width: 90px;
     margin-left: 1px; }
     @media (min-width: 48em) and (max-width: 89.99em) {
-      /* line 153, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      /* line 179, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
       .login-panel__btn--signup {
         margin-left: 1px; } }
 
-/* line 162, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+/* line 188, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
 .hiw {
   text-align: center;
   width: 320px;
   margin: 34px auto; }
   @media (min-width: 48em) and (max-width: 89.99em) {
-    /* line 162, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    /* line 188, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
     .hiw {
       position: relative;
-      margin: 94px auto;
+      margin: 94px auto 97px;
       left: 3px;
       width: 100%; } }
-  /* line 172, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 198, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .hiw__header {
     color: #333;
     font: 700 22px Montserrat;
     margin-bottom: 14px; }
     @media (min-width: 48em) and (max-width: 89.99em) {
-      /* line 172, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      /* line 198, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
       .hiw__header {
         margin-bottom: 23px; } }
-  /* line 181, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 207, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .hiw__block {
     position: relative;
     margin-top: 10px; }
     @media (min-width: 48em) and (max-width: 89.99em) {
-      /* line 181, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      /* line 207, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
       .hiw__block {
         float: left;
         margin: 10px 13px 0 7px;
         width: 236px;
-        height: 401px; } }
-  /* line 191, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+        height: 400px; } }
+  /* line 217, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .hiw__image {
     width: 320px;
     height: 240px;
     margin: 0 auto; }
     @media (min-width: 48em) and (max-width: 89.99em) {
-      /* line 191, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      /* line 217, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
       .hiw__image {
         width: 236px;
-        height: 401px; } }
-  /* line 218, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
-  .hiw__text-block {
+        height: 400px;
+        margin: -1px auto; } }
+
+/* line 229, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+.slider {
+  position: relative;
+  margin: 0 auto;
+  width: 300px;
+  height: 240px;
+  border-radius: 5px;
+  overflow: hidden; }
+  @media (min-width: 48em) and (max-width: 89.99em) {
+    /* line 229, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    .slider {
+      margin: 1px auto;
+      width: 236px;
+      height: 400px; } }
+  /* line 242, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  .slider__scr {
+    margin: 0px auto;
+    width: 300px;
+    height: 240px;
+    background-size: cover;
+    display: none; }
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      /* line 242, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .slider__scr {
+        margin: 0px auto;
+        width: 236px;
+        height: 400px; } }
+    /* line 253, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    .slider__scr--1 {
+      background: url(../img/step-merged-1.png); }
+      @media (min-width: 48em) and (max-width: 89.99em) {
+        /* line 253, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+        .slider__scr--1 {
+          background: url(../img/tablet/step-merged-1.png); } }
+    /* line 259, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    .slider__scr--2 {
+      background: url(../img/step-merged-2.png); }
+      @media (min-width: 48em) and (max-width: 89.99em) {
+        /* line 259, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+        .slider__scr--2 {
+          background: url(../img/tablet/step-merged-2.png); } }
+    /* line 265, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    .slider__scr--3 {
+      background: url(../img/step-merged-3.png); }
+      @media (min-width: 48em) and (max-width: 89.99em) {
+        /* line 265, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+        .slider__scr--3 {
+          background: url(../img/tablet/step-merged-3.png); } }
+  /* line 272, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  .slider__button {
+    position: absolute;
+    top: 40px;
+    width: 30px;
+    height: 56px;
+    cursor: pointer; }
+    /* line 278, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    .slider__button--left {
+      left: 20px;
+      background-image: url(../img/left-arrow.png); }
+    /* line 282, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    .slider__button--right {
+      right: 20px;
+      background-image: url(../img/right-arrow.png); }
+    @media (max-width: 47.99em) {
+      /* line 272, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .slider__button {
+        display: none; } }
+  /* line 291, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  .slider__text-block {
     position: absolute;
     bottom: 0px;
-    padding: 15px 30px;
+    padding: 15px 19px;
     text-align: left; }
     @media (min-width: 48em) and (max-width: 89.99em) {
-      /* line 218, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
-      .hiw__text-block {
+      /* line 291, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .slider__text-block {
         padding: 15px 17px; } }
-  /* line 229, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
-  .hiw__step {
+  /* line 302, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  .slider__step {
     color: #fff;
     font: 400 10px Montserrat;
     letter-spacing: 2px;
@@ -1253,98 +1348,95 @@ body {
     border-radius: 10px;
     padding-left: 3px; }
     @media (min-width: 48em) and (max-width: 89.99em) {
-      /* line 229, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
-      .hiw__step {
+      /* line 302, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .slider__step {
         padding-left: 0px;
         margin-left: 5px; } }
-  /* line 246, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
-  .hiw__caption {
+  /* line 319, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  .slider__caption {
     color: #fff;
     font: 700 24px Montserrat;
     margin-bottom: 12px; }
-  /* line 251, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
-  .hiw__text {
+  /* line 324, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  .slider__text {
     color: #ccc;
     font: 300 14px Roboto;
     bottom: 0px; }
 
-/* line 258, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
-.slider {
-  position: relative;
-  margin: 1px auto;
-  width: 236px;
-  height: 400px;
-  border-radius: 5px; }
-  /* line 264, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
-  .slider__scr {
-    margin: 0px auto;
-    width: 236px;
-    height: 400px;
-    background-size: cover; }
-  /* line 270, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
-  .slider__button {
-    position: absolute;
-    top: 150px;
-    width: 25px;
-    height: 70px;
-    font: 36px Arial, Tahoma, sans-serif;
-    text-align: center; }
-    /* line 277, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
-    .slider__button--left {
-      left: 5px; }
-    /* line 280, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
-    .slider__button--right {
-      right: 5px; }
-
-/* line 286, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+/* line 331, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
 .partners {
   text-align: center;
   width: 320px;
-  margin: 34px auto; }
-  /* line 290, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  margin: 34px auto 35px; }
+  @media (min-width: 48em) and (max-width: 89.99em) {
+    /* line 331, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    .partners {
+      width: 510px;
+      margin-bottom: 49px; } }
+  /* line 339, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .partners__header {
     color: #333;
     font: 700 22px Montserrat;
     padding: 0 10px 13px 6px; }
-  /* line 295, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      /* line 339, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .partners__header {
+        padding: 0 10px 31px 6px; } }
+  /* line 347, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .partners__block {
     position: relative;
     text-align: center; }
-    /* line 298, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      /* line 347, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .partners__block {
+        float: left;
+        width: 255px; } }
+    /* line 354, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
     .partners__block a {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%; }
-  /* line 302, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
-  .partners__block.pb4, .partners__block.pb3 {
+  /* line 358, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  .partners__block.pb4 {
     margin-left: -5px; }
-  /* line 303, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      /* line 358, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .partners__block.pb4 {
+        margin: 0px 0px; } }
+  /* line 364, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  .partners__block.pb3 {
+    margin-left: -5px; }
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      /* line 364, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .partners__block.pb3 {
+        margin: 0px 0px; } }
+  /* line 370, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .partners__photo {
     position: relative;
     width: 121px;
     height: 121px;
     margin: 0 auto; }
-  /* line 309, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 376, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .partners__photo--p1 {
     background: url(../img/partner-1.png); }
-  /* line 310, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 377, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .partners__photo--p2 {
     background: url(../img/partner-2.png); }
-  /* line 311, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 378, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .partners__photo--p3 {
     background: url(../img/partner-3.png); }
-  /* line 312, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 379, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .partners__photo--p4 {
     background: url(../img/partner-4.png); }
-  /* line 313, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 380, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .partners__label {
     width: 24px;
     height: 24px;
     background: url(../img/sprites.png);
     margin: 4px auto; }
-  /* line 319, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 386, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .partners__label-back {
     width: 32px;
     height: 32px;
@@ -1353,131 +1445,197 @@ body {
     right: -3px;
     border-radius: 50%;
     border: 3px solid #fff; }
-  /* line 328, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 395, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .partners__label-back--1 {
     background-color: #ff4e50; }
-  /* line 329, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 396, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .partners__label-back--2 {
     background-color: #ffa507; }
-  /* line 330, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 397, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .partners__label-back--3 {
     background-color: #1cd7ad; }
-  /* line 331, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 398, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .partners__label-back--4 {
     background-color: #4e73db; }
-  /* line 332, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 399, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .partners__label--l1 {
     background-position: 0px 0px; }
-  /* line 333, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 400, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .partners__label--l2 {
     background-position: -24px 0px; }
-  /* line 334, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 401, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .partners__label--l3 {
     background-position: -48px 0px; }
-  /* line 335, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 402, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .partners__label--l4 {
     background-position: -72px 0px; }
-  /* line 336, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 403, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .partners__name {
     color: #333;
     font: 700 14px Montserrat;
     margin: 17px 0 13px 0; }
-  /* line 341, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  /* line 408, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .partners__brief {
     color: #666;
     font: 300 14px Roboto;
     margin-bottom: 26px;
     padding: 0 52px; }
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      /* line 408, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .partners__brief {
+        margin-bottom: 22px;
+        padding: 0 18px; } }
+  /* line 418, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  .partners__see-other {
+    margin: -1px 18px;
+    width: 276px; }
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      /* line 418, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .partners__see-other {
+        margin: 47px 157px;
+        width: 188px; } }
 
-/* line 349, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
-.round-button {
-  color: #ff4e50;
-  font: 700 14px Montserrat;
-  width: 276px;
-  height: 36px;
-  line-height: 36px;
-  text-align: center;
-  border-radius: 20px;
-  border: 2px solid #ff4e50;
-  margin: -1px 0 0 18px; }
-  /* line 359, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
-  .round-button a {
-    display: inline-block;
-    width: 100%; }
-
-/* line 365, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
-.round-button:hover {
-  background-color: #ff4e50;
-  color: #fff;
-  cursor: pointer; }
-
-/* line 371, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+/* line 428, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
 .discover-ideas {
+  position: relative;
   width: 320px;
   margin: 0 auto; }
-  /* line 374, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  @media (max-width: 47.99em) {
+    /* line 428, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    .discover-ideas {
+      padding: 0 10px; } }
+  @media (min-width: 48em) and (max-width: 89.99em) {
+    /* line 428, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    .discover-ideas {
+      width: 100%; } }
+  /* line 439, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .discover-ideas__header {
     color: #333;
     font: 700 22px Montserrat;
     margin: 0 22px;
-    margin-bottom: 13px;
     text-align: center; }
-  /* line 381, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    @media (max-width: 47.99em) {
+      /* line 439, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .discover-ideas__header {
+        position: relative;
+        left: -10px;
+        margin-bottom: 13px; } }
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      /* line 439, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .discover-ideas__header {
+        margin-bottom: 23px; } }
+  /* line 453, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .discover-ideas__question {
     color: #333;
     font: 300 18px Roboto;
     margin: 0; }
 
-/* line 388, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
-.grid {
-  height: inherit !important; }
-  /* line 390, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
-  .grid__item {
-    position: relative;
-    overflow: hidden;
-    margin: 10px auto;
-    width: 300px;
-    height: 120px;
-    border-radius: 5px; }
-    /* line 397, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
-    .grid__item a {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%; }
-  /* line 401, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
-  .grid__text-panel {
+@media (min-width: 48em) and (max-width: 89.99em) {
+  /* line 483, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  .grid {
+    margin-bottom: 85px; } }
+
+/* line 487, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+.grid__sizer {
+  width: 33.2%; }
+
+/* line 490, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+.grid__item {
+  float: left;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+  width: 300px;
+  height: 120px;
+  border-radius: 5px; }
+  @media (min-width: 48em) and (max-width: 89.99em) {
+    /* line 490, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    .grid__item {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      height: 310px; }
+      /* line 504, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .grid__item--1 {
+        width: 30.7%; }
+      /* line 505, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .grid__item--2 {
+        width: 30.7%;
+        margin-left: 11px; }
+      /* line 506, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .grid__item--3 {
+        width: 30.7%;
+        margin-left: 11px; }
+      /* line 507, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .grid__item--4 {
+        width: 30.7%; }
+      /* line 508, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .grid__item--5 {
+        width: 64.2%;
+        margin-left: 11px; }
+      /* line 509, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .grid__item--6 {
+        width: 64.2%; }
+      /* line 510, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .grid__item--7 {
+        width: 30.7%;
+        margin-left: 11px; } }
+  /* line 512, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  .grid__item a {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    display: table; }
-  /* line 405, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
-  .grid__caption {
-    color: #fff;
-    display: table-cell;
-    vertical-align: middle;
-    padding: 10px;
-    font: 700 22px Montserrat; }
+    height: 100%; }
 
-/* line 414, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+/* line 516, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+.grid__text-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: table; }
+
+/* line 520, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+.grid__caption {
+  color: #fff;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px;
+  font: 700 22px Montserrat; }
+
+/* line 529, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
 .request-area {
   width: 320px;
-  margin: 0 auto 40px; }
-  /* line 417, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  margin: -9px auto 40px; }
+  @media (min-width: 48em) and (max-width: 89.99em) {
+    /* line 529, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    .request-area {
+      width: 100%;
+      margin: 0 auto 100px; } }
+  /* line 537, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .request-area__header {
     color: #333;
     font: 700 22px Montserrat;
-    margin: 34px 22px 11px;
+    margin: 34px 22px 10px;
     text-align: center; }
-  /* line 423, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      /* line 537, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .request-area__header {
+        margin: 34px 22px 31px; } }
+  /* line 546, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .request-area__question {
     text-align: center;
     color: #333;
-    font: 300 18px Roboto; }
-  /* line 428, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    font: 300 18px Roboto;
+    position: relative;
+    left: -2px; }
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      /* line 546, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .request-area__question {
+        margin-bottom: 37px; } }
+  /* line 556, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .request-area input {
     position: relative;
     box-sizing: border-box;
@@ -1491,42 +1649,116 @@ body {
     padding-left: 15px;
     color: #999;
     font: 300 14px Roboto; }
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      /* line 556, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .request-area input {
+        display: inline-block;
+        margin: 0;
+        position: relative;
+        left: 6px;
+        width: 240px; } }
+  @media (min-width: 48em) and (max-width: 89.99em) {
+    /* line 577, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    .request-area__btn {
+      display: inline-block;
+      width: 157px;
+      position: relative;
+      left: -7px;
+      top: 1px; } }
 
-/* line 444, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+/* line 589, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
 .footer {
   width: 320px;
   margin: 0 auto 18px;
   border-top: 4px solid #ff4e50;
   text-align: center; }
-  /* line 450, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+  @media (min-width: 48em) and (max-width: 89.99em) {
+    /* line 589, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    .footer {
+      position: relative;
+      width: 100%;
+      height: 178px; } }
+  /* line 600, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .footer__name {
     color: #ff4e50;
     font: 700 16px Montserrat;
     margin: 15px 0 12px;
     letter-spacing: 0.8px; }
-  /* line 456, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      /* line 600, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .footer__name {
+        position: absolute;
+        left: 39px;
+        top: 36px;
+        margin: 0; } }
+  /* line 612, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .footer__h2 {
     color: #333;
     font: 700 14px Montserrat; }
-  /* line 460, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      /* line 612, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .footer__h2 {
+        position: absolute;
+        top: 36px;
+        margin: 0; }
+        /* line 619, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+        .footer__h2--1 {
+          left: 266px; }
+        /* line 622, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+        .footer__h2--2 {
+          left: 437px; } }
+  /* line 627, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .footer__menu {
-    margin-bottom: 8px; }
-  /* line 463, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
-  .footer ul {
-    margin: 0;
-    padding: 0; }
-  /* line 467, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
-  .footer__menu-item {
-    display: inline-block;
-    color: #666;
-    font: 300 14px/24px Roboto;
-    margin: 0 4px; }
-  /* line 476, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    margin-bottom: 8px;
+    position: relative;
+    left: -2px; }
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      /* line 627, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .footer__menu {
+        position: absolute;
+        top: 65px;
+        left: 262px;
+        margin: 0; } }
+    /* line 637, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    .footer__menu ul {
+      margin: 0;
+      padding: 0; }
+    /* line 641, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    .footer__menu-item {
+      display: inline-block;
+      color: #666;
+      font: 300 14px/24px Roboto;
+      margin: 0 4.5px; }
+      @media (min-width: 48em) and (max-width: 89.99em) {
+        /* line 641, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+        .footer__menu-item {
+          text-align: left;
+          margin: 0 3px;
+          display: block;
+          font-weight: 300; } }
+      /* line 652, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .footer__menu-item a {
+        font-weight: 300; }
+  /* line 657, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
   .footer__designed {
     color: #ccc;
     font: 700 10px Montserrat;
     text-transform: uppercase;
     margin: 13px 0px 7px;
     letter-spacing: 1px; }
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      /* line 657, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+      .footer__designed {
+        position: absolute;
+        right: 39px;
+        top: 36px;
+        margin: 0; } }
+  @media (min-width: 48em) and (max-width: 89.99em) {
+    /* line 670, D:/GoIT-Frontend/reps/a-shaforostov.github.io/final_exam/src/css/main.scss */
+    .footer__designed + a {
+      position: absolute;
+      right: 39px;
+      top: 57px;
+      margin: 0; } }
 
 /*# sourceMappingURL=main.css.map */

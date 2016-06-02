@@ -1,46 +1,48 @@
-function Slider(selector, images) {
-	this.frame = 0;
-	this.selector = selector;
-	this.slides = images;
+//Класс слайдера
+function Slider(element, frame) {
+	this.frame = frame;
+	this.imgs = element.querySelectorAll('.slider__scr');
 	
-	this.set(this.slides[this.frame]);
+	this.set(this.frame, 'block');
 };	
-Slider.prototype.set = function(image) { // установка нужного фона слайдеру
-	var elements = document.querySelectorAll(this.selector)
-	for (var i = 0; i < elements.length; i++) {
-		elements[i].style.backgroundImage = "url("+image+")";
-	}
+
+Slider.prototype.set = function(frame, value) { // установка нужного фона слайдеру
+	this.imgs[frame].style.display = value;
 };
+
 Slider.prototype.left = function() { // крутим на один кадр влево
+	this.set(this.frame, 'none');
 	this.frame--;
-	if(this.frame < 0) this.frame = this.slides.length-1;
-	this.set(this.slides[this.frame]);
+	if(this.frame < 0) this.frame = this.imgs.length-1;
+	this.set(this.frame, 'block');
 };
+
 Slider.prototype.right = function() { // крутим на один кадр вправо
+	this.set(this.frame, 'none');
 	this.frame++;
-	if(this.frame === this.slides.length) this.frame = 0;
-	this.set(this.slides[this.frame]);		
+	if(this.frame === this.imgs.length) this.frame = 0;
+	this.set(this.frame, 'block');
 };
+//Класс слайдера
+
 
 (function ($) {
 	'use strict';
+	
 	$(function () {
 
-		var $grid = $('.grid');
-		if ($grid.masonry) {
-			$grid.masonry({
-				itemSelector: '.grid-item', 
-				columnWidth: 300
-			});
-		}
+		$('.grid').masonry({
+			itemSelector: '.grid__item', 
+			columnWidth: '.grid__sizer',
+			percentPosition: true,
+			gutter: 1
+		});
 		
-		var slider = new Slider(
-			'.slider', 
-			['img/tablet/step-merged-1.png','img/tablet/step-merged-2.png','img/tablet/step-merged-3.png']
-		);	
-		setInterval(function() { // ставим пятисекундный интервал для перелистывания картинок
-			slider.right();
-		}, 5000);		
+		var sliders = document.querySelectorAll('.slider');
+		window.mySliders = [];
+		for (var sl = 0; sl < sliders.length; sl++) {
+			window.mySliders.push(new Slider(sliders[sl], sl));	
+		}
 		
 		var isPicturesReceived = false;
 		
@@ -65,6 +67,8 @@ Slider.prototype.right = function() { // крутим на один кадр в�
 							}
 						}
 						
+						// Масштабировать картинку плагином
+						// Если плагин не доступен (ie8), то заполнить по ширине
 						var $gridItem = $('.grid__item');
 						if ($gridItem.imagefill) {
 							$gridItem.imagefill();
@@ -110,4 +114,5 @@ Slider.prototype.right = function() { // крутим на один кадр в�
 		});
 		
 	});
+	
 })(jQuery);
