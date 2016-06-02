@@ -874,6 +874,13 @@ body {
       height: 700px;
       padding: 30px 0;
       background: url(../img/tablet/header.png); } }
+  @media (min-width: 90em) {
+    .header {
+      box-sizing: border-box;
+      width: 1440px;
+      height: 700px;
+      padding: 30px 0;
+      background: url(../img/desktop/header.png); } }
   .header__name {
     margin-top: 115px;
     letter-spacing: 1px;
@@ -883,6 +890,13 @@ body {
         text-align: left;
         margin-left: 48px;
         margin-top: 16px; } }
+    @media (min-width: 90em) {
+      .header__name {
+        position: absolute;
+        top: 46px;
+        left: 249px;
+        text-align: left;
+        margin: 0; } }
   .header__slogan {
     margin-top: 27px;
     font-size: 30.01px;
@@ -892,6 +906,11 @@ body {
         margin-top: 144px;
         margin-left: -5px;
         font: 700 52px Montserrat; } }
+    @media (min-width: 90em) {
+      .header__slogan {
+        margin-top: 185px;
+        font-size: 52px;
+        line-height: 62px; } }
   @media (max-width: 47.99em) {
     .header__slogan2 {
       margin: 8px 50px;
@@ -900,6 +919,10 @@ body {
   @media (min-width: 48em) and (max-width: 89.99em) {
     .header__slogan2 {
       margin: 24px 2px 33px 0px;
+      font: 300 24px Roboto; } }
+  @media (min-width: 90em) {
+    .header__slogan2 {
+      margin-top: 25px;
       font: 300 24px Roboto; } }
   .header__find-btn {
     font-size: 14px;
@@ -916,6 +939,12 @@ body {
         position: relative;
         width: 225px;
         left: -2px; } }
+    @media (min-width: 90em) {
+      .header__find-btn {
+        position: relative;
+        width: 225px;
+        left: 0px;
+        margin: 33px auto; } }
     .header__find-btn a {
       display: inline-block;
       width: 100%;
@@ -936,6 +965,11 @@ body {
     .login-panel {
       position: absolute;
       right: 25px;
+      margin-top: 8px; } }
+  @media (min-width: 90em) {
+    .login-panel {
+      position: absolute;
+      right: 226px;
       margin-top: 8px; } }
   .login-panel__btn {
     float: left;
@@ -958,27 +992,41 @@ body {
   text-align: center;
   width: 320px;
   margin: 34px auto; }
-  @media (min-width: 48em) and (max-width: 89.99em) {
+  @media (min-width: 48em) {
     .hiw {
       position: relative;
       margin: 94px auto 97px;
       left: 3px;
       width: 100%; } }
+  @media (min-width: 90em) {
+    .hiw {
+      width: 960px;
+      height: 461px; } }
   .hiw__header {
     color: #333;
     font: 700 22px Montserrat;
     margin-bottom: 14px; }
-    @media (min-width: 48em) and (max-width: 89.99em) {
+    @media (min-width: 48em) {
       .hiw__header {
         margin-bottom: 23px; } }
+    @media (min-width: 90em) {
+      .hiw__header {
+        position: relative;
+        left: -4px; } }
   .hiw__block {
     position: relative;
     margin-top: 10px; }
-    @media (min-width: 48em) and (max-width: 89.99em) {
+    @media (min-width: 48em) {
       .hiw__block {
         float: left;
         margin: 10px 13px 0 7px;
         width: 236px;
+        height: 400px; } }
+    @media (min-width: 90em) {
+      .hiw__block {
+        float: left;
+        margin: 11px 13px 0 7px;
+        width: 300px;
         height: 400px; } }
   .hiw__image {
     width: 320px;
@@ -987,6 +1035,11 @@ body {
     @media (min-width: 48em) and (max-width: 89.99em) {
       .hiw__image {
         width: 236px;
+        height: 400px;
+        margin: -1px auto; } }
+    @media (min-width: 90em) {
+      .hiw__image {
+        width: 300px;
         height: 400px;
         margin: -1px auto; } }
 
@@ -1002,6 +1055,11 @@ body {
       margin: 1px auto;
       width: 236px;
       height: 400px; } }
+  @media (min-width: 90em) {
+    .slider {
+      margin: 1px auto;
+      width: 300px;
+      height: 400px; } }
   .slider__scr {
     margin: 0px auto;
     width: 300px;
@@ -1013,21 +1071,35 @@ body {
         margin: 0px auto;
         width: 236px;
         height: 400px; } }
+    @media (min-width: 90em) {
+      .slider__scr {
+        margin: 0px auto;
+        width: 300px;
+        height: 400px; } }
     .slider__scr--1 {
       background: url(../img/step-merged-1.png); }
       @media (min-width: 48em) and (max-width: 89.99em) {
         .slider__scr--1 {
           background: url(../img/tablet/step-merged-1.png); } }
+      @media (min-width: 90em) {
+        .slider__scr--1 {
+          background: url(../img/desktop/step-merged-1.png); } }
     .slider__scr--2 {
       background: url(../img/step-merged-2.png); }
       @media (min-width: 48em) and (max-width: 89.99em) {
         .slider__scr--2 {
           background: url(../img/tablet/step-merged-2.png); } }
+      @media (min-width: 90em) {
+        .slider__scr--2 {
+          background: url(../img/desktop/step-merged-2.png); } }
     .slider__scr--3 {
       background: url(../img/step-merged-3.png); }
       @media (min-width: 48em) and (max-width: 89.99em) {
         .slider__scr--3 {
           background: url(../img/tablet/step-merged-3.png); } }
+      @media (min-width: 90em) {
+        .slider__scr--3 {
+          background: url(../img/desktop/step-merged-3.png); } }
   .slider__button {
     position: absolute;
     top: 40px;
@@ -1043,6 +1115,9 @@ body {
     @media (max-width: 47.99em) {
       .slider__button {
         display: none; } }
+    @media (min-width: 90em) {
+      .slider__button {
+        top: 153px; } }
   .slider__text-block {
     position: absolute;
     bottom: 0px;
@@ -1084,6 +1159,10 @@ body {
     .partners {
       width: 510px;
       margin-bottom: 49px; } }
+  @media (min-width: 90em) {
+    .partners {
+      width: 1000px;
+      margin-bottom: 49px; } }
   .partners__header {
     color: #333;
     font: 700 22px Montserrat;
@@ -1091,6 +1170,14 @@ body {
     @media (min-width: 48em) and (max-width: 89.99em) {
       .partners__header {
         padding: 0 10px 31px 6px; } }
+    @media (min-width: 90em) {
+      .partners__header {
+        width: 500px;
+        margin: 0 auto 27px;
+        padding: 0;
+        position: relative;
+        left: -2px;
+        top: -2px; } }
   .partners__block {
     position: relative;
     text-align: center; }
@@ -1098,22 +1185,43 @@ body {
       .partners__block {
         float: left;
         width: 255px; } }
+    @media (min-width: 90em) {
+      .partners__block {
+        box-sizing: border-box;
+        float: left;
+        width: 25%;
+        margin-top: 3px;
+        padding-left: 30px; } }
     .partners__block a {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%; }
-  .partners__block.pb4 {
-    margin-left: -5px; }
-    @media (min-width: 48em) and (max-width: 89.99em) {
-      .partners__block.pb4 {
-        margin: 0px 0px; } }
+  @media (min-width: 90em) {
+    .partners__block.pb2 {
+      padding-left: 22px;
+      padding-right: 12px; } }
   .partners__block.pb3 {
     margin-left: -5px; }
     @media (min-width: 48em) and (max-width: 89.99em) {
       .partners__block.pb3 {
         margin: 0px 0px; } }
+    @media (min-width: 90em) {
+      .partners__block.pb3 {
+        padding-left: 10px;
+        padding-right: 10px; } }
+  .partners__block.pb4 {
+    margin-left: -5px; }
+    @media (min-width: 48em) and (max-width: 89.99em) {
+      .partners__block.pb4 {
+        margin: 0px 0px; } }
+    @media (min-width: 90em) {
+      .partners__block.pb4 {
+        margin: 3px 0px;
+        padding-left: 0px;
+        padding-right: 21px;
+        letter-spacing: 0.1px; } }
   .partners__photo {
     position: relative;
     width: 121px;
@@ -1169,12 +1277,20 @@ body {
       .partners__brief {
         margin-bottom: 22px;
         padding: 0 18px; } }
+    @media (min-width: 90em) {
+      .partners__brief {
+        margin-bottom: 22px;
+        padding: 0px; } }
   .partners__see-other {
     margin: -1px 18px;
     width: 276px; }
     @media (min-width: 48em) and (max-width: 89.99em) {
       .partners__see-other {
         margin: 47px 157px;
+        width: 188px; } }
+    @media (min-width: 90em) {
+      .partners__see-other {
+        margin: 14px auto 46px;
         width: 188px; } }
 
 .discover-ideas {
@@ -1184,7 +1300,7 @@ body {
   @media (max-width: 47.99em) {
     .discover-ideas {
       padding: 0 10px; } }
-  @media (min-width: 48em) and (max-width: 89.99em) {
+  @media (min-width: 48em) {
     .discover-ideas {
       width: 100%; } }
   .discover-ideas__header {
@@ -1197,9 +1313,12 @@ body {
         position: relative;
         left: -10px;
         margin-bottom: 13px; } }
-    @media (min-width: 48em) and (max-width: 89.99em) {
+    @media (min-width: 48em) {
       .discover-ideas__header {
         margin-bottom: 23px; } }
+    @media (min-width: 90em) {
+      .discover-ideas__header {
+        margin-bottom: 33px; } }
   .discover-ideas__question {
     color: #333;
     font: 300 18px Roboto;
@@ -1209,8 +1328,16 @@ body {
   .grid {
     margin-bottom: 85px; } }
 
+@media (min-width: 90em) {
+  .grid {
+    width: 940px;
+    margin: 0 auto; } }
+
 .grid__sizer {
   width: 33.2%; }
+  @media (min-width: 90em) {
+    .grid__sizer {
+      width: 33.2%; } }
 
 .grid__item {
   float: left;
@@ -1220,7 +1347,7 @@ body {
   width: 300px;
   height: 120px;
   border-radius: 5px; }
-  @media (min-width: 48em) and (max-width: 89.99em) {
+  @media (min-width: 48em) {
     .grid__item {
       margin-top: 10px;
       margin-bottom: 10px;
@@ -1244,6 +1371,36 @@ body {
       .grid__item--7 {
         width: 30.7%;
         margin-left: 11px; } }
+  @media (min-width: 90em) {
+    .grid__item {
+      margin-top: 0px;
+      margin-bottom: 10px;
+      margin-left: 0px;
+      height: 312px; }
+      .grid__item--1 {
+        width: 32%; }
+      .grid__item--2 {
+        width: 32%;
+        margin-left: 7px; }
+      .grid__item--3 {
+        width: 32%;
+        margin-left: 12px; }
+      .grid__item--4 {
+        width: 32%;
+        margin-top: 7px; }
+      .grid__item--5 {
+        margin-top: 9px;
+        margin-left: 7px;
+        width: 65.9%;
+        height: 310px; }
+      .grid__item--6 {
+        width: 66%;
+        margin-top: 10px; }
+      .grid__item--7 {
+        width: 32%;
+        margin-top: 10px;
+        margin-left: 13px;
+        width: 32%; } }
   .grid__item a {
     position: absolute;
     top: 0;
@@ -1269,10 +1426,13 @@ body {
 .request-area {
   width: 320px;
   margin: -9px auto 40px; }
-  @media (min-width: 48em) and (max-width: 89.99em) {
+  @media (min-width: 48em) {
     .request-area {
       width: 100%;
       margin: 0 auto 100px; } }
+  @media (min-width: 90em) {
+    .request-area {
+      margin: 83px auto 137px; } }
   .request-area__header {
     color: #333;
     font: 700 22px Montserrat;
@@ -1281,6 +1441,9 @@ body {
     @media (min-width: 48em) and (max-width: 89.99em) {
       .request-area__header {
         margin: 34px 22px 31px; } }
+    @media (min-width: 90em) {
+      .request-area__header {
+        margin: 34px 22px 32px; } }
   .request-area__question {
     text-align: center;
     color: #333;
@@ -1303,27 +1466,33 @@ body {
     padding-left: 15px;
     color: #999;
     font: 300 14px Roboto; }
-    @media (min-width: 48em) and (max-width: 89.99em) {
+    @media (min-width: 48em) {
       .request-area input {
         display: inline-block;
         margin: 0;
         position: relative;
         left: 6px;
         width: 240px; } }
-  @media (min-width: 48em) and (max-width: 89.99em) {
+    @media (min-width: 90em) {
+      .request-area input {
+        top: 37px; } }
+  @media (min-width: 48em) {
     .request-area__btn {
       display: inline-block;
       width: 157px;
       position: relative;
       left: -7px;
       top: 1px; } }
+  @media (min-width: 90em) {
+    .request-area__btn {
+      top: 38px; } }
 
 .footer {
   width: 320px;
   margin: 0 auto 18px;
   border-top: 4px solid #ff4e50;
   text-align: center; }
-  @media (min-width: 48em) and (max-width: 89.99em) {
+  @media (min-width: 48em) {
     .footer {
       position: relative;
       width: 100%;
@@ -1333,16 +1502,19 @@ body {
     font: 700 16px Montserrat;
     margin: 15px 0 12px;
     letter-spacing: 0.8px; }
-    @media (min-width: 48em) and (max-width: 89.99em) {
+    @media (min-width: 48em) {
       .footer__name {
         position: absolute;
         left: 39px;
         top: 36px;
         margin: 0; } }
+    @media (min-width: 90em) {
+      .footer__name {
+        left: 250px; } }
   .footer__h2 {
     color: #333;
     font: 700 14px Montserrat; }
-    @media (min-width: 48em) and (max-width: 89.99em) {
+    @media (min-width: 48em) {
       .footer__h2 {
         position: absolute;
         top: 36px;
@@ -1351,16 +1523,24 @@ body {
           left: 266px; }
         .footer__h2--2 {
           left: 437px; } }
+    @media (min-width: 48em) {
+      .footer__h2--1 {
+        left: 490px; }
+      .footer__h2--2 {
+        left: 650px; } }
   .footer__menu {
     margin-bottom: 8px;
     position: relative;
     left: -2px; }
-    @media (min-width: 48em) and (max-width: 89.99em) {
+    @media (min-width: 48em) {
       .footer__menu {
         position: absolute;
         top: 65px;
         left: 262px;
         margin: 0; } }
+    @media (min-width: 90em) {
+      .footer__menu {
+        left: 487px; } }
     .footer__menu ul {
       margin: 0;
       padding: 0; }
@@ -1369,7 +1549,7 @@ body {
       color: #666;
       font: 300 14px / 24px Roboto;
       margin: 0 4.5px; }
-      @media (min-width: 48em) and (max-width: 89.99em) {
+      @media (min-width: 48em) {
         .footer__menu-item {
           text-align: left;
           margin: 0 3px;
@@ -1383,15 +1563,22 @@ body {
     text-transform: uppercase;
     margin: 13px 0px 7px;
     letter-spacing: 1px; }
-    @media (min-width: 48em) and (max-width: 89.99em) {
+    @media (min-width: 48em) {
       .footer__designed {
         position: absolute;
         right: 39px;
         top: 36px;
         margin: 0; } }
-  @media (min-width: 48em) and (max-width: 89.99em) {
+    @media (min-width: 90em) {
+      .footer__designed {
+        right: 249px;
+        top: 37px; } }
+  @media (min-width: 48em) {
     .footer__designed + a {
       position: absolute;
       right: 39px;
       top: 57px;
       margin: 0; } }
+  @media (min-width: 48em) {
+    .footer__designed + a {
+      right: 250px; } }

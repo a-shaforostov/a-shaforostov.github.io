@@ -88,6 +88,13 @@ body {
 		padding: 30px 0;
 		background: url(../img/tablet/header.png);
 	}
+	@include mq($from: desktop) {
+		box-sizing: border-box;
+		width: 1440px;
+		height: 700px;
+		padding: 30px 0;
+		background: url(../img/desktop/header.png);
+	}
 	
 	&__name {
 		margin-top: 115px;
@@ -97,6 +104,13 @@ body {
 			text-align: left;
 			margin-left: 48px;
 			margin-top: 16px;
+		}
+		@include mq($from: desktop) {
+			position: absolute;
+			top: 46px;
+			left: 249px;
+			text-align: left;
+			margin: 0;
 		}
 	}
 	&__slogan {
@@ -108,7 +122,11 @@ body {
 			margin-left: -5px;
 			font: 700 52px Montserrat;
 		}
-		
+		@include mq($from: desktop) {
+			margin-top: 185px;
+			font-size: 52px;
+			line-height: 62px;
+		}
 	}
 	&__slogan2 {
 		@include mq($until: tablet) {
@@ -118,6 +136,10 @@ body {
 		}
 		@include mq(tablet, desktop) {
 			margin: 24px 2px 33px 0px;
+			font: 300 24px Roboto;
+		}
+		@include mq($from: desktop) {
+			margin-top: 25px;
 			font: 300 24px Roboto;
 		}
 	}
@@ -135,6 +157,12 @@ body {
 			position: relative;
 			width: 225px;
 			left: -2px;
+		}
+		@include mq($from: desktop) {
+			position: relative;
+			width: 225px;
+			left: 0px;
+			margin: 33px auto;
 		}
 		
 		a {
@@ -160,6 +188,11 @@ body {
 	@include mq(tablet, desktop) {
 		position: absolute;
 		right: 25px;
+		margin-top: 8px;
+	}
+	@include mq($from: desktop) {
+		position: absolute;
+		right: 226px;
 		margin-top: 8px;
 	}
 
@@ -189,28 +222,42 @@ body {
 	text-align: center;
 	width: 320px;
 	margin: 34px auto;
-	@include mq(tablet, desktop) {
+	@include mq($from: tablet) {
 		position: relative;
 		margin: 94px auto 97px;
 		left: 3px;
 		width: 100%;
 	}
+	@include mq($from: desktop) {
+		width: 960px;
+		height: 461px;
+	}
 	&__header {
 		color: #333;
 		font: 700 22px Montserrat;
 		margin-bottom: 14px;
-		@include mq(tablet, desktop) {
+		@include mq($from: tablet) {
 			margin-bottom: 23px;
+		}
+		@include mq($from: desktop) {
+			position: relative;
+			left: -4px;
 		}
 
 	}
 	&__block {
 		position: relative;
 		margin-top: 10px;
-		@include mq(tablet, desktop) {
+		@include mq($from: tablet) {
 			float: left;
 			margin: 10px 13px 0 7px;
 			width: 236px;
+			height: 400px;
+		}
+		@include mq($from: desktop) {
+			float: left;
+			margin: 11px 13px 0 7px;
+			width: 300px;
 			height: 400px;
 		}
 	}
@@ -220,6 +267,11 @@ body {
 		margin: 0 auto;
 		@include mq(tablet, desktop) {
 			width: 236px;
+			height: 400px;
+			margin: -1px auto;
+		}
+		@include mq($from: desktop) {
+			width: 300px;
 			height: 400px;
 			margin: -1px auto;
 		}
@@ -238,6 +290,11 @@ body {
 		width: 236px;
 		height: 400px;
 	}
+	@include mq($from: desktop) {
+		margin: 1px auto;
+		width: 300px;
+		height: 400px;
+	}
 
 	&__scr {
 		margin: 0px auto;
@@ -250,10 +307,18 @@ body {
 			width: 236px;
 			height: 400px;
 		}
+		@include mq($from: desktop) {
+			margin: 0px auto;
+			width: 300px;
+			height: 400px;
+		}
 		&--1 { 
 			background: url(../img/step-merged-1.png);
 			@include mq(tablet, desktop) {
 				background: url(../img/tablet/step-merged-1.png);
+			}
+			@include mq($from: desktop) {
+				background: url(../img/desktop/step-merged-1.png);
 			}
 		}
 		&--2 { 
@@ -261,11 +326,17 @@ body {
 			@include mq(tablet, desktop) {
 				background: url(../img/tablet/step-merged-2.png);
 			}
+			@include mq($from: desktop) {
+				background: url(../img/desktop/step-merged-2.png);
+			}
 		}
 		&--3 { 
 			background: url(../img/step-merged-3.png);
 			@include mq(tablet, desktop) {
 				background: url(../img/tablet/step-merged-3.png);
+			}
+			@include mq($from: desktop) {
+				background: url(../img/desktop/step-merged-3.png);
 			}
 		}
 	}
@@ -285,6 +356,9 @@ body {
 		}
 		@include mq($until: tablet) {
 			display: none;
+		}
+		@include mq($from: desktop) {
+			top: 153px;
 		}
 	}
 
@@ -336,12 +410,24 @@ body {
 		width: 510px;
 		margin-bottom: 49px;
 	}
+	@include mq($from: desktop) {
+		width: 1000px;
+		margin-bottom: 49px;
+	}
 	&__header {
 		color: #333;
 		font: 700 22px Montserrat;
 		padding: 0 10px 13px 6px;
 		@include mq(tablet, desktop) {
 			padding: 0 10px 31px 6px;
+		}
+		@include mq($from: desktop) {
+			width: 500px;
+			margin: 0 auto 27px;
+			padding: 0;
+			position: relative;
+			left: -2px;
+			top: -2px;
 		}
 	}
 	&__block {
@@ -351,8 +437,31 @@ body {
 			float: left;
 			width: 255px;
 		}
+		@include mq($from: desktop) {
+			box-sizing: border-box;
+			float: left;
+			width: 25%;
+			margin-top: 3px;
+			padding-left: 30px;
+		}
 		a {
 			@include coverParent;
+		}
+	}
+	&__block.pb2 {
+		@include mq($from: desktop) {
+			padding-left: 22px;
+			padding-right: 12px;
+		}
+	}
+	&__block.pb3 { 
+		margin-left: -5px;	
+		@include mq(tablet, desktop) {
+			margin: 0px 0px;
+		}
+		@include mq($from: desktop) {
+			padding-left: 10px;
+			padding-right: 10px;
 		}
 	}
 	&__block.pb4 {
@@ -360,11 +469,11 @@ body {
 		@include mq(tablet, desktop) {
 			margin: 0px 0px;
 		}
-	}
-	&__block.pb3 { 
-		margin-left: -5px;	
-		@include mq(tablet, desktop) {
-			margin: 0px 0px;
+		@include mq($from: desktop) {
+			margin: 3px 0px;
+			padding-left: 0px;
+			padding-right: 21px;
+			letter-spacing: 0.1px;
 		}
 	}
 	&__photo {
@@ -414,12 +523,20 @@ body {
 			margin-bottom: 22px;
 			padding: 0 18px;
 		}
+		@include mq($from: desktop) {
+			margin-bottom: 22px;
+			padding: 0px;
+		}
 	}
 	&__see-other {
 		margin: -1px 18px;
 		width: 276px;			
 		@include mq(tablet, desktop) {
 			margin: 47px 157px;
+			width: 188px;
+		}
+		@include mq($from: desktop) {
+			margin: 14px auto 46px;
 			width: 188px;
 		}
 	}
@@ -432,7 +549,7 @@ body {
 	@include mq($until: tablet) {
 		padding: 0 10px;
 	}
-	@include mq(tablet, desktop) {
+	@include mq($from: tablet) {
 		width: 100%;
 	}
 	
@@ -446,8 +563,11 @@ body {
 			left: -10px;
 			margin-bottom: 13px;
 		}
-		@include mq(tablet, desktop) {
+		@include mq($from: tablet) {
 			margin-bottom: 23px;
+		}
+		@include mq($from: desktop) {
+			margin-bottom: 33px;
 		}
 	}
 	&__question {
@@ -457,35 +577,21 @@ body {
 	}
 }
 
-//.grid {
-//	&__sizer {
-//		width: 1%;
-//	}
-//	&__item {
-//		width: 33%;
-//		height: 120px;
-//		border-radius: 5px;
-//		background-color: blue;
-//		border: 1px solid darkblue;
-//		margin: 10px;
-//		float: left;
-//		&--2 {
-//			width: 20%;
-//			height: 150px;
-//		}
-//		
-//		
-//	}
-//}
-
 $w-1: 30.7%;
 $w-2: 64.2%;
 .grid {
 	@include mq(tablet, desktop) {
 		margin-bottom: 85px;
 	}
+	@include mq($from: desktop) {
+		width: 940px;
+		margin: 0 auto;
+	}
 	&__sizer {
 		width: 33.2%;
+		@include mq($from: desktop) {
+			width: 33.2%;
+		}
 	}
 	&__item {
 		float: left;
@@ -496,7 +602,7 @@ $w-2: 64.2%;
 		width: 300px;
 		height: 120px;
 		border-radius: 5px;
-		@include mq(tablet, desktop) {
+		@include mq($from: tablet) {
 			margin-top: 10px;
 			margin-bottom: 10px;
 			margin-left: 10px;
@@ -508,6 +614,19 @@ $w-2: 64.2%;
 			&--5 { width: $w-2; margin-left: 11px; }
 			&--6 { width: $w-2; }
 			&--7 { width: $w-1; margin-left: 11px; }
+		}
+		@include mq($from: desktop) {
+			margin-top: 0px;
+			margin-bottom: 10px;
+			margin-left: 0px;
+			height: 312px;
+			&--1 { width: 32%; }
+			&--2 { width: 32%; margin-left: 7px; }
+			&--3 { width: 32%; margin-left: 12px; }
+			&--4 { width: 32%; margin-top: 7px; }
+			&--5 { margin-top: 9px; margin-left: 7px; width: 65.9%; height: 310px; }
+			&--6 { width: 66%; margin-top: 10px; }
+			&--7 { width: 32%; margin-top: 10px; margin-left: 13px; width: 32%; }
 		}
 		a {
 			@include coverParent;
@@ -529,10 +648,14 @@ $w-2: 64.2%;
 .request-area {
 	width: 320px;
 	margin: -9px auto 40px;	
-	@include mq(tablet, desktop) {
+	@include mq($from: tablet) {
 		width: 100%;
 		margin: 0 auto 100px;	
 	}
+	@include mq($from: desktop) {
+		margin: 83px auto 137px;	
+	}
+	
 	
 	&__header {
 		color: #333;
@@ -541,6 +664,9 @@ $w-2: 64.2%;
 		text-align: center;
 		@include mq(tablet, desktop) {
 			margin: 34px 22px 31px;
+		}
+		@include mq($from: desktop) {
+			margin: 34px 22px 32px;
 		}
 	}
 	&__question {
@@ -566,21 +692,27 @@ $w-2: 64.2%;
 		padding-left: 15px;
 		color: #999;
 		font: 300 14px Roboto;
-		@include mq(tablet, desktop) {
+		@include mq($from: tablet) {
 			display: inline-block;
 			margin: 0;
 			position: relative;
 			left: 6px;
 			width: 240px;
 		}
+		@include mq($from: desktop) {
+			top: 37px;
+		}
 	}
 	&__btn {
-		@include mq(tablet, desktop) {
+		@include mq($from: tablet) {
 			display: inline-block;
 			width: 157px;
 			position: relative;
 			left: -7px;
 			top: 1px;
+		}
+		@include mq($from: desktop) {
+			top: 38px;
 		}
 	}
 
@@ -592,7 +724,7 @@ $w-2: 64.2%;
 	
 	border-top: 4px solid #ff4e50;
 	text-align: center;
-	@include mq(tablet, desktop) {
+	@include mq($from: tablet) {
 		position: relative;
 		width: 100%;
 		height: 178px;
@@ -602,17 +734,21 @@ $w-2: 64.2%;
 		font: 700 16px Montserrat;
 		margin: 15px 0 12px;
 		letter-spacing: 0.8px;
-		@include mq(tablet, desktop) {
+		@include mq($from: tablet) {
 			position: absolute;
 			left: 39px;
 			top: 36px;
 			margin: 0;
 		}
+		@include mq($from: desktop) {
+			left: 250px;
+		}
+		
 	}
 	&__h2  {
 		color: #333;
 		font: 700 14px Montserrat;
-		@include mq(tablet, desktop) {
+		@include mq($from: tablet) {
 			position: absolute;
 			top: 36px;
 			margin: 0;
@@ -623,17 +759,29 @@ $w-2: 64.2%;
 				left: 437px;
 			}
 		}
+		@include mq($from: tablet) {
+			&--1 {
+				left: 490px;
+			}
+			&--2 {
+				left: 650px;
+			}
+		}
 	}
 	&__menu {
 		margin-bottom: 8px;
 		position: relative;
 		left: -2px;
-		@include mq(tablet, desktop) {
+		@include mq($from: tablet) {
 			position: absolute;
 			top: 65px;
 			left: 262px;
 			margin: 0;
 		}
+		@include mq($from: desktop) {
+			left: 487px;
+		}
+		
 		ul {
 			margin: 0;
 			padding: 0;
@@ -643,7 +791,7 @@ $w-2: 64.2%;
 			color: #666;
 			font: 300 14px / 24px Roboto;
 			margin: 0 4.5px;
-			@include mq(tablet, desktop) {
+			@include mq($from: tablet) {
 				text-align: left;
 				margin: 0 3px;
 				display: block;
@@ -660,19 +808,26 @@ $w-2: 64.2%;
 		text-transform: uppercase;
 		margin: 13px 0px 7px;
 		letter-spacing: 1px;
-		@include mq(tablet, desktop) {
+		@include mq($from: tablet) {
 			position: absolute;
 			right: 39px;
 			top: 36px;
 			margin: 0;
 		}
+		@include mq($from: desktop) {
+			right: 249px;
+			top: 37px;
+		}
 	}
 	&__designed+a {
-		@include mq(tablet, desktop) {
+		@include mq($from: tablet) {
 			position: absolute;
 			right: 39px;
 			top: 57px;
 			margin: 0;
+		}
+		@include mq($from: tablet) {
+			right: 250px;
 		}
 	}
 }
