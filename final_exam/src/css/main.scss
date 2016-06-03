@@ -20,9 +20,6 @@
 	height: 100%;
 }
 
-$column-width: 320px;
-$column-flow: 300px;
-
 a,
 a:hover,
 a:visited,
@@ -34,7 +31,7 @@ a:active {
 }
 
 html {
-	overflow-x: hidden;
+//	overflow-x: hidden;
 }
 
 body {
@@ -63,11 +60,6 @@ body {
 	cursor: pointer;
 }
 
-.wrapper {
-	padding: 0;
-	width: 100%;
-}
-
 .header {
 	position: relative;
 	margin: 0 auto;
@@ -81,12 +73,23 @@ body {
 		padding: 10px 0;
 		background: url(../img/header.png);
 	}
-	@include mq(tablet, desktop) {
+	@include mq(mobilePlus, tablet) {
 		box-sizing: border-box;
-		width: 768px;
+		width: 100%;
 		height: 700px;
 		padding: 30px 0;
-		background: url(../img/tablet/header.png);
+		background-position: center 0;
+		background-image: url(../img/tablet/header.png);
+	}
+	@include mq(tablet, desktop) {
+		box-sizing: border-box;
+//		width: 768px;
+		width: 100%;
+		height: 700px;
+		padding: 30px 0;
+//		background: url(../img/tablet/header.png);
+		background-position: center 0;
+		background-image: url(../img/desktop/header.png);
 	}
 	@include mq($from: desktop) {
 		box-sizing: border-box;
@@ -133,6 +136,9 @@ body {
 			margin: 8px 50px;
 			width: 220px;
 			font: 300 18.01px Roboto;
+		}
+		@include mq(mobilePlus, tablet) {
+			margin: 8px auto;
 		}
 		@include mq(tablet, desktop) {
 			margin: 24px 2px 33px 0px;
@@ -220,13 +226,15 @@ body {
 
 .hiw {
 	text-align: center;
-	width: 320px;
 	margin: 34px auto;
+	@include mq(mobile, tablet) {
+		width: 320px;
+	}
 	@include mq($from: tablet) {
 		position: relative;
 		margin: 94px auto 97px;
-		left: 3px;
-		width: 100%;
+		width: 768px;
+//		left: 3px;
 	}
 	@include mq($from: desktop) {
 		width: 960px;
@@ -238,6 +246,7 @@ body {
 		margin-bottom: 14px;
 		@include mq($from: tablet) {
 			margin-bottom: 23px;
+			margin-left: 5px;
 		}
 		@include mq($from: desktop) {
 			position: relative;
@@ -250,7 +259,7 @@ body {
 		margin-top: 10px;
 		@include mq($from: tablet) {
 			float: left;
-			margin: 10px 13px 0 7px;
+			margin: 10px 10px 0 10px;
 			width: 236px;
 			height: 400px;
 		}
@@ -259,6 +268,7 @@ body {
 			margin: 11px 13px 0 7px;
 			width: 300px;
 			height: 400px;
+			left: 3px;
 		}
 	}
 	&__image {
@@ -394,11 +404,76 @@ body {
 		color: #fff;
 		font: 700 24px Montserrat;
 		margin-bottom: 12px;
+		&--2 {
+			@include mq(tablet, desktop) {
+				color: #fff;
+				font: 700 24px Montserrat;
+				margin-bottom: 12px;
+			}
+		}
 	}
 	&__text {
 		color: #ccc;
 		font: 300 14px Roboto;
 		bottom: 0px;
+	}
+}
+
+@include mq(tablet, desktop) {
+	.hiw__image--i1 {
+		.slider__step {
+			margin-bottom: 17px;
+		}
+		.slider__caption {
+			margin-left: 1px;
+			line-height: 28px;
+		}
+	}
+
+	.hiw__image--i2 {
+		.slider__step {
+			 position: relative;
+			 top: 2px;
+			 left: -2px;
+			 width: 68px;
+			 padding-left: 2px;
+			 line-height: 20px;
+		}
+		.slider__caption {
+			 position: relative;
+			 top: 2px;
+			 left: 1px;
+		}
+		.slider__text {
+			position: relative;
+			left: 2px;
+			letter-spacing: 0.1px;
+		}
+		.slider__button--left {
+			left: 10px;
+		}
+		.slider__button--right {
+			right: 10px;
+		}
+	}
+
+	.hiw__image--i3 {
+		.slider__step {
+			position: relative;
+			top: -2px;
+			left: 0px;
+			width: 69px;
+		}
+		.slider__caption {
+			position: relative;
+			left: 2px;
+			line-height: 28px;
+		}
+		.slider__text {
+			position: relative;
+			left: 2px;
+			letter-spacing: -0.05px;
+		}
 	}
 }
 
@@ -544,10 +619,13 @@ body {
 
 .discover-ideas {
 	position: relative;
-	width: 320px;
+//	width: 320px;
+	
 	margin: 0 auto;
 	@include mq($until: tablet) {
+//		left: 10px;	
 		padding: 0 10px;
+		box-sizing: border-box;
 	}
 	@include mq($from: tablet) {
 		width: 100%;
@@ -560,7 +638,8 @@ body {
 		text-align: center;
 		@include mq($until: tablet) {
 			position: relative;
-			left: -10px;
+			left: -1px;
+			margin: 0;
 			margin-bottom: 13px;
 		}
 		@include mq($from: tablet) {
@@ -581,7 +660,9 @@ $w-1: 30.7%;
 $w-2: 64.2%;
 .grid {
 	@include mq(tablet, desktop) {
-		margin-bottom: 85px;
+		margin: 0 auto 85px;
+//		width: 100%;
+		max-width: 940px;
 	}
 	@include mq($from: desktop) {
 		width: 940px;
@@ -598,10 +679,20 @@ $w-2: 64.2%;
 		position: relative;
 		overflow: hidden;
 //		margin: 10px auto;
+		margin: 0 auto;
 		margin-bottom: 10px;
-		width: 300px;
-		height: 120px;
+//		width: 300px;
+		width: 99.75%;
+//		height: 120px;
+		height: 35.5vw;
 		border-radius: 5px;
+		@include mq($from: mobile) {
+			&--4 { margin-top: 2px; }
+			&--5 { margin-top: 0px; }
+			&--6 { margin-top: 0px; }
+			&--7 { margin-top: 0px; }
+		}
+		
 		@include mq($from: tablet) {
 			margin-top: 10px;
 			margin-bottom: 10px;
@@ -662,6 +753,10 @@ $w-2: 64.2%;
 		font: 700 22px Montserrat;
 		margin: 34px 22px 10px;
 		text-align: center;
+		@include mq($until: tablet) {
+			left: -1px;
+			position: relative;		
+		}
 		@include mq(tablet, desktop) {
 			margin: 34px 22px 31px;
 		}
@@ -719,14 +814,14 @@ $w-2: 64.2%;
 }
 
 .footer {
-	width: 320px;
+	width: inherit;
 	margin: 0 auto 18px;	
 	
 	border-top: 4px solid #ff4e50;
 	text-align: center;
 	@include mq($from: tablet) {
 		position: relative;
-		width: 100%;
+//		width: 100%;
 		height: 178px;
 	}
 	&__name {
@@ -759,7 +854,7 @@ $w-2: 64.2%;
 				left: 437px;
 			}
 		}
-		@include mq($from: tablet) {
+		@include mq($from: desktop) {
 			&--1 {
 				left: 490px;
 			}
@@ -826,7 +921,7 @@ $w-2: 64.2%;
 			top: 57px;
 			margin: 0;
 		}
-		@include mq($from: tablet) {
+		@include mq($from: desktop) {
 			right: 250px;
 		}
 	}
