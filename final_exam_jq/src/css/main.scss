@@ -1,0 +1,944 @@
+@import 'reset';
+@import 'grid-imagefill';
+@import 'main-imagefill';
+@import 'sprite';
+@import 'mq';
+@import url(https://fonts.googleapis.com/css?family=Roboto:300|Montserrat:400,700);
+
+@mixin center($width) {
+	position: absolute;
+	display: table;
+	text-align: center;
+	width: $width;
+	top: 0;	left: 0; right: 0; bottom: 0;
+	margin: auto;
+}
+
+@mixin coverParent {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+// icons
+.icon-partner-l1 {
+	background-repeat: no-repeat;
+}
+.icon-partner-l2 {
+	position: relative;
+	left: 3px;	
+	background-repeat: no-repeat;
+}
+.icon-partner-l3 {
+   position: relative;
+   top: -2px;
+	background-repeat: no-repeat;
+}
+.icon-partner-l4 {
+   position: relative;
+   top: 2px;
+   left: -2px;
+	background-repeat: no-repeat;
+}
+
+$mq-responsive: true;
+$robotoFontStack: Roboto, Arial, sans-serif;
+$montserratFontStack: Montserrat, Verdana, sans-serif;
+
+a,
+a:hover,
+a:visited,
+a:focus,
+a:active {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+body {
+	text-align: center;
+}
+
+.round-button {
+	color: #ff4e50;
+	font: 700 14px $montserratFontStack;
+	width: 276px;
+	height: 36px;		
+	line-height: 36px;
+	text-align: center;
+	border-radius: 20px;
+	border: 2px solid #ff4e50;
+	margin: -1px 0 0 18px;
+	a {
+		display: inline-block;
+		width: 100%;
+	}
+}
+.round-button:hover {
+	background-color: #ff4e50;
+	color: #fff;
+	cursor: pointer;
+}
+
+.header {
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+	color: #ffffff;
+	font: 700 20px $montserratFontStack;
+	
+	@include mq($until: tablet) {
+		width: 320px;
+		height: 520px;
+		padding: 10px 0;
+		background: url(../img/header.png);
+	}
+	@include mq(mobilePlus, tablet) {
+		box-sizing: border-box;
+		width: 100%;
+		height: 700px;
+		padding: 30px 0;
+		background-position: center 0;
+		background-image: url(../img/tablet/header.png);
+	}
+	@include mq(tablet, desktop) {
+		box-sizing: border-box;
+		width: 100%;
+		height: 700px;
+		padding: 30px 0;
+		background-position: center 0;
+		background-image: url(../img/desktop/header.png);
+	}
+	@include mq($from: desktop) {
+		box-sizing: border-box;
+		width: 1440px;
+		height: 700px;
+		padding: 30px 0;
+		background: url(../img/desktop/header.png);
+	}
+	
+	&__name {
+		margin-top: 115px;
+		letter-spacing: 1px;
+		margin-left: -1px;
+		@include mq(tablet, desktop) {
+			text-align: left;
+			margin-left: 48px;
+			margin-top: 16px;
+		}
+		@include mq($from: desktop) {
+			position: absolute;
+			top: 46px;
+			left: 249px;
+			text-align: left;
+			margin: 0;
+		}
+	}
+	&__slogan {
+		margin-top: 27px;
+		font-size: 30.01px;
+		text-transform: uppercase;
+		@include mq(tablet, desktop) {
+			margin-top: 144px;
+			margin-left: -5px;
+			font: 700 52px $montserratFontStack;
+		}
+		@include mq($from: desktop) {
+			margin-top: 185px;
+			font-size: 52px;
+			line-height: 62px;
+		}
+	}
+	&__slogan2 {
+		@include mq($until: tablet) {
+			margin: 8px 50px;
+			width: 220px;
+			font: 300 18.01px $robotoFontStack;
+		}
+		@include mq(mobilePlus, tablet) {
+			margin: 8px auto;
+		}
+		@include mq(tablet, desktop) {
+			margin: 24px 2px 33px 0px;
+			font: 300 24px $robotoFontStack;
+		}
+		@include mq($from: desktop) {
+			margin-top: 25px;
+			font: 300 24px $robotoFontStack;
+		}
+	}
+	&__find-btn {
+		font-size: 14px;
+		background-color: #ff4e50;
+		border-radius: 20px;
+		height: 40px;
+		line-height: 40px;
+		margin: 14px auto;
+		@include mq($until: tablet) {
+			width: 280px;
+		}
+		@include mq(tablet, desktop) {
+			position: relative;
+			width: 225px;
+			left: -2px;
+		}
+		@include mq($from: desktop) {
+			position: relative;
+			width: 225px;
+			left: 0px;
+			margin: 33px auto;
+		}
+		
+		a {
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+}
+
+.login-panel {
+	padding: 0px 20px 0 0px;
+	width: 180px;
+	height: 36px;
+	text-align: center;
+	color: #ffffff;
+	font: 700 14px $montserratFontStack;
+	line-height: 36px;
+	@include mq($until: tablet) {
+		margin: 10px auto;
+	}
+	@include mq(tablet, desktop) {
+		position: absolute;
+		right: 25px;
+		margin-top: 8px;
+	}
+	@include mq($from: desktop) {
+		position: absolute;
+		right: 226px;
+		margin-top: 8px;
+	}
+
+	&__btn {
+		float: left;
+		box-sizing: border-box;
+	}
+	&__btn:hover {
+		border: 2px solid #fff;
+		border-radius: 20px;
+		line-height: 32px;
+	}
+	&__btn--login {
+		width: 80px;
+		margin-left: 4px;
+	}
+	&__btn--signup {
+		width: 90px;
+		margin-left: 1px;
+		@include mq(tablet, desktop) {
+			margin-left: 1px;
+		}
+	}
+}
+
+.hiw {
+	text-align: center;
+	margin: 34px auto;
+	@include mq(mobile, tablet) {
+		width: 320px;
+	}
+	@include mq($from: tablet) {
+		position: relative;
+		margin: 94px auto 97px;
+		width: 768px;
+	}
+	@include mq($from: desktop) {
+		width: 960px;
+		height: 461px;
+	}
+	&__header {
+		color: #333;
+		font: 700 22px $montserratFontStack;
+		margin-bottom: 14px;
+		@include mq($from: tablet) {
+			margin-bottom: 23px;
+			margin-left: 5px;
+		}
+		@include mq($from: desktop) {
+			position: relative;
+			left: -4px;
+		}
+
+	}
+	&__block {
+		position: relative;
+		margin-top: 10px;
+		@include mq($from: tablet) {
+			float: left;
+			margin: 10px 10px 0 10px;
+			width: 236px;
+			height: 400px;
+		}
+		@include mq($from: desktop) {
+			float: left;
+			margin: 11px 13px 0 7px;
+			width: 300px;
+			height: 400px;
+			left: 3px;
+		}
+	}
+	&__image {
+		width: 320px;
+		height: 240px;
+		margin: 0 auto;
+		@include mq(tablet, desktop) {
+			width: 236px;
+			height: 400px;
+			margin: -1px auto;
+		}
+		@include mq($from: desktop) {
+			width: 300px;
+			height: 400px;
+			margin: -1px auto;
+		}
+	}
+}
+
+.slider {
+	position:relative;
+	margin: 0 auto;
+	width: 300px;
+	height: 240px;
+	border-radius: 5px;
+	overflow: hidden;
+	@include mq(tablet, desktop) {
+		margin: 1px auto;
+		width: 236px;
+		height: 400px;
+	}
+	@include mq($from: desktop) {
+		margin: 1px auto;
+		width: 300px;
+		height: 400px;
+	}
+
+	&__scr {
+		margin: 0px auto;
+		width: 300px;
+		height: 240px;
+		background-size: cover;
+		display: none;
+		@include mq(tablet, desktop) {
+			margin: 0px auto;
+			width: 236px;
+			height: 400px;
+		}
+		@include mq($from: desktop) {
+			margin: 0px auto;
+			width: 300px;
+			height: 400px;
+		}
+		&--1 { 
+			background: url(../img/step-merged-1.png);
+			@include mq(tablet, desktop) {
+				background: url(../img/tablet/step-merged-1.png);
+			}
+			@include mq($from: desktop) {
+				background: url(../img/desktop/step-merged-1.png);
+			}
+		}
+		&--2 { 
+			background: url(../img/step-merged-2.png);
+			@include mq(tablet, desktop) {
+				background: url(../img/tablet/step-merged-2.png);
+			}
+			@include mq($from: desktop) {
+				background: url(../img/desktop/step-merged-2.png);
+			}
+		}
+		&--3 { 
+			background: url(../img/step-merged-3.png);
+			@include mq(tablet, desktop) {
+				background: url(../img/tablet/step-merged-3.png);
+			}
+			@include mq($from: desktop) {
+				background: url(../img/desktop/step-merged-3.png);
+			}
+		}
+	}
+	&__button {
+		position: absolute;
+		top: 40px;
+		width: 30px;
+		height: 56px;
+		cursor: pointer;
+		&--left {
+			left: 20px;
+			background-image: url(../img/left-arrow.png);
+		}
+		&--right {
+			right: 20px;
+			background-image: url(../img/right-arrow.png);
+		}
+		@include mq($until: tablet) {
+			display: none;
+		}
+		@include mq($from: desktop) {
+			top: 153px;
+		}
+	}
+
+	&__text-block {
+		position: absolute;
+		bottom: 0px;
+		padding: 15px 19px;
+		text-align: left;
+		//zoom: 1;
+		//writing-mode: tb-rl;		
+		@include mq(tablet, desktop) {
+			padding: 15px 17px;
+		}
+	}
+	&__step {
+		color: #fff;
+		font: 400 10px $montserratFontStack;
+		letter-spacing: 2px;
+		background-color: #ff4e50;
+		height: 20px;
+		width: 68px;
+		line-height: 21px;
+		margin-bottom: 15px;
+		text-align: center;
+		border-radius: 10px;
+		padding-left: 3px;
+		@include mq(tablet, desktop) {
+			padding-left: 0px;
+			margin-left: 5px;
+		}
+	}
+	&__caption {
+		color: #fff;
+		font: 700 24px $montserratFontStack;
+		margin-bottom: 12px;
+		&--2 {
+			@include mq(tablet, desktop) {
+				color: #fff;
+				font: 700 24px $montserratFontStack;
+				margin-bottom: 12px;
+			}
+		}
+	}
+	&__text {
+		color: #ccc;
+		font: 300 14px $robotoFontStack;
+		bottom: 0px;
+	}
+}
+
+@include mq(tablet, desktop) {
+	.hiw__image--i1 {
+		.slider__step {
+			margin-bottom: 17px;
+		}
+		.slider__caption {
+			margin-left: 1px;
+			line-height: 28px;
+		}
+	}
+
+	.hiw__image--i2 {
+		.slider__step {
+			 position: relative;
+			 top: 2px;
+			 left: -2px;
+			 width: 68px;
+			 padding-left: 2px;
+			 line-height: 20px;
+		}
+		.slider__caption {
+			 position: relative;
+			 top: 2px;
+			 left: 1px;
+		}
+		.slider__text {
+			position: relative;
+			left: 2px;
+			letter-spacing: 0.1px;
+		}
+		.slider__button--left {
+			left: 10px;
+		}
+		.slider__button--right {
+			right: 10px;
+		}
+	}
+
+	.hiw__image--i3 {
+		.slider__step {
+			position: relative;
+			top: -2px;
+			left: 0px;
+			width: 69px;
+		}
+		.slider__caption {
+			position: relative;
+			left: 2px;
+			line-height: 28px;
+		}
+		.slider__text {
+			position: relative;
+			left: 2px;
+			letter-spacing: -0.05px;
+		}
+	}
+}
+
+.partners {
+	text-align: center;
+	width: 320px;
+	margin: 34px auto 35px;
+	@include mq(tablet, desktop) {
+		width: 510px;
+		margin-bottom: 49px;
+	}
+	@include mq($from: desktop) {
+		width: 1000px;
+		margin-bottom: 49px;
+	}
+	&__header {
+		color: #333;
+		font: 700 22px $montserratFontStack;
+		padding: 0 10px 13px 6px;
+		@include mq(tablet, desktop) {
+			padding: 0 10px 31px 6px;
+		}
+		@include mq($from: desktop) {
+			width: 500px;
+			margin: 0 auto 27px;
+			padding: 0;
+			position: relative;
+			left: -2px;
+			top: -2px;
+		}
+	}
+	&__block {
+		position: relative;
+		text-align: center;
+		@include mq(tablet, desktop) {
+			float: left;
+			width: 255px;
+		}
+		@include mq($from: desktop) {
+			box-sizing: border-box;
+			float: left;
+			width: 25%;
+			margin-top: 3px;
+			padding-left: 30px;
+		}
+		a {
+			@include coverParent;
+		}
+	}
+	&__block.pb2 {
+		@include mq($from: desktop) {
+			padding-left: 22px;
+			padding-right: 12px;
+		}
+	}
+	&__block.pb3 { 
+		margin-left: -5px;	
+		@include mq(tablet, desktop) {
+			margin: 0px 0px;
+		}
+		@include mq($from: desktop) {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+	&__block.pb4 {
+		margin-left: -5px;	
+		@include mq(tablet, desktop) {
+			margin: 0px 0px;
+		}
+		@include mq($from: desktop) {
+			margin: 3px 0px;
+			padding-left: 0px;
+			padding-right: 21px;
+			letter-spacing: 0.1px;
+		}
+	}
+	&__photo {
+		position: relative;
+		width: 121px;
+		height: 121px;
+		margin: 0 auto;
+	}
+	&__photo--p1 {background: url(../img/partner-1.png);}
+	&__photo--p2 {background: url(../img/partner-2.png);}
+	&__photo--p3 {background: url(../img/partner-3.png);}
+	&__photo--p4 {background: url(../img/partner-4.png);}
+	&__label {
+		width: 24px;
+		height: 24px;
+		margin: 4px auto;
+	}
+	&__label-back {
+		width: 32px;
+		height: 32px;
+		position: absolute;
+		bottom: -3px;
+		right: -3px;
+		border-radius: 50%;
+		border: 3px solid #fff;
+	}
+	&__label-back--1 { background-color: #ff4e50; }
+	&__label-back--2 { background-color: #ffa507; }
+	&__label-back--3 { background-color: #1cd7ad; }
+	&__label-back--4 { background-color: #4e73db; }
+	
+	&__name {
+		color: #333;
+		font: 700 14px $montserratFontStack;
+		margin: 17px 0 13px 0;	
+	}
+	&__brief {
+		color: #666;
+		font: 300 14px $robotoFontStack;
+		margin-bottom: 26px;
+		padding: 0 52px;
+		@include mq(tablet, desktop) {
+			margin-bottom: 22px;
+			padding: 0 18px;
+		}
+		@include mq($from: desktop) {
+			margin-bottom: 22px;
+			padding: 0px;
+		}
+	}
+	&__see-other {
+		margin: -1px 18px;
+		width: 276px;			
+		@include mq(tablet, desktop) {
+			margin: 47px 157px;
+			width: 188px;
+		}
+		@include mq($from: desktop) {
+			margin: 14px auto 46px;
+			width: 188px;
+		}
+	}
+}
+
+.discover-ideas {
+	position: relative;
+	
+	margin: 0 auto;
+	@include mq($until: tablet) {
+		padding: 0 10px;
+		box-sizing: border-box;
+	}
+	@include mq($from: tablet) {
+		width: 100%;
+	}
+	
+	&__header {
+		color: #333;
+		font: 700 22px $montserratFontStack;
+		margin: 0 22px;
+		text-align: center;
+		@include mq($until: tablet) {
+			position: relative;
+			left: -1px;
+			margin: 0;
+			margin-bottom: 13px;
+		}
+		@include mq($from: tablet) {
+			margin-bottom: 23px;
+		}
+		@include mq($from: desktop) {
+			margin-bottom: 33px;
+		}
+	}
+	&__question {
+		color: #333;
+		font: 300 18px $robotoFontStack;
+		margin: 0;
+	}
+}
+
+$w-1: 235.766px;
+$w-2: 493.047px;
+//$w-1: 341.375px;
+//$w-2: 603.469px;
+.grid {
+	@include mq(tablet, desktop) {
+		margin: 0 auto 85px;
+//		max-width: 940px;
+	}
+	@include mq($from: desktop) {
+//		width: 990px;
+		margin: 0 15% 0 17.4%;
+	}
+	&__sizer {
+		width: 254.969px;
+		@include mq($from: desktop) {
+			width: 320px;
+		}
+	}
+	&__item {
+		float: left;
+		position: relative;
+		overflow: hidden;
+		margin: 0 auto;
+		margin-bottom: 10px;
+		width: 99.75%;
+		height: 35.5vw;
+		border-radius: 5px;
+		@include mq($from: mobile) {
+			&--4 { margin-top: 2px; }
+			&--5 { margin-top: 0px; }
+			&--6 { margin-top: 0px; }
+			&--7 { margin-top: 0px; }
+		}
+		
+		@include mq($from: tablet) {
+			margin-top: 10px;
+			margin-bottom: 10px;
+			margin-left: 10px;
+			height: 310px;
+			&--1 { width: $w-1; }
+			&--2 { width: $w-1; margin-left: 11px; }
+			&--3 { width: $w-1; margin-left: 11px; }
+			&--4 { width: $w-1; }
+			&--5 { width: $w-2; margin-left: 11px; }
+			&--6 { width: $w-2; }
+			&--7 { width: $w-1; margin-left: 11px; }
+		}
+		@include mq($from: desktop) {
+			margin-top: 0px;
+			margin-bottom: 10px;
+			margin-left: 0px;
+			height: 312px;
+			
+			&--1 { width: 300px; margin-left: 0px; }
+			&--2 { width: 300px; margin-left: -1px; }
+			&--3 { width: 300px; margin-top: 0px; margin-left: -3px; }
+			&--4 { width: 300px; margin-top: 8px; margin-left: -1px; }
+			&--5 { width: 618px; margin-top: 9px; margin-left: -2px; height: 311px; width:620; }
+			&--6 { width: 619px; margin-top: 9px; margin-left: -1px; }
+			&--7 { width: 300px; margin-top: 9px; margin-left: -3px; height: 310px; }
+		}
+		a {
+			@include coverParent;
+		}
+	}
+	&__text-panel {
+		@include coverParent;
+		display: table;
+	}
+	&__caption {
+		color: #fff;
+		display: table-cell;
+		vertical-align: middle;
+		padding: 10px;
+		font: 700 22px $montserratFontStack;
+	}
+}
+
+.request-area {
+	width: 320px;
+	margin: -9px auto 40px;	
+	@include mq($from: tablet) {
+		width: 100%;
+		margin: 0 auto 100px;	
+	}
+	@include mq($from: desktop) {
+		margin: 83px auto 137px;	
+	}
+	
+	
+	&__header {
+		color: #333;
+		font: 700 22px $montserratFontStack;
+		margin: 34px 22px 10px;
+		text-align: center;
+		@include mq($until: tablet) {
+			left: -1px;
+			position: relative;		
+		}
+		@include mq(tablet, desktop) {
+			margin: 34px 22px 31px;
+			position: relative;
+			left: -2px;
+		}
+		@include mq($from: desktop) {
+			margin: 34px 22px 32px;
+			position: relative;
+			left: -2px;
+		}
+	}
+	&__question {
+		text-align: center;
+		color: #333;
+		font: 300 18px $robotoFontStack;
+		position: relative;
+		left: -2px;
+		@include mq(tablet, desktop) {
+			margin-bottom: 37px;
+		}
+	}
+	input {
+		position: relative;
+		box-sizing: border-box;
+		border-radius: 4px;
+		border: 1px solid #999;
+		height: 40px;
+		line-height: 40px;
+		left: -2px;
+		width: 280px;
+		margin: 15px auto 11px;
+		padding-left: 15px;
+		color: #999;
+		font: 300 14px $robotoFontStack;
+		vertical-align: top;
+		@include mq($from: tablet) {
+			display: inline-block;
+			margin: 0;
+			position: relative;
+			left: 6px;
+			width: 240px;
+		}
+		@include mq($from: desktop) {
+			top: 37px;
+		}
+	}
+	&__btn {
+		@include mq($from: tablet) {
+			display: inline-block;
+			width: 157px;
+			position: relative;
+			left: -7px;
+			top: 1px;
+		}
+		@include mq($from: desktop) {
+			top: 38px;
+		}
+	}
+
+}
+
+.footer {
+	width: inherit;
+	margin: 0 auto 18px;	
+	
+	border-top: 4px solid #ff4e50;
+	text-align: center;
+	@include mq($from: tablet) {
+		position: relative;
+		height: 178px;
+	}
+	&__name {
+		color: #ff4e50;
+		font: 700 16px $montserratFontStack;
+		margin: 15px 0 12px;
+		letter-spacing: 0.8px;
+		@include mq($from: tablet) {
+			position: absolute;
+			left: 39px;
+			top: 36px;
+			margin: 0;
+		}
+		@include mq($from: desktop) {
+			left: 250px;
+		}
+		
+	}
+	&__h2  {
+		color: #333;
+		font: 700 14px $montserratFontStack;
+		@include mq($from: tablet) {
+			position: absolute;
+			top: 36px;
+			margin: 0;
+			&--1 {
+				left: 266px;
+			}
+			&--2 {
+				left: 437px;
+			}
+		}
+		@include mq($from: desktop) {
+			&--1 {
+				left: 490px;
+			}
+			&--2 {
+				left: 650px;
+			}
+		}
+	}
+	&__menu {
+		margin-bottom: 8px;
+		position: relative;
+		left: -2px;
+		@include mq($from: tablet) {
+			position: absolute;
+			top: 65px;
+			left: 262px;
+			margin: 0;
+		}
+		@include mq($from: desktop) {
+			left: 487px;
+		}
+		
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+		&-item {
+			display: inline-block;
+			color: #666;
+			font: 300 14px / 24px $robotoFontStack;
+			margin: 0 4.5px;
+			@include mq($from: tablet) {
+				text-align: left;
+				margin: 0 3px;
+				display: block;
+				font-weight: 300;
+			}
+			a {
+				font-weight: 300;
+			}
+		}
+	}
+	&__designed {
+		color: #ccc;
+		font: 700 10px $montserratFontStack;
+		text-transform: uppercase;
+		margin: 13px 0px 7px;
+		letter-spacing: 1px;
+		@include mq($from: tablet) {
+			position: absolute;
+			right: 39px;
+			top: 36px;
+			margin: 0;
+		}
+		@include mq($from: desktop) {
+			right: 249px;
+			top: 37px;
+		}
+	}
+	&__designed+a {
+		@include mq($from: tablet) {
+			position: absolute;
+			right: 39px;
+			top: 57px;
+			margin: 0;
+		}
+		@include mq($from: desktop) {
+			right: 250px;
+		}
+	}
+}
