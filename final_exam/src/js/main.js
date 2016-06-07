@@ -34,7 +34,7 @@ Slider.prototype.right = function() { // крутим на один кадр в�
 		$('.grid').masonry({
 			itemSelector: '.grid__item', 
 			columnWidth: '.grid__sizer',
-			percentPosition: true,
+//			percentPosition: true,
 			gutter: 1
 		});
 		
@@ -68,12 +68,22 @@ Slider.prototype.right = function() { // крутим на один кадр в�
 						}
 						
 						// Масштабировать картинку плагином
-						// Если плагин не доступен (ie8), то заполнить по ширине
 						var $gridItem = $('.grid__item');
+						var $gridItemImg = $gridItem.find('.grid__item-img');
 						if ($gridItem.imagefill) {
 							$gridItem.imagefill();
 						} else {
-							$gridItem.find('.grid__item-img').css({"width": "100%"});
+							// Если плагин не доступен (ie8), то заполнить по ширине
+							$gridItemImg.css({"width": "100%", "position": "relative"});
+
+							for (var i = 0; i < $gridItem.length; i++) {
+								// Если контейнер не заполнен, то заполнить по высоте
+								if ($gridItem[i].offsetHeight > $gridItemImg[i].offsetHeight) {
+									$($gridItemImg[i])
+										.css({"height": "100%", "width": "", "position": "relative"});
+								}
+							}
+							
 						}
 						
 						isPicturesReceived = true;

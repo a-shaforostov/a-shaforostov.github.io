@@ -1,7 +1,9 @@
 @import 'reset';
 @import 'grid-imagefill';
 @import 'main-imagefill';
+@import 'sprite';
 @import 'mq';
+@import url(https://fonts.googleapis.com/css?family=Roboto:300|Montserrat:400,700);
 
 @mixin center($width) {
 	position: absolute;
@@ -20,6 +22,31 @@
 	height: 100%;
 }
 
+// icons
+.icon-partner-l1 {
+	background-repeat: no-repeat;
+}
+.icon-partner-l2 {
+	position: relative;
+	left: 3px;	
+	background-repeat: no-repeat;
+}
+.icon-partner-l3 {
+   position: relative;
+   top: -2px;
+	background-repeat: no-repeat;
+}
+.icon-partner-l4 {
+   position: relative;
+   top: 2px;
+   left: -2px;
+	background-repeat: no-repeat;
+}
+
+$mq-responsive: true;
+$robotoFontStack: Roboto, Arial, sans-serif;
+$montserratFontStack: Montserrat, Verdana, sans-serif;
+
 a,
 a:hover,
 a:visited,
@@ -30,17 +57,13 @@ a:active {
 	cursor: pointer;
 }
 
-html {
-//	overflow-x: hidden;
-}
-
 body {
 	text-align: center;
 }
 
 .round-button {
 	color: #ff4e50;
-	font: 700 14px Montserrat;
+	font: 700 14px $montserratFontStack;
 	width: 276px;
 	height: 36px;		
 	line-height: 36px;
@@ -51,7 +74,6 @@ body {
 	a {
 		display: inline-block;
 		width: 100%;
-//			height: 100%;
 	}
 }
 .round-button:hover {
@@ -65,7 +87,7 @@ body {
 	margin: 0 auto;
 	text-align: center;
 	color: #ffffff;
-	font: 700 20px Montserrat;
+	font: 700 20px $montserratFontStack;
 	
 	@include mq($until: tablet) {
 		width: 320px;
@@ -83,11 +105,9 @@ body {
 	}
 	@include mq(tablet, desktop) {
 		box-sizing: border-box;
-//		width: 768px;
 		width: 100%;
 		height: 700px;
 		padding: 30px 0;
-//		background: url(../img/tablet/header.png);
 		background-position: center 0;
 		background-image: url(../img/desktop/header.png);
 	}
@@ -123,7 +143,7 @@ body {
 		@include mq(tablet, desktop) {
 			margin-top: 144px;
 			margin-left: -5px;
-			font: 700 52px Montserrat;
+			font: 700 52px $montserratFontStack;
 		}
 		@include mq($from: desktop) {
 			margin-top: 185px;
@@ -135,18 +155,18 @@ body {
 		@include mq($until: tablet) {
 			margin: 8px 50px;
 			width: 220px;
-			font: 300 18.01px Roboto;
+			font: 300 18.01px $robotoFontStack;
 		}
 		@include mq(mobilePlus, tablet) {
 			margin: 8px auto;
 		}
 		@include mq(tablet, desktop) {
 			margin: 24px 2px 33px 0px;
-			font: 300 24px Roboto;
+			font: 300 24px $robotoFontStack;
 		}
 		@include mq($from: desktop) {
 			margin-top: 25px;
-			font: 300 24px Roboto;
+			font: 300 24px $robotoFontStack;
 		}
 	}
 	&__find-btn {
@@ -186,7 +206,7 @@ body {
 	height: 36px;
 	text-align: center;
 	color: #ffffff;
-	font: 700 14px Montserrat;
+	font: 700 14px $montserratFontStack;
 	line-height: 36px;
 	@include mq($until: tablet) {
 		margin: 10px auto;
@@ -234,7 +254,6 @@ body {
 		position: relative;
 		margin: 94px auto 97px;
 		width: 768px;
-//		left: 3px;
 	}
 	@include mq($from: desktop) {
 		width: 960px;
@@ -242,7 +261,7 @@ body {
 	}
 	&__header {
 		color: #333;
-		font: 700 22px Montserrat;
+		font: 700 22px $montserratFontStack;
 		margin-bottom: 14px;
 		@include mq($from: tablet) {
 			margin-bottom: 23px;
@@ -385,7 +404,7 @@ body {
 	}
 	&__step {
 		color: #fff;
-		font: 400 10px Montserrat;
+		font: 400 10px $montserratFontStack;
 		letter-spacing: 2px;
 		background-color: #ff4e50;
 		height: 20px;
@@ -402,19 +421,19 @@ body {
 	}
 	&__caption {
 		color: #fff;
-		font: 700 24px Montserrat;
+		font: 700 24px $montserratFontStack;
 		margin-bottom: 12px;
 		&--2 {
 			@include mq(tablet, desktop) {
 				color: #fff;
-				font: 700 24px Montserrat;
+				font: 700 24px $montserratFontStack;
 				margin-bottom: 12px;
 			}
 		}
 	}
 	&__text {
 		color: #ccc;
-		font: 300 14px Roboto;
+		font: 300 14px $robotoFontStack;
 		bottom: 0px;
 	}
 }
@@ -491,7 +510,7 @@ body {
 	}
 	&__header {
 		color: #333;
-		font: 700 22px Montserrat;
+		font: 700 22px $montserratFontStack;
 		padding: 0 10px 13px 6px;
 		@include mq(tablet, desktop) {
 			padding: 0 10px 31px 6px;
@@ -564,7 +583,6 @@ body {
 	&__label {
 		width: 24px;
 		height: 24px;
-		background: url(../img/sprites.png);
 		margin: 4px auto;
 	}
 	&__label-back {
@@ -580,18 +598,15 @@ body {
 	&__label-back--2 { background-color: #ffa507; }
 	&__label-back--3 { background-color: #1cd7ad; }
 	&__label-back--4 { background-color: #4e73db; }
-	&__label--l1 { background-position: 0px 0px; }
-	&__label--l2 { background-position: -24px 0px; }
-	&__label--l3 { background-position: -48px 0px; }
-	&__label--l4 { background-position: -72px 0px; }
+	
 	&__name {
 		color: #333;
-		font: 700 14px Montserrat;
+		font: 700 14px $montserratFontStack;
 		margin: 17px 0 13px 0;	
 	}
 	&__brief {
 		color: #666;
-		font: 300 14px Roboto;
+		font: 300 14px $robotoFontStack;
 		margin-bottom: 26px;
 		padding: 0 52px;
 		@include mq(tablet, desktop) {
@@ -619,11 +634,9 @@ body {
 
 .discover-ideas {
 	position: relative;
-//	width: 320px;
 	
 	margin: 0 auto;
 	@include mq($until: tablet) {
-//		left: 10px;	
 		padding: 0 10px;
 		box-sizing: border-box;
 	}
@@ -633,7 +646,7 @@ body {
 	
 	&__header {
 		color: #333;
-		font: 700 22px Montserrat;
+		font: 700 22px $montserratFontStack;
 		margin: 0 22px;
 		text-align: center;
 		@include mq($until: tablet) {
@@ -651,39 +664,37 @@ body {
 	}
 	&__question {
 		color: #333;
-		font: 300 18px Roboto;
+		font: 300 18px $robotoFontStack;
 		margin: 0;
 	}
 }
 
-$w-1: 30.7%;
-$w-2: 64.2%;
+$w-1: 235.766px;
+$w-2: 493.047px;
+//$w-1: 341.375px;
+//$w-2: 603.469px;
 .grid {
 	@include mq(tablet, desktop) {
 		margin: 0 auto 85px;
-//		width: 100%;
-		max-width: 940px;
+//		max-width: 940px;
 	}
 	@include mq($from: desktop) {
-		width: 940px;
-		margin: 0 auto;
+//		width: 990px;
+		margin: 0 15% 0 17.4%;
 	}
 	&__sizer {
-		width: 33.2%;
+		width: 254.969px;
 		@include mq($from: desktop) {
-			width: 33.2%;
+			width: 320px;
 		}
 	}
 	&__item {
 		float: left;
 		position: relative;
 		overflow: hidden;
-//		margin: 10px auto;
 		margin: 0 auto;
 		margin-bottom: 10px;
-//		width: 300px;
 		width: 99.75%;
-//		height: 120px;
 		height: 35.5vw;
 		border-radius: 5px;
 		@include mq($from: mobile) {
@@ -711,13 +722,14 @@ $w-2: 64.2%;
 			margin-bottom: 10px;
 			margin-left: 0px;
 			height: 312px;
-			&--1 { width: 32%; }
-			&--2 { width: 32%; margin-left: 7px; }
-			&--3 { width: 32%; margin-left: 12px; }
-			&--4 { width: 32%; margin-top: 7px; }
-			&--5 { margin-top: 9px; margin-left: 7px; width: 65.9%; height: 310px; }
-			&--6 { width: 66%; margin-top: 10px; }
-			&--7 { width: 32%; margin-top: 10px; margin-left: 13px; width: 32%; }
+			
+			&--1 { width: 300px; margin-left: 0px; }
+			&--2 { width: 300px; margin-left: -1px; }
+			&--3 { width: 300px; margin-top: 0px; margin-left: -3px; }
+			&--4 { width: 300px; margin-top: 8px; margin-left: -1px; }
+			&--5 { width: 618px; margin-top: 9px; margin-left: -2px; height: 311px; width:620; }
+			&--6 { width: 619px; margin-top: 9px; margin-left: -1px; }
+			&--7 { width: 300px; margin-top: 9px; margin-left: -3px; height: 310px; }
 		}
 		a {
 			@include coverParent;
@@ -732,7 +744,7 @@ $w-2: 64.2%;
 		display: table-cell;
 		vertical-align: middle;
 		padding: 10px;
-		font: 700 22px Montserrat;
+		font: 700 22px $montserratFontStack;
 	}
 }
 
@@ -750,7 +762,7 @@ $w-2: 64.2%;
 	
 	&__header {
 		color: #333;
-		font: 700 22px Montserrat;
+		font: 700 22px $montserratFontStack;
 		margin: 34px 22px 10px;
 		text-align: center;
 		@include mq($until: tablet) {
@@ -759,15 +771,19 @@ $w-2: 64.2%;
 		}
 		@include mq(tablet, desktop) {
 			margin: 34px 22px 31px;
+			position: relative;
+			left: -2px;
 		}
 		@include mq($from: desktop) {
 			margin: 34px 22px 32px;
+			position: relative;
+			left: -2px;
 		}
 	}
 	&__question {
 		text-align: center;
 		color: #333;
-		font: 300 18px Roboto;
+		font: 300 18px $robotoFontStack;
 		position: relative;
 		left: -2px;
 		@include mq(tablet, desktop) {
@@ -786,7 +802,8 @@ $w-2: 64.2%;
 		margin: 15px auto 11px;
 		padding-left: 15px;
 		color: #999;
-		font: 300 14px Roboto;
+		font: 300 14px $robotoFontStack;
+		vertical-align: top;
 		@include mq($from: tablet) {
 			display: inline-block;
 			margin: 0;
@@ -821,12 +838,11 @@ $w-2: 64.2%;
 	text-align: center;
 	@include mq($from: tablet) {
 		position: relative;
-//		width: 100%;
 		height: 178px;
 	}
 	&__name {
 		color: #ff4e50;
-		font: 700 16px Montserrat;
+		font: 700 16px $montserratFontStack;
 		margin: 15px 0 12px;
 		letter-spacing: 0.8px;
 		@include mq($from: tablet) {
@@ -842,7 +858,7 @@ $w-2: 64.2%;
 	}
 	&__h2  {
 		color: #333;
-		font: 700 14px Montserrat;
+		font: 700 14px $montserratFontStack;
 		@include mq($from: tablet) {
 			position: absolute;
 			top: 36px;
@@ -884,7 +900,7 @@ $w-2: 64.2%;
 		&-item {
 			display: inline-block;
 			color: #666;
-			font: 300 14px / 24px Roboto;
+			font: 300 14px / 24px $robotoFontStack;
 			margin: 0 4.5px;
 			@include mq($from: tablet) {
 				text-align: left;
@@ -899,7 +915,7 @@ $w-2: 64.2%;
 	}
 	&__designed {
 		color: #ccc;
-		font: 700 10px Montserrat;
+		font: 700 10px $montserratFontStack;
 		text-transform: uppercase;
 		margin: 13px 0px 7px;
 		letter-spacing: 1px;
