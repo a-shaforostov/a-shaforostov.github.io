@@ -1467,6 +1467,12 @@ body {
   width: 99.75%;
   height: 35.5vw;
   border-radius: 5px; }
+  .grid__item-img {
+    display: block; }
+  .grid__item--portrait img {
+    width: 110%; }
+  .grid__item--landscape img {
+    height: 110%; }
   @media (min-width: 20em) {
     .grid__item--4 {
       margin-top: 2px; }
@@ -1559,7 +1565,11 @@ body {
 
 .request-area {
   width: 320px;
-  margin: -9px auto 40px; }
+  margin: -9px auto 41px; }
+  @media (min-width: 20em) and (max-width: 21.3025em) {
+    .request-area {
+      position: relative;
+      top: 1px; } }
   @media (min-width: 48em) {
     .request-area {
       width: 100%;
@@ -1611,30 +1621,37 @@ body {
     vertical-align: top; }
     @media (min-width: 48em) {
       .request-area input {
-        display: inline-block;
+        display: inline;
         margin: 0;
         position: relative;
-        left: 6px;
-        width: 240px; } }
+        left: 3px;
+        width: 240px;
+        line-height: 40px; } }
     @media (min-width: 90em) {
       .request-area input {
-        top: 37px; } }
+        top: 37px;
+        left: 6px; } }
   @media (min-width: 48em) {
     .request-area__btn {
       display: inline-block;
       width: 157px;
       position: relative;
-      left: -7px;
+      left: -5px;
       top: 1px; } }
   @media (min-width: 90em) {
     .request-area__btn {
-      top: 38px; } }
+      top: 38px;
+      left: -7px; } }
 
 .footer {
   width: inherit;
   margin: 0 auto 18px;
   border-top: 4px solid #ff4e50;
   text-align: center; }
+  @media (min-width: 20em) and (max-width: 21.3025em) {
+    .footer {
+      position: relative;
+      left: -1px; } }
   @media (min-width: 48em) {
     .footer {
       position: relative;
@@ -1691,6 +1708,11 @@ body {
       color: #666;
       font: 300 14px/24px Roboto, Arial, sans-serif;
       margin: 0 4.5px; }
+      @media (min-width: 20em) and (max-width: 21.3025em) {
+        .footer__menu-item {
+          margin: 0 6.9px;
+          position: relative;
+          left: 2px; } }
       @media (min-width: 48em) {
         .footer__menu-item {
           text-align: left;

@@ -1,3 +1,67 @@
+// Код, который запускается при загрузке скрипта
+window.onload = documentReady;
+// Код, который запускается при загрузке скрипта
+// ---------------------------------------------
+
+
+// Получение картинок с сервиса 
+
+// Запросить картинки по запросу
+function getPictures (request) {
+	var docHead = document.getElementsByTagName('head')[0]; // For IE8-
+	var q = request ? '&q='+encodeURIComponent(request) : '';
+	var elem = document.getElementById('pixabayRequest');
+	if (elem) { docHead.removeChild(elem); }
+	elem = document.createElement("script");
+	elem.id = 'pixabayRequest';
+	elem.src = "https://pixabay.com/api/?key=2654122-2e7cfe65e4216a71a55f9c97a&image_type=photo"+q+"&callback=onData";
+	docHead.appendChild(elem);
+}
+
+// Обработчик на получение данных JSONP
+function onData(data) {
+	if (data) {
+
+		// Заполнить картинками
+		var grid = document.querySelector('.grid');
+		for (var i = 0; i < 7; i++) {
+			var img = grid.querySelector('.grid__item--'+(i+1)+' .grid__item-img');
+			if (data.hits[i]) {
+				img.src = data.hits[i].webformatURL;
+				img.parentNode.querySelector('.grid__caption').innerHTML = data.hits[i].tags;
+				img.setAttribute('data-width', data.hits[i].webformatWidth);
+				img.setAttribute('data-height', data.hits[i].webformatHeight);
+			} else {
+				img.src = '';
+				img.parentNode.querySelector('.grid__caption').innerHTML = 'Empty';
+				img.setAttribute('data-width', 0);
+				img.setAttribute('data-height', 0);
+			}
+		}
+
+		// Масштабировать картинки
+		var gridItems = grid.querySelectorAll('grid__item');
+		for (var i = 0; i < gridItems.length; i++) {
+			var el = gridItems[i];
+			var refH = el.offsetHeight;
+			var refW = el.offsetWidth;
+
+			var imgH = el.getElementsByTagName("img")[0].getAttribute('data-height');
+			var imgW = el.getElementsByTagName("img")[0].getAttribute('data-width');
+			
+			if (imgH-refH > imgW-refW) {
+				el.classList.add("grid__item--portrait");
+				el.classList.remove("grid__item--landscape");
+			} else {
+				el.classList.add("grid__item--landscape");
+				el.classList.remove("grid__item--portrait");
+			}
+		}
+	}
+}
+// Получение картинок с сервиса 
+
+
 //Класс слайдера
 function Slider(element, frame) {
 	this.frame = frame;
@@ -26,103 +90,33 @@ Slider.prototype.right = function() { // крутим на один кадр в�
 //Класс слайдера
 
 
-(function ($) {
-	'use strict';
-	
-	$(function () {
+// Функция запускается после загрузки документа
+function documentReady() {
 
-		$('.grid').masonry({
-			itemSelector: '.grid__item', 
-			columnWidth: '.grid__sizer',
-//			percentPosition: true,
-			gutter: 1
-		});
-		
-		var sliders = document.querySelectorAll('.slider');
-		window.mySliders = [];
-		for (var sl = 0; sl < sliders.length; sl++) {
-			window.mySliders.push(new Slider(sliders[sl], sl));	
-		}
-		
-		var isPicturesReceived = false;
-		
-		function getPictures (request) {
-			var q = request ? '&q='+encodeURIComponent(request) : '';
-			$.ajax({
-
-				url: "https://pixabay.com/api/?key=2654122-2e7cfe65e4216a71a55f9c97a&image_type=photo"+q+"&callback=?",
-				dataType: "jsonp",
-				success: function (data) {
-					
-					if (data) {
-						
-						for (var i = 0; i < 7; i++) {
-							var $img = $('.grid__item--'+(i+1)+' .grid__item-img');
-							if (data.hits[i]) {
-								$img[0].src = data.hits[i].webformatURL;
-								$img.parent().find('.grid__caption').html(data.hits[i].tags);
-							} else {
-								$img[0].src = '';
-								$img.parent().find('.grid__caption').html('Empty');
-							}
-						}
-						
-						// Масштабировать картинку плагином
-						var $gridItem = $('.grid__item');
-						var $gridItemImg = $gridItem.find('.grid__item-img');
-						if ($gridItem.imagefill) {
-							$gridItem.imagefill();
-						} else {
-							// Если плагин не доступен (ie8), то заполнить по ширине
-							$gridItemImg.css({"width": "100%", "position": "relative"});
-
-							for (var i = 0; i < $gridItem.length; i++) {
-								// Если контейнер не заполнен, то заполнить по высоте
-								if ($gridItem[i].offsetHeight > $gridItemImg[i].offsetHeight) {
-									$($gridItemImg[i])
-										.css({"height": "100%", "width": "", "position": "relative"});
-								}
-							}
-							
-						}
-						
-						isPicturesReceived = true;
-					}
-				}
-			});
-
-		}
-
-		// Сервис работает ненадежно
-		// Повторяем попытку загрузить пока не загрузится
-		// Проблемы загрузки можно увидеть в консоли
-		function refreshGrid(request) {
-			
-			getPictures(request);
-			
-			if (!isPicturesReceived) {
-				
-				var tryInterval = setInterval( 
-					function () {
-						if (isPicturesReceived) {
-							clearInterval(tryInterval);
-						} else {
-							getPictures(request);
-						}
-					}, 2000);
-			}
-			
-		}
-		
-		refreshGrid();
-		
-		$('.request-area .round-button').on('click', function (e) {
-			var r = $('.request-area input').val();
-			refreshGrid(r);
-//			e.stopImmediatePropagation();
-//			e.preventDefault();
-		});
-		
+	// Инициализация Masonry
+	var msnry = new Masonry('.grid', {
+		itemSelector: '.grid__item',
+		columnWidth: '.grid__sizer',
+		gutter: 1
 	});
-	
-})(jQuery);
+
+	// Инициализация слайдеров
+	var sliders = document.querySelectorAll('.slider');
+	window.mySliders = [];
+	for (var sl = 0; sl < sliders.length; sl++) {
+		window.mySliders.push(new Slider(sliders[sl], sl));	
+	}
+
+	// Загрузка картинок по пустому запросу
+	getPictures();
+
+	// Кроссбраузерная установка обработчика на кнопку запроса картинок
+	Event.add(
+		document.querySelector('.request-area .round-button'), 
+		'click', 
+		function (e) {
+			var elem = document.querySelector('.request-area input');
+			getPictures(elem.value);
+		}
+	);
+}

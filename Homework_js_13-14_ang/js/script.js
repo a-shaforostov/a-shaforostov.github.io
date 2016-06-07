@@ -1,6 +1,4 @@
 //			$scope.$apply(); используется для обновления вида, если данные обновились не в ангуляре.
-
-
 (function () {
 	"use strict";
 
@@ -11,8 +9,7 @@
 	app.controller("appCtrl", function ($scope) {
 
 		$scope.model = new Model(quizData);
-		
-		
+
 		$scope.initQuiz = function () {
 		
 			$scope.userAnswers = [];
@@ -45,9 +42,7 @@
 		$scope.initQuiz();
 	});
 
-/* 
-	Модель
-*/
+/*	Модель  */
 
 	function Model(appData) {
 		this.data = appData || {};
@@ -70,8 +65,5 @@
 		return result;
 	}
 
-/* 
-	Модель (конец)
-*/
-	
+/* 	Модель (конец)   */
 }) ();
