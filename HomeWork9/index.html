@@ -25,10 +25,41 @@
     <![endif]-->
 </head>
 <body>
-    <div class="wrapper">
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1701068273498187',
+        xfbml      : true,
+        version    : 'v2.5'
+      });
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+
+  </script>
+  <script type="text/javascript">
+      function shareFacebook(product_id) {
+        var shareURL = "http://a-shaforostov.github.io/HomeWork9/index.html";
+
+        FB.ui({
+          display: 'popup',
+          method: 'share',
+          href: shareURL,
+        }, function(response){ console.log(response) });
+
+        console.log(shareURL);
+      }
+  </script>
+      <div class="wrapper">
         <div class="page-header clearfix">
             <div class="logo logo--position_header">
-                <span class="logo__main-part">pingbull</span>
+                <span class="logo__main-part" onclick="shareFacebook()">pingbull</span>
                 <span class="logo__suffix"></span>
             </div>
             <div class="menu nav">
