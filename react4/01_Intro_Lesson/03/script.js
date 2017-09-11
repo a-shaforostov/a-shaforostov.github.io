@@ -8,6 +8,9 @@ window.onload = function() {
 
 	orderByField('id');
 
+	const paginationEl = document.querySelector('.pagination-block');
+	paginationEl.style.display = 'none';
+
 	document.getElementsByTagName('thead')[0].addEventListener('click', function(event) {
 		orderField = event.target.dataset['field'];
 		orderByField(orderField);
@@ -80,13 +83,19 @@ window.onload = function() {
 		const placeholder = document.getElementsByTagName('tbody')[0];
 		placeholder.innerHTML = '';
 
-		movies.forEach(movie => {
-			const {id, title, original_language, popularity, vote_count, vote_average, release_date} = movie;
-			const template = eval('`'+document.getElementById('row-template').innerHTML+'`');
+		if (movies.length) {
+			movies.forEach(movie => {
+				const {id, title, original_language, popularity, vote_count, vote_average, release_date} = movie;
+				const template = eval('`' + document.getElementById('row-template').innerHTML + '`');
+				let newEl = document.createElement('tr');
+				newEl.innerHTML = template;
+				placeholder.appendChild(newEl);
+			});
+		} else {
 			let newEl = document.createElement('tr');
-			newEl.innerHTML = template;
+			newEl.innerHTML = `<td colspan="7" style="text-align:center">Ничего не найдено</td>`;
 			placeholder.appendChild(newEl);
-		});
+		}
 
 	}
 
