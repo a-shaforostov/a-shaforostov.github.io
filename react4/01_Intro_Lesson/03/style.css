@@ -1,0 +1,29 @@
+table {
+    user-select: none;
+}
+
+table.table td {
+    padding: 0;
+}
+
+td div {
+    padding: 12px;
+}
+
+td:hover {
+    background-color: #e7e7e7;
+    cursor: pointer;
+}
+
+td .ordered.asc:after {
+    content: " \25B2";
+}
+
+td .ordered.desc:after {
+    content: " \25BC";
+}
+
+.pagination-block select {
+    display: inline-block;
+    width: 100px;
+}

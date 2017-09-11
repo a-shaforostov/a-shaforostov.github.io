@@ -28,7 +28,7 @@ gulp.task('js:build', function () {
     var f = filter(['*', '!src/js/tmpl.js'], {restore: true});
 
     return gulp.src(path.src.js)
-        .pipe(f) // Фильтруем файлы, которые не нужно бабифицировать
+        .pipe(f) // Фильтруем файлы, которые не нужно обрабатывать
         .pipe(babel({
 			presets: ['es2015']
 		}))

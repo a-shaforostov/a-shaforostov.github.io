@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React4 course. Homeworks.</title>
+    <style>
+        .description {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul class="lessons">
+        <li class="lesson lesson-1">
+            <h5>Lesson 1</h5>
+            <ul class="tasks">
+                <li class="task task-1">
+                    <h5><a href="01_Intro_Lesson/01/index.html">Задание 1</a> <button>...</button></h5>
+                    <p class="description">
+                        1. Маленькие задачки на работу с массивами <br>
+                        1 балл <br>
+                        В папке 01 для выполнения данного задани лежит файл tasks.js В нем в комментариях описано какие задачи необходимо решить. Используйте для решения задач ES6 и методы для работы с массивами (map, reguce, filter, find, every). Постарайтесь написать максимально лаконичное решение.
+                    </p>
+                </li>
+                <li class="task task-2">
+                    <h5><a href="01_Intro_Lesson/02/index.html">Задание 2</a> <button>...</button></h5>
+                    <p class="description">
+                        2. Задачки на преобразование данных <br>
+                        2 балла <br>
+                        Используя приемы функционального программирования и возможности ES6, решите задачки в папке 02 в файле tasks.js (описаны в комментариях).
+                    </p>
+                </li>
+                <li class="task task-1">
+                    <h5><a href="01_Intro_Lesson/03/index.html">Задание 3</a> <button>...</button></h5>
+                    <p class="description">
+                        3. Сортируемая табличка <br>
+                        3 балла <br>
+                        Используя полученные знания по ES2015 и приемы функционального программирования реализуйте тестовое задание курса с сортируемой таблицей. <br>
+                        <strong>Описание задания:</strong> <br>
+                        Реализуйте веб-страницу с поиском по фильмам. На странице должен находиться поле для поиска и таблица. После ввода поискового запроса в поле для поиска, должны получаться данные для отображения с использованием The Movie Database API. После того, как данные получены - они должны отобразиться в таблице с такими полями (минималный набор, можно расширить): ID, Title, Language, Popularity Index, Votes Count, Rating, Release Date. <br>
+                        При клике на заголовок столбца, все данные в таблице должны сортироваться по значениям в этом столбце по возрастанию, при втором клике - по убыванию, при третьем - опять по возрастанию и т.д. <br>
+                        При клике на заголовок другой колонки, данные должны пересортировываться по значениям в этой колонке аналогично. При этом, необходимо ввести идикатор порядка сортировки для выбранной колонки, например, стрелки вверх и вниз (↑ и ↓). <br>
+                        <strong>Требования:</strong> <br>
+                        Используйте метод fetch для совершения запросов к серверу <br>
+                        НЕ используйте jQuery. Только vanilla JavaScript <br>
+                        Запрещено использовать сторонние библиотеки для сортировки, этот функционал нужно реализовать самостоятельно <br>
+                        Постарайтесь реализовать механизм "сортируемости" таблицы максимально переиспользуемым. Так, чтобы его работа не зависела от данных, которые отображаются. <br>
+                        Готовую, рабочую веб-страницу нужно разместить на Github Pages и приложить ссылку <br>
+                        Для стилей можно использовать Bootstrap.
+                    </p>
+                </li>
+                <li class="task task-1">
+                    <h5><a href="01_Intro_Lesson/04/index.html">Задание 4</a> <button>...</button></h5>
+                    <p class="description">
+                        4. Which House George Martin Hated The Most <br>
+                        2 балла <br>
+                        Напишите функцию-генератор, которая по номеру книги (book) получает название дома (house) с максимальным числом погибших персонажей (character). <br>
+                        Документация API: https://anapioficeandfire.com/
+                    </p>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <script>
+        $('.task button').on('click', function(event) {
+            var $currentDescription = $(this).closest('.task').find('.description');
+            var currentHidden = $currentDescription.css('display') === 'block';
+
+            $('.task .description').slideUp();
+            if (!currentHidden) $currentDescription.slideDown();
+        })
+    </script>
+</body>
+</html>

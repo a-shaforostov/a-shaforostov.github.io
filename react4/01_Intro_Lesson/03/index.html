@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <br>
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control" id="search" placeholder="Введите текст для поиска и нажмите Enter">
+            </div>
+        </form>
+
+        <div class="pagination-block">
+            <span>Страница&nbsp;</span>
+            <select class="form-control" name="page" id="page"></select>
+            <span>&nbsp;из&nbsp;</span><span class="total-pages"></span>
+        </div>
+        <br>
+
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <td class="field-caption"><div data-field="id">ID</div></td>
+                <td class="field-caption"><div data-field="title">Title</div></td>
+                <td class="field-caption"><div data-field="original_language">Lang</div></td>
+                <td class="field-caption"><div data-field="popularity">Popularity</div></td>
+                <td class="field-caption"><div data-field="vote_count">Votes</div></td>
+                <td class="field-caption"><div data-field="vote_average">Rating</div></td>
+                <td class="field-caption"><div data-field="release_date">Release Date</div></td>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="script.js"></script>
+
+    <script type="text/x-handlebars-template" id="row-template">
+            <td><div>${id}</div></td>
+            <td><div>${title}</div></td>
+            <td><div>${original_language}</div></td>
+            <td><div>${popularity}</div></td>
+            <td><div>${vote_count}</div></td>
+            <td><div>${vote_average}</div></td>
+            <td><div>${release_date}</div></td>
+    </script>
+
+</body>
+</html>
