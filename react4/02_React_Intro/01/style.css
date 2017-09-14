@@ -1,0 +1,9 @@
+article {
+    font-family: sans-serif;
+    width: 500px;
+    text-align: justify;
+}
+
+.author {
+    font-weight: 600;
+}

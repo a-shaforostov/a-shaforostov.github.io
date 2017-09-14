@@ -30,7 +30,7 @@
                         Используя приемы функционального программирования и возможности ES6, решите задачки в папке 02 в файле tasks.js (описаны в комментариях).
                     </p>
                 </li>
-                <li class="task task-1">
+                <li class="task task-3">
                     <h5><a href="01_Intro_Lesson/03/index.html">Задание 3</a> <button>...</button></h5>
                     <p class="description">
                         3. Сортируемая табличка <br>
@@ -49,7 +49,7 @@
                         Для стилей можно использовать Bootstrap.
                     </p>
                 </li>
-                <li class="task task-1">
+                <li class="task task-4">
                     <h5><a href="01_Intro_Lesson/04/index.html">Задание 4</a> <button>...</button></h5>
                     <p class="description">
                         4. Which House George Martin Hated The Most <br>
@@ -58,6 +58,95 @@
                         Документация API: https://anapioficeandfire.com/
                     </p>
                 </li>
+            </ul>
+        </li>
+        <li class="lesson lesson-2">
+            <h5>Lesson 2</h5>
+            <ul class="tasks">
+                <li class="task task-1">
+                    <h5><a href="02_React_Intro/01/index.html">Задание 1</a> <button>...</button></h5>
+                    <p class="description">
+                        1. Компонент для отображения статьи без JSX <br>
+                        1 балл <br>
+                        Напишите компонент для отображения статьи, который в качестве параметров принимает Название статьи, ее текст и имя автора.
+                    </p>
+                </li>
+                <li class="task task-2">
+                    <h5><a href="02_React_Intro/02/index.html">Задание 2</a> <button>...</button></h5>
+                    <p class="description">
+                        2. Компонент для отображения статьи c JSX <br>
+                        1 балл <br>
+                        Теперь напишите такой же компонент для отображения статьи уже с использованием JSX. Также добавьте для него количество комментариев и лайков.
+                    </p>
+                </li>
+                <li class="task task-3">
+                    <h5><a href="02_React_Intro/03/index.html">Задание 3</a> <button>...</button></h5>
+                    <p class="description">
+                        3. Flip Card <br>
+                        1 балл <br>
+                        Создайте компонент с карточкой с одной стороны которой находится фото (любое, которое вам нравится), а с другой - просто цветная заливка. При каждом клике на карту стороны должны меняться. <br>
+                        Дополнительно в этом задании: <br>
+                        1 балл - Анимация переворачивания карты
+                    </p>
+                </li>
+                <li class="task task-4">
+                    <h5><a href="02_React_Intro/04/index.html">Задание 4</a> <button>...</button></h5>
+                    <div class="description">
+                        <h4><a id="user-content-4-tweet---дополнительные-параметры" class="anchor"
+                               href="#4-tweet---дополнительные-параметры" aria-hidden="true">
+                            <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1"
+                                 viewBox="0 0 16 16" width="16">
+                                <path fill-rule="evenodd"
+                                      d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                            </svg>
+                        </a>4. Tweet - дополнительные параметры
+                        </h4>
+                        <p>
+                            <g-emoji alias="star"
+                                     fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2b50.png"
+                                     ios-version="6.0"><img class="emoji" alt=":star:" height="20" width="20"
+                                                            src="https://assets-cdn.github.com/images/icons/emoji/unicode/2b50.png">
+                            </g-emoji>
+                            <g-emoji alias="star"
+                                     fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2b50.png"
+                                     ios-version="6.0"><img class="emoji" alt=":star:" height="20" width="20"
+                                                            src="https://assets-cdn.github.com/images/icons/emoji/unicode/2b50.png">
+                            </g-emoji>
+                            <g-emoji alias="star"
+                                     fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2b50.png"
+                                     ios-version="6.0"><img class="emoji" alt=":star:" height="20" width="20"
+                                                            src="https://assets-cdn.github.com/images/icons/emoji/unicode/2b50.png">
+                            </g-emoji>
+                        </p>
+                        <p><strong>4.1 isLiked и isRetweeted</strong></p>
+                        <p>Добавить к написанному на занятии компоненту твита параметры isLiked, isRetweeted. Нужно
+                            подсвечивать соответствующие иконки, твит был <code>liked</code> или <code>retweeted</code>.</p>
+                        <p><strong>4.2 Размер текста</strong></p>
+                        <p>Если вы замечали, в твиттере в зависимости от количества лайков и ретвитов, изменяется размер
+                            текста в твите. Предлагаю сделать упрощенную версию такого поведения.</p>
+                        <p>Например, давайте рассчитаем условный показатель популярности твита:</p>
+                        <p><code>popularity = likes + retweets</code></p>
+                        <p>И теперь, в зависимости от его значения, будем изменять размер шрифта.</p>
+                        <p>Например, так:</p>
+                        <pre><code>popularity ∈ (0; 100) =&gt; 16px
+
+        popularity ∈ [100; 1000) =&gt; 18px
+
+        popularity ∈ [1000; ∞) =&gt; 22px
+
+        </code></pre>
+                        <p>Пример использования: <code>&lt;p style={{ fontSize: 21 }}&gt;{text}&lt;/p&gt;</code>.</p>
+                    </div>
+                </li>
+                <li class="task task-5">
+                    <h5><a href="02_React_Intro/05/index.html">Задание 5</a> <button>...</button></h5>
+                    <div class="description">
+                        5. Список группы <br>
+                        3 балла <br>
+                        Создайте страницу для отображения списка нашей группы.
+                    </div>
+                </li>
+
             </ul>
         </li>
     </ul>
