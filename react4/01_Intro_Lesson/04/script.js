@@ -30,7 +30,7 @@ window.onload = function() {
 		progressElement.innerText = 'Получение данных книги...';
 		const bookUrl = `https://anapioficeandfire.com/api/books/${num}`;
 		const book = yield* fetchRequest(bookUrl);
-		let houses = {};
+		const houses = {};
 
 		// Учесть данные каждого персонажа
 		let counter = 0;
@@ -51,7 +51,7 @@ window.onload = function() {
 
 		if (maxUrl) {
 			progressElement.innerText = 'Получение данных дома...';
-			let {name:houseName} = yield* fetchRequest(maxUrl);
+			const {name:houseName} = yield* fetchRequest(maxUrl);
 			resultElement.innerHTML = `В доме <a href="${maxUrl}">${houseName}</a> количество погибших ${houses[maxUrl]}`;
 		} else {
 			resultElement.innerText = `Домов не найдено`;

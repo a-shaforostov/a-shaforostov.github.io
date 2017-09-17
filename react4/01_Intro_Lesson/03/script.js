@@ -5,6 +5,7 @@ window.onload = function() {
 	let ascOrder = true;
 	let currentPage = 1;
 	let query;
+	const apiKey = '6cbafac50ae57075cbc3591600facdb4';
 
 	orderByField('id');
 
@@ -67,14 +68,17 @@ window.onload = function() {
 		}
 	}
 
-	function getMovies() {
+	async function getMovies() {
 
-		return fetchRequest(`https://api.themoviedb.org/3/search/movie?api_key=6cbafac50ae57075cbc3591600facdb4&language=en-US&query=${query}&page=${currentPage}&include_adult=false`)
-			.then(moviesJSON => {
-				movies = moviesJSON;
-				if (currentPage === 1) updatePagination(movies.total_pages);
-				render( orderArray(movies, orderField, ascOrder) );
-			});
+		const movieUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${query}&page=${currentPage}&include_adult=false`;
+
+		try {
+			movies = await fetchRequest(movieUrl);
+		} catch(e) {
+			console.error(e);
+		}
+		if (currentPage === 1) updatePagination(movies.total_pages);
+		render( orderArray(movies, orderField, ascOrder) );
 
 	}
 
@@ -87,12 +91,12 @@ window.onload = function() {
 			movies.forEach(movie => {
 				const {id, title, original_language, popularity, vote_count, vote_average, release_date} = movie;
 				const template = eval('`' + document.getElementById('row-template').innerHTML + '`');
-				let newEl = document.createElement('tr');
+				const newEl = document.createElement('tr');
 				newEl.innerHTML = template;
 				placeholder.appendChild(newEl);
 			});
 		} else {
-			let newEl = document.createElement('tr');
+			const newEl = document.createElement('tr');
 			newEl.innerHTML = `<td colspan="7" style="text-align:center">Ничего не найдено</td>`;
 			placeholder.appendChild(newEl);
 		}
@@ -129,9 +133,11 @@ window.onload = function() {
 
 	}
 
-	function fetchRequest(url) {
+	async function fetchRequest(url) {
 
-		return fetch(url).then(request => request.json());
+		const response = await fetch(url);
+		const json = await response.json();
+		return json;
 
 	}
 

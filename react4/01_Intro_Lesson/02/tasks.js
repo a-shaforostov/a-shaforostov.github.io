@@ -40,7 +40,7 @@
 
 {
 	String.prototype.toCamelCase = function() {
-		let source = this.toLowerCase();
+		const source = this.toLowerCase();
 		let result = '';
 
 		for (let i = 0; i < source.length; i++) {
@@ -53,7 +53,7 @@
 	};
 
 	function camelObject(src, processor) {
-		let obj = {};
+		const obj = {};
 
 		Object.keys(src).forEach( item => {
 
